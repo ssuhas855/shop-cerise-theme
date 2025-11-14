@@ -1,8 +1,5 @@
-body{
-	background: red;
-}  
 p.announcement-bar__message {    
-    padding: 16px 0;
+    padding: 16px 0; 
     font-size: 12px;
     letter-spacing: 1.7px;
     line-height: normal;
@@ -10,7 +7,7 @@ p.announcement-bar__message {
     font-family: var(--font-nav-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-nav-weight);
-}
+} 
 .header:not(.drawer-menu).page-width {
 	margin: 0;
 	padding: 0 30px;

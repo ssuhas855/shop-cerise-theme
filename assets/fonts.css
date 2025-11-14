@@ -1,3 +1,6 @@
+body{
+    background: green!IMPORTANT;
+}
 @font-face {
     font-family: 'PP Editorial Old';
     src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/PPEditorialOld-Regular.eot');
