@@ -1,0 +1,62 @@
+<section class="custom-accordion" id="{{ section.settings.section_title | handle }}_faq">
+  <div class="page-width">
+    <div class="accordion-wrapper">
+      <h5 class="accordion-heading h5">{{ section.settings.section_title }}</h5>
+
+      <div class="accordion-items">
+        {% for block in section.blocks %}
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-question h3">{{ block.settings.title }}</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-text">{{ block.settings.answer }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Materials & Manufacturing",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "ORDERS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question",
+          "default": "Where does Cerise ship to?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs Materials & Manufacturing",
+      "category": "FAQs page"
+    }
+  ]
+}
+{% endschema %}

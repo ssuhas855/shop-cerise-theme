@@ -1,0 +1,123 @@
+<div id="newsletter-popup" class="newsletter-popup">
+  <div class="newsletter-overlay"></div>
+
+  <div class="newsletter-box color-{{ section.settings.color_scheme }} gradient">
+    <button class="close-popup" aria-label="Close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="0.590999" y1="0.530339" x2="12.591" y2="12.5303" stroke="#DE3725" stroke-width="1.5"/>
+<line x1="0.530339" y1="12.5303" x2="12.3955" y2="0.665172" stroke="#DE3725" stroke-width="1.5"/>
+</svg>
+</button>
+
+
+<div class="popup_wrapper">
+    {% if section.settings.title != blank %}
+    <h5 class="popup-title">{{ section.settings.title }}</h5>
+    {% endif %}
+
+    {% if section.settings.logo_text != blank %}
+    <div class="popup-logo">{{ section.settings.logo_text }}</div>
+    {% endif %}
+
+    {% if section.settings.logo_text != blank %}
+    <p class="popup-subtitle h3">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    <form id="newsletter-form" class="newsletter-form" action="/" method="post">
+      <input
+        type="email"
+        name="contact[email]"
+        placeholder=""
+        required
+      >
+      <button type="submit" class="button button--primary">CONTINUE</button>
+    </form>
+</div>
+
+  </div>
+</div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("newsletter-popup");
+  const closeBtn = document.querySelector(".close-popup");
+
+  // Only show once per session (or change to days with cookie)
+  if (!sessionStorage.getItem("newsletterShown")) {
+    setTimeout(() => {
+      popup.classList.add("active");
+      sessionStorage.setItem("newsletterShown", "true");
+    }, {{ section.settings.delay | times: 1000 }});
+  }
+
+  closeBtn.addEventListener("click", function() {
+    popup.classList.remove("active");
+  });
+
+  document.querySelector(".newsletter-overlay").addEventListener("click", function() {
+    popup.classList.remove("active");
+  });
+  document.querySelector(".newsletter-overlay").addEventListener("click", function() {
+    popup.classList.remove("active");
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Popup Newsletter",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    }, 
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "MAGIC IN YOUR INBOX"
+    },
+    {
+      "type": "html",
+      "id": "logo_text",
+      "label": "Logo or brand text"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Sign up for 15% off and exclusive access to our world."
+    },
+    {
+      "type": "text",
+      "id": "placeholder_text",
+      "label": "Email placeholder",
+      "default": "Your email address"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Continue"
+    },
+    {
+      "type": "url",
+      "id": "form_action",
+      "label": "Form action URL (optional)"
+    },
+    {
+      "type": "range",
+      "id": "delay",
+      "label": "Popup delay (seconds)",
+      "default": 3,
+      "min": 0,
+      "max": 20,
+      "step": 1
+    }
+  ]
+}
+{% endschema %}

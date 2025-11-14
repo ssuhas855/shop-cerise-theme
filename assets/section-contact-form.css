@@ -1,0 +1,129 @@
+.contact img {
+  max-width: 100%;
+}
+
+.contact .form__message {
+  align-items: flex-start;
+}
+
+.contact .icon-success {
+  margin-top: 0.2rem;
+}
+
+.contact .field {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact .field {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact__button {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact__button {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .contact__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+
+.contact.page-width.page-width--narrow {
+	max-width: 1145px;
+	display: flex;
+	flex-wrap: wrap;
+  
+}
+.contact_info {
+	width: 50%;
+}
+#contact_form-section {
+	width: 50%;
+	padding-bottom: 160px;
+	padding-top: 10px;
+}
+.contact_info-rte {
+	width: 100%;
+	max-width: 446px;
+}
+h3.title {
+	font-size: 25px;
+	line-height: 30px;
+	margin: 0 0 20px;
+}
+.contact_info-rte p {
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0;
+}
+.contact__fields {
+	display: grid;
+	grid-template-columns: repeat(1,1fr);
+	grid-column-gap: 0;
+}
+.field__input {
+	border: 1px solid !important;
+	border-radius: 0 !important;
+	padding: 10px 20px !important;
+	min-height: 70px;
+	outline: none !important;
+	box-shadow: none !important;
+	font-size: 19px;
+  font-family: var(--font-nav-family);
+    font-style: var(--font-body-style);    
+}
+.text-area.field__input {
+	min-height: 280px;
+}
+.field_box__label {
+	float: left;
+	width: 100%;
+  text-transform: uppercase;
+    font-family: var(--font-nav-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-nav-weight);
+    letter-spacing: 1.7px;
+    font-size: 12px;
+    padding-top:18px;
+}
+    .field_box {
+	float: left;
+	width: 100%;
+	margin-bottom: 65px;
+	position: relative;
+}
+.form-status.caption-large.text-body {
+	display: none!important;
+}
+.form__message .svg-wrapper {
+	display: none!important;
+}
+.form__message {
+	clear: both;
+  margin:0;
+}
+.contact__field-error {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.form-status-list.caption-large {
+	display: none!important;
+}
+.form-status.form-status-list.form__message svg {
+	display: none!important;
+}
+.form-status.form-status-list.form__message {
+	letter-spacing: 0;
+	margin: 0 0 40px;
+}

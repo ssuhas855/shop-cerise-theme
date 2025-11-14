@@ -1,0 +1,78 @@
+<section class="about-story" id="about-story_second">
+      <div class="about-story__inner page-width">
+    <div class="about-story__grid">
+      <!-- Left Images -->
+      <div class="about-story_row">
+       <div class="about-story__images about-story__images--left">
+        {% if section.settings.left_image_1 != blank  %}
+        <div class="about-story__image img_1"><img src="{{ section.settings.left_image_1 | image_url: width: 1200 }}" alt="Left Image 1" loading="lazy" width="" height="" /></div>        
+    {% endif %}  
+    </div>
+
+        <div class="about-story__content">
+        <div class="about-story__text-block">
+             {% if section.settings.main_heading != blank  %}
+            <h3 class="about-story__title h3">
+            {{ section.settings.main_heading }}
+            </h3>
+             {% endif %}  
+             {% if section.settings.main_text != blank  %}
+            <p class="about-story__desc">
+            {{ section.settings.main_text }}
+            </p>
+             {% endif %}  
+        </div>
+
+        
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Story Second",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image_1",
+      "label": "Left Image 1"
+    },   
+    
+    {
+      "type": "textarea",
+      "id": "main_heading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "main_text",
+      "label": "Main Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_1",
+      "label": "Right Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_2",
+      "label": "Right Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_3",
+      "label": "Right Image 2"
+    },
+  ],
+  "presets": [
+    {
+      "name": "About Story Second"
+    }
+  ]
+}
+{% endschema %}

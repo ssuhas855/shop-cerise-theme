@@ -1,0 +1,252 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "faq_ordering_fxbGKb": {
+      "type": "faq-ordering",
+      "blocks": {
+        "faq_nMD7Nm": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
+          }
+        },
+        "faq_xXEHeH": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there <strong>anything </strong>better than an ice-cold, bone dry dirty <a href=\"#\" title=\"#\">martini</a> at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p><ul><li>Inspired by the classic martini</li><li>Inspired by the classic martini</li><li>Inspired by the classic martini</li></ul><p>Inspired by the classic martini</p>"
+          }
+        },
+        "faq_3krPHz": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
+          }
+        },
+        "faq_xWGKEm": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
+          }
+        },
+        "faq_rC9tBx": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_nMD7Nm",
+        "faq_xXEHeH",
+        "faq_3krPHz",
+        "faq_xWGKEm",
+        "faq_rC9tBx"
+      ],
+      "name": "FAQs Ordering",
+      "settings": {
+        "section_title": "ORDERS"
+      }
+    },
+    "faq_shipping_delivery_wbrzzr": {
+      "type": "faq-shipping-delivery",
+      "blocks": {
+        "faq_tNkCYk": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_KELnH4": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_bgKYqr": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_4YhtWf": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_tNkCYk",
+        "faq_KELnH4",
+        "faq_bgKYqr",
+        "faq_4YhtWf"
+      ],
+      "name": "FAQs Shipping & Delivery",
+      "settings": {
+        "section_title": "Shipping & Delivery"
+      }
+    },
+    "faq_returns_zYiQJF": {
+      "type": "faq-returns",
+      "blocks": {
+        "faq_48jBpy": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_kQWrzh": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_CGDrTJ": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_rETRXp": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_48jBpy",
+        "faq_kQWrzh",
+        "faq_CGDrTJ",
+        "faq_rETRXp"
+      ],
+      "name": "FAQs Returns",
+      "settings": {
+        "section_title": "Returns"
+      }
+    },
+    "faq_materials_manufacturing_FtaxAP": {
+      "type": "faq-materials-manufacturing",
+      "blocks": {
+        "faq_39F8eR": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_eXTnjK": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_zidRyw": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_39F8eR",
+        "faq_eXTnjK",
+        "faq_zidRyw"
+      ],
+      "name": "FAQs Materials & Manufacturing",
+      "settings": {
+        "section_title": "Materials & Manufacturing"
+      }
+    },
+    "faq_wholesale_kqhMh4": {
+      "type": "faq-wholesale",
+      "blocks": {
+        "faq_hXDjez": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_rX3cJG": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_YjhwVe": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_VPkNNf": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_nDJ9bq": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_hXDjez",
+        "faq_rX3cJG",
+        "faq_YjhwVe",
+        "faq_VPkNNf",
+        "faq_nDJ9bq"
+      ],
+      "name": "FAQs Wholesale",
+      "settings": {
+        "section_title": "Wholesale"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq_ordering_fxbGKb",
+    "faq_shipping_delivery_wbrzzr",
+    "faq_returns_zYiQJF",
+    "faq_materials_manufacturing_FtaxAP",
+    "faq_wholesale_kqhMh4"
+  ]
+}

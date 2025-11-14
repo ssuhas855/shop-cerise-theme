@@ -1,0 +1,148 @@
+<section class="about-story" id="about-story_third">
+  <div class="about-story__inner page-width">
+    <div class="about-story__grid">
+
+      <!-- Left Images -->
+      <div class="about-story_row">
+
+       <div class="about-story__images about-story__images--left">
+        {% if section.settings.left_image_1 != blank  %}
+        <div class="about-story__image img_1"><img src="{{ section.settings.left_image_1 | image_url: width: 600 }}" alt="Left Image 1" loading="lazy" width="" height="" /></div>
+       {% endif %}
+        {% if section.settings.left_image_2 != blank  %}
+        <div class="about-story__image img_2"><img src="{{ section.settings.left_image_2 | image_url: width: 600 }}" alt="Left Image 2" loading="lazy" width="" height="" /></div>
+    {% endif %}  
+    </div>
+
+        <div class="about-story__content">
+        <div class="about-story__text-block">
+            {% if section.settings.main_heading != blank  %}
+            <h3 class="about-story__title h3">
+            {{ section.settings.main_heading }}
+            </h3>
+            {% endif %}
+            {% if section.settings.main_text != blank  %}
+            <p class="about-story__desc">
+            {{ section.settings.main_text }}
+            </p>
+            {% endif %}
+        </div>
+        </div>
+
+
+
+         <div class="about-story__images about-story__images--right">
+
+        <div class="about-story__top-imgs">
+        {% if section.settings.right_image_1 != blank  %}
+        <div class="imgbox1"><img src="{{ section.settings.right_image_1 | image_url: width: 600 }}" alt="Right Image 1" loading="lazy" width="" height="" /></div>
+      {% endif %}
+        {% if section.settings.right_image_2 != blank  %}
+        <div class="imgbox2"><img src="{{ section.settings.right_image_2 | image_url: width: 600 }}" alt="Right Image 2" loading="lazy"  width="" height="" /></div>
+       {% endif %}        
+        {% if section.settings.right_image_3 != blank  %}
+        <div class="imgbox3"><img src="{{ section.settings.right_image_3 | image_url: width: 600 }}" alt="Right Image 3" loading="lazy"  width="" height="" /></div>
+      {% endif %}
+      </div>
+        {% if section.settings.right_image_4 != blank  %}
+        <div class="imgbox4"><img src="{{ section.settings.right_image_4 | image_url: width: 600 }}" alt="Right Image 4" loading="lazy"  width="" height="" /></div>
+       {% endif %} 
+    </div>
+
+
+
+</div>
+
+
+{% if section.settings.right_image_5 != blank  %}
+        <div class="imgbox5">
+          <img src="{{ section.settings.right_image_5 | image_url: width: 700 }}" alt="Right Image 5" loading="lazy"  width="" height="" />
+         <div class="imgbox5_rte">
+
+<svg width="278" height="104" viewBox="0 0 278 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M192.206 55.2772C193.456 55.1098 196.003 56.6298 196.304 58.0066C189.456 74.6935 163.656 80.4135 156.749 59.8903C147.578 71.614 128.903 70.8342 131.207 52.5268C122.843 46.4186 119.648 53.9975 113.523 58.5153C103.26 66.0789 87.6953 75.7285 75.0895 68.3654C67.5125 63.9389 70.2493 55.9163 67.6794 48.8882C73.8898 44.0644 76.4566 33.8505 85.9245 34.7276C94.9934 35.5747 98.7796 41.5125 93.4016 49.4922C90.0796 54.4214 82.5005 54.6106 77.2839 55.0088C74.899 58.8238 77.4082 62.4846 81.4318 63.5081C92.1085 66.2284 109.138 53.7388 116.258 46.3574L116.779 44.9619C108.691 38.9576 110.707 23.97 122.385 24.1073C134.943 24.2589 134.346 35.9236 129.059 44.2684C134.203 46.3196 137.208 42.7161 141.747 41.653C151.018 46.0347 140.008 49.3453 138.838 52.4905C136.847 57.8271 138.929 61.6266 145.105 60.8661C148.571 60.4399 154.686 53.9291 156.008 50.7315C157.251 47.7302 157.867 34.8949 163.268 35.4171C168.668 35.9393 163.633 46.4495 163.261 49.4745C162.346 56.898 165.6 66.6639 174.544 66.203C182.846 65.7799 191.156 55.4446 192.204 55.3071L192.206 55.2772ZM125.891 32.2239C123.451 26.9846 114.999 35.3702 121.089 39.5016C123.938 41.3773 126.108 32.6854 125.891 32.2239ZM89.3705 42.4507C87.6966 38.111 78.3451 44.4689 78.4676 48.4C81.192 49.178 90.6109 45.6571 89.3705 42.4507Z" fill="#DE3725"/>
+<path d="M55.9212 28.7927C56.0658 29.3006 54.8309 32.1521 54.2505 32.5434C53.6701 32.9347 43.5283 31.3228 40.1919 31.5654C32.4943 32.1191 18.4459 36.5083 14.121 43.2594C9.31842 50.7474 6.8676 60.6467 14.6277 67.0049C24.8401 75.3689 43.7373 64.3651 51.6695 56.5641C55.3881 52.9064 58.0233 45.7098 63.347 46.168C70.7921 49.4365 54.3344 64.6883 50.9363 67.3508C36.6753 78.548 8.92537 84.6105 2.61553 61.7743C-4.68981 35.2435 35.667 15.4375 55.9212 28.7927Z" fill="#DE3725"/>
+<path d="M236.955 34.1403C236.272 34.5865 228.316 31.1221 221.433 35.7819C206.725 45.725 206.194 85.2984 181.375 96.1943C175.579 98.7462 160.663 100.098 161.063 90.9465C169.043 89.5559 173.782 92.4879 181.334 87.6615C203.112 73.7388 201.656 30.0603 226.066 26.4931C231.614 25.681 242.359 30.6275 236.955 34.1503L236.955 34.1403Z" fill="#DE3725"/>
+<path d="M277.32 14.9754C279.383 18.1431 266.651 35.3748 264.073 38.8396C256.523 49.0028 242.72 65.2193 229.501 66.8468C203.437 70.0604 217.724 34.674 232.463 40.4323C235.625 41.6629 236.765 43.082 236.071 46.5314C234.309 55.2739 222.443 56.6991 221.871 57.9119C220.147 61.5198 231.503 59.8987 233.157 59.271C244.284 55.0251 260.239 34.8418 266.851 24.8415C268.616 22.1869 271.891 13.4205 274.036 13.5685C274.884 13.6312 276.93 14.375 277.33 14.9759L277.32 14.9754ZM230.715 45.7211C227.115 44.038 225.055 48.7704 222.673 50.5329C223.534 52.9192 231.013 46.5672 230.715 45.7211Z" fill="#DE3725"/>
+<path d="M167.598 26.3834C163.845 28.928 159.618 20.2144 166.053 19.2868C170.622 18.6257 169.784 24.9115 167.598 26.3834Z" fill="#DE3725"/>
+</svg>
+
+
+         <h3>{{ section.settings.right_title_5 }}</h3>
+         {{ section.settings.right_text_5 }}
+        </div>
+        </div>
+       {% endif %}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Story Third",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image_1",
+      "label": "Left Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image_2",
+      "label": "Left Image 2"
+    },
+    
+    {
+      "type": "textarea",
+      "id": "main_heading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "main_text",
+      "label": "Main Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_1",
+      "label": "Right Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_2",
+      "label": "Right Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_3",
+      "label": "Right Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_4",
+      "label": "Right Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_5",
+      "label": "Right Image 5"
+    },
+    {
+      "type": "text",
+      "id": "right_title_5",
+      "label": "Right Title"
+    },
+    {
+      "type": "richtext",
+      "id": "right_text_5",
+      "label": "Right Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Story Third"
+    }
+  ]
+}
+{% endschema %}

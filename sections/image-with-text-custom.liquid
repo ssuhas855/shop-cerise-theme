@@ -1,0 +1,65 @@
+
+
+<div class="image-with-text image_position_{{ section.settings.image_position }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+     {% if section.settings.image != blank  %}
+  <div class="image_box">    
+      <picture>
+  <!-- Mobile image (for screens 767px and below) -->
+  <source
+    media="(max-width: 767px)"
+    srcset="{{ section.settings.mobile_image | image_url: width: 750 }}">
+
+  <!-- Default (desktop) image -->
+  {{
+    section.settings.image
+    | image_url: width: 1500
+    | image_tag:
+        sizes: '(max-width: 767px) 100vw, 1500px',
+        widths: '352, 750, 1200, 1500',
+        fetchpriority: fetch_priority
+  }}
+</picture>
+
+
+  </div>
+  {% endif %}
+  <div class="ret_text">
+      <div class="ret_text_wrapper">
+      {% if section.settings.heading != blank %}
+    <h2>{{ section.settings.heading }}</h2>
+     {% endif %}
+      {% if section.settings.text != blank  %}
+    <div class="infotext">{{ section.settings.text }}</div>
+      {% endif %}
+    {% if section.settings.button_link != blank  %}
+      <a href="{{ section.settings.button_link }}" class="button button--primary">{{ section.settings.button_label }}</a>
+    {% endif %}
+     </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Custom Image with Text",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    {
+  "type": "image_picker",
+  "id": "mobile_image",
+  "label": "Mobile Image"
+},
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Your Heading Here" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Your text goes here.</p>" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Learn more" },
+    { "type": "select", "id": "image_position", "label": "Image position", "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    }
+  ],
+  "presets": [{ "name": "Custom Image with Text" }]
+}
+{% endschema %}

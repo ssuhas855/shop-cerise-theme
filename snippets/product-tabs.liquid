@@ -1,0 +1,67 @@
+{% comment %}
+  Product Tabs from metafields:
+  - Tab title first → product.metafields.custom.tab_title_first
+  - Tab content first → product.metafields.custom.tab_content_first
+  (up to fifth)
+{% endcomment %}
+
+<div class="product-tabs">
+  <div class="tab-buttons">
+    {% assign tabs = '' %}
+
+    {% if product.metafields.custom.tab_title_firtst  %}
+      <button class="tab-button active" data-tab="tab-1">{{ product.metafields.custom.tab_title_firtst | metafield_tag }}</button>
+    {% endif %}
+    {% if product.metafields.custom.tab_title_second %}
+      <button class="tab-button" data-tab="tab-2">{{ product.metafields.custom.tab_title_second | metafield_tag }}</button>
+    {% endif %}
+    {% if product.metafields.custom.tab_title_third %}
+      <button class="tab-button" data-tab="tab-3">{{ product.metafields.custom.tab_title_third | metafield_tag }}</button>
+    {% endif %}
+    {% if product.metafields.custom.tab_title_fourth %}
+      <button class="tab-button" data-tab="tab-4">{{ product.metafields.custom.tab_title_fourth | metafield_tag }}</button>
+    {% endif %}
+    {% if product.metafields.custom.tab_title_fifth %}
+      <button class="tab-button" data-tab="tab-5">{{ product.metafields.custom.tab_title_fifth | metafield_tag }}</button>
+    {% endif %}
+  </div>
+
+  {% if product.metafields.custom.tab_content_first %}
+    <div class="tab-content active" id="tab-1">{{ product.metafields.custom.tab_content_first | metafield_tag }}</div>
+  {% endif %}
+  {% if product.metafields.custom.tab_content_second %}
+    <div class="tab-content" id="tab-2">{{ product.metafields.custom.tab_content_second | metafield_tag }}</div>
+  {% endif %}
+  {% if product.metafields.custom.tab_content_third %}
+    <div class="tab-content" id="tab-3">{{ product.metafields.custom.tab_content_third | metafield_tag }}</div>
+  {% endif %}
+  {% if product.metafields.custom.tab_content_fourth %}
+    <div class="tab-content" id="tab-4">{{ product.metafields.custom.tab_content_fourth | metafield_tag }}</div>
+  {% endif %}
+  {% if product.metafields.custom.tab_content_fifth %}
+    <div class="tab-content" id="tab-5">{{ product.metafields.custom.tab_content_fifth | metafield_tag }}</div>
+  {% endif %}
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.tab;
+
+      // Remove active classes
+      tabButtons.forEach((btn) => btn.classList.remove('active'));
+      tabContents.forEach((content) => content.classList.remove('active'));
+
+      // Activate clicked tab
+      button.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+});
+
+</script>

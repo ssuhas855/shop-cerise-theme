@@ -1,0 +1,206 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_custom_D6Q3Jc": {
+      "type": "image-with-text-custom",
+      "name": "Custom Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/hero.webp",
+        "mobile_image": "shopify://shop_images/hero_mo.webp",
+        "heading": "",
+        "text": "<h3>PORTA works hand in hand with designers and makers from all over Europe to bring you products that are steeped in tradition while also updated for the contemporary eye.</h3>",
+        "button_link": "",
+        "button_label": "",
+        "image_position": "left"
+      }
+    },
+    "featured-collection-0": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "housecoats",
+        "products_to_show": 2,
+        "title": "Housecoats",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 2,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "featured_collection_DPjRxk": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "ceramics",
+        "products_to_show": 18,
+        "title": "CERAMICS",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 2,
+        "enable_desktop_slider": true,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_swiper_MJ4gnV": {
+      "type": "featured-collection-swiper",
+      "name": "Featured Collection (Swiper)",
+      "settings": {
+        "collection": "ceramics",
+        "products_to_show": 4,
+        "title": "CERAMICS",
+        "description": "",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_view_all": false,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "cerise_textiles_w6jBwM": {
+      "type": "cerise-textiles",
+      "blocks": {
+        "product_rfzxe3": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-2"
+          }
+        },
+        "product_rNmtkY": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-3"
+          }
+        },
+        "product_FhfhTy": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-4"
+          }
+        },
+        "product_zXdT9Q": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-5"
+          }
+        },
+        "product_cEUNqK": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-6"
+          }
+        },
+        "product_DhpxAd": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-7"
+          }
+        },
+        "product_hKLp9b": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-7"
+          }
+        },
+        "product_DPcJfC": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-copy-1"
+          }
+        },
+        "product_WzaYrn": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-7"
+          }
+        }
+      },
+      "block_order": [
+        "product_rfzxe3",
+        "product_rNmtkY",
+        "product_FhfhTy",
+        "product_zXdT9Q",
+        "product_cEUNqK",
+        "product_DhpxAd",
+        "product_hKLp9b",
+        "product_DPcJfC",
+        "product_WzaYrn"
+      ],
+      "name": "Cerise Textiles Slider",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "section_heading": "TEXTILES",
+        "info_text": "Some sort of text here about Cerise and how we source things.",
+        "background_color": "#5e0945"
+      }
+    },
+    "about_cerise_7iUWJV": {
+      "type": "about-cerise",
+      "name": "About Cerise",
+      "settings": {
+        "color_scheme": "",
+        "title": "About Cerise",
+        "logo-svg": "<svg width=\"211\" height=\"79\" viewbox=\"0 0 211 79\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M145.413 41.82C146.359 41.6933 148.286 42.8433 148.514 43.885C143.333 56.5094 123.814 60.8369 118.589 45.3101C111.65 54.1796 97.5221 53.5896 99.2647 39.7392C92.9373 35.118 90.5201 40.8519 85.8863 44.2698C78.1216 49.992 66.3461 57.2924 56.8092 51.7219C51.0768 48.373 53.1473 42.3035 51.2031 36.9864C55.9015 33.3369 57.8434 25.6096 65.0063 26.2732C71.8674 26.914 74.7319 31.4063 70.6632 37.4434C68.1499 41.1726 62.4159 41.3157 58.4693 41.617C56.665 44.5032 58.5633 47.2727 61.6074 48.0471C69.6849 50.1051 82.5685 40.6561 87.9553 35.0718L88.3493 34.0159C82.2301 29.4734 83.7553 18.1345 92.5902 18.2384C102.091 18.3531 101.639 27.1781 97.64 33.4913C101.531 35.0431 103.805 32.3169 107.239 31.5126C114.253 34.8276 105.923 37.3322 105.038 39.7117C103.532 43.7491 105.107 46.6236 109.779 46.0483C112.402 45.7258 117.028 40.8001 118.028 38.381C118.968 36.1103 119.435 26.3998 123.52 26.7948C127.606 27.1899 123.797 35.1414 123.515 37.43C122.823 43.0462 125.285 50.4346 132.051 50.0859C138.332 49.7658 144.619 41.9466 145.412 41.8426L145.413 41.82ZM95.2429 24.379C93.3972 20.4152 87.0026 26.7594 91.61 29.885C93.7657 31.304 95.4072 24.7281 95.2429 24.379ZM67.6135 32.1161C66.3471 28.8329 59.2722 33.643 59.3649 36.6171C61.426 37.2056 68.5519 34.5419 67.6135 32.1161Z\" fill=\"#F7DAC7\"></path>\n<path d=\"M42.3073 21.7829C42.4167 22.1672 41.4824 24.3245 41.0433 24.6205C40.6042 24.9166 32.9314 23.6971 30.4073 23.8806C24.5837 24.2995 13.9553 27.6202 10.6833 32.7277C7.04995 38.3928 5.19579 45.8821 11.0667 50.6924C18.7929 57.0202 33.0895 48.6952 39.0907 42.7933C41.904 40.0261 43.8976 34.5815 47.9253 34.9282C53.5579 37.401 41.1068 48.9398 38.5359 50.9541C27.7468 59.4253 6.75259 64.0119 1.97888 46.7352C-3.54797 26.6633 26.984 11.679 42.3073 21.7829Z\" fill=\"#F7DAC7\"></path>\n<path d=\"M179.269 25.8288C178.752 26.1663 172.733 23.5454 167.525 27.0708C156.398 34.5932 155.996 64.5324 137.219 72.7758C132.835 74.7063 121.549 75.729 121.852 68.8055C127.89 67.7535 131.475 69.9716 137.188 66.3202C153.664 55.787 152.563 22.7421 171.03 20.0433C175.228 19.4289 183.357 23.1712 179.268 25.8363L179.269 25.8288Z\" fill=\"#F7DAC7\"></path>\n<path d=\"M209.806 11.3296C211.367 13.7261 201.735 26.7627 199.785 29.384C194.072 37.073 183.63 49.3417 173.629 50.5729C153.91 53.0042 164.719 26.2326 175.87 30.589C178.262 31.52 179.125 32.5936 178.6 35.2033C177.267 41.8174 168.289 42.8956 167.857 43.8132C166.553 46.5427 175.144 45.3163 176.395 44.8414C184.813 41.6292 196.884 26.3595 201.886 18.7938C203.222 16.7855 205.699 10.1532 207.322 10.2652C207.964 10.3127 209.511 10.8754 209.814 11.33L209.806 11.3296ZM174.548 34.5903C171.824 33.3169 170.265 36.8972 168.463 38.2306C169.115 40.036 174.773 35.2303 174.548 34.5903Z\" fill=\"#F7DAC7\"></path>\n<path d=\"M126.796 19.9603C123.957 21.8854 120.759 15.2931 125.627 14.5913C129.084 14.0911 128.45 18.8467 126.796 19.9603Z\" fill=\"#F7DAC7\"></path>\n</svg>",
+        "text": "<p>Two forever friends inspired by color, pattern, and craft. </p><p>Turning our travels and discoveries into pieces you can enjoy every day.</p>",
+        "image_left_top": "shopify://shop_images/about1.webp",
+        "image_left_bottom": "shopify://shop_images/about2.webp",
+        "image_right_top": "shopify://shop_images/about3.webp",
+        "image_right_bottom": "shopify://shop_images/about4.webp",
+        "link": "#",
+        "link_text": "Read Our Story",
+        "background_color": "#7b5b27"
+      }
+    }
+  },
+  "order": [
+    "image_with_text_custom_D6Q3Jc",
+    "featured-collection-0",
+    "featured_collection_DPjRxk",
+    "featured_collection_swiper_MJ4gnV",
+    "cerise_textiles_w6jBwM",
+    "about_cerise_7iUWJV"
+  ]
+}

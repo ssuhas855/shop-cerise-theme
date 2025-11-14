@@ -1,0 +1,128 @@
+
+
+<section class="cerise-textiles color-{{ section.settings.color_scheme }} gradient {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="cerise-textiles__inner">
+    <div class="cerise-textiles__header">
+      <h5 class="cerise-textiles__title h5">{{ section.settings.section_heading }}</h5>
+    </div>
+
+    <div class="cerise-textiles__content">
+      <!-- Product Slider -->
+      <div class="cerise-textiles__slider swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.product] %}
+            {% if product %}
+              <div class="swiper-slide cerise-textiles__item" {{ block.shopify_attributes }}>
+                
+                 {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
+              {% render 'card-product',
+                card_product:product,
+                show_vendor: section.settings.show_vendor,
+                media_aspect_ratio: section.settings.image_ratio,
+                image_shape: section.settings.image_shape,
+                lazy_load: false,
+                placeholder_image: placeholder_image
+              %}
+ 
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="swiper-btn">
+        <div class="swiper-button-prev"><svg width="91" height="19" viewBox="0 0 91 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="90.4546" y1="9.4455" x2="14.7623" y2="9.4455" stroke="#F7DAC7"/>
+<path d="M1 9.28952L14.9343 1.24456L14.9343 17.3345L1 9.28952Z" stroke="#F7DAC7"/>
+</svg>
+</div>
+        <div class="swiper-button-next">
+           <svg width="91" height="19" viewBox="0 0 91 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="9.1333" x2="75.6924" y2="9.1333" stroke="#F7DAC7"/>
+<path d="M89.4546 9.28928L75.5203 17.3342L75.5204 1.24431L89.4546 9.28928Z" stroke="#F7DAC7"/>
+</svg>
+
+        </div>
+        </div>
+      </div>
+
+      <!-- Right-hand Text -->
+      <div class="cerise-textiles__text">
+        <h3>{{ section.settings.info_text }}</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  new Swiper('.cerise-textiles__slider', {
+    slidesPerView: 2,
+    grid: { rows: 2 },
+    spaceBetween: 20,
+    allowTouchMove: false,   // 👈 disables dragging
+      simulateTouch: false,    // 👈 disables mouse dragging
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: { slidesPerView: 2, grid: { rows: 2 } },
+      480: { slidesPerView: 1, grid: { rows: 1 } }
+    }
+  });
+});
+</script>
+
+
+{% schema %}
+{
+  "name": "Cerise Textiles Slider",
+  "settings": [
+        {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    }, 
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading",
+      "default": "TEXTILES"
+    },
+    {
+      "type": "textarea",
+      "id": "info_text",
+      "label": "Right-hand text",
+      "default": "Some sort of text here about Cerise and how we source things."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#5E0945"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cerise Textiles Slider",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

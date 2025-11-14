@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'PP Editorial Old';
+    src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/PPEditorialOld-Regular.eot');
+    src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/PPEditorialOld-Regular.eot?#iefix') format('embedded-opentype'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/PPEditorialOld-Regular.woff2') format('woff2'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/PPEditorialOld-Regular.woff') format('woff'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/PPEditorialOld-Regular.ttf') format('truetype'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/PPEditorialOld-Regular.svg#PPEditorialOld-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GT America';
+    src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Regular.eot');
+    src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Regular.eot?#iefix') format('embedded-opentype'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Regular.woff2') format('woff2'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Regular.woff') format('woff'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Regular.ttf') format('truetype'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Regular.svg#GTAmerica-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GT America';
+    src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Bold.eot');
+    src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Bold.eot?#iefix') format('embedded-opentype'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Bold.woff2') format('woff2'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Bold.woff') format('woff'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Bold.ttf') format('truetype'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/GTAmerica-Bold.svg#GTAmerica-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Adieu';
+    src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/Adieu-Regular.eot');
+    src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/Adieu-Regular.eot?#iefix') format('embedded-opentype'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/Adieu-Regular.woff2') format('woff2'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/Adieu-Regular.woff') format('woff'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/Adieu-Regular.ttf') format('truetype'),
+        url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/Adieu-Regular.svg#Adieu-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-body-family: 'GT America';
+    --font-body-style: normal;
+    --font-body-weight: 400;
+    --font-body-weight-bold: 700;
+    --font-heading-family: 'PP Editorial Old';
+    --font-heading-style: normal;
+    --font-heading-weight: 400;
+     --font-nav-family: 'GT America';
+     --font-nav-weight: bold;
+     --font-btn-family: 'Adieu';
+    --font-btn-style: normal;
+     --font-btn-weight: 400;
+}
+.link {
+	position: relative;
+}
+.link::after {
+	position: absolute;
+    bottom:0;
+    left:0;
+    content:'';
+    width:0;
+    height:2px;
+    background: currentColor;
+   transition: width 0.2s ease-in-out;
+}
+.link:hover::after{
+    width:100%;
+}
+.predictive-search__item.predictive-search__item--term::after,
+.predictive-search__item.link::after,
+.header__heading-link.link::after,
+.modal__close-button.link::after {
+	display: none;
+}
+.button, .shopify-challenge__button, .customer button {
+	font-family: var(--font-btn-family);
+	font-style: var(--font-btn-style);
+	font-weight: var(--font-btn-weight);
+	text-transform: uppercase;
+	font-size: 19px;
+	opacity: 1;
+	transition: opacity .2s ease-in-out;
+	line-height: 30px;
+	letter-spacing: normal;
+	padding-top: 0px;
+	max-width: none;
+	width: 100%;
+	border-radius: 0;
+	position: relative;
+    min-height:68px;
+    transition: background 0.2s ease, color 0.2s ease;
+    font-family: var(--font-nav-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-nav-weight);
+    
+}
+.button::after, .shopify-challenge__button::after, .customer button::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	border: 1px solid;
+	border-radius: 4px;
+	content: '';
+	transform: translate(-50%, -50%);
+    transition: border 0.2s ease, color 0.2s ease;
+}
+#accept-cookies{
+    font-family: var(--font-nav-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-nav-weight);
+  letter-spacing:1.7px;
+  font-size:12px;
+  text-transform:uppercase;
+}
+
+.button:hover,
+.shopify-challenge__button:hover,
+.customer button:hover{
+    color: rgba(var(--color-button),var(--alpha-button-background));
+    background-color: rgb(var(--color-button-text));
+    box-shadow: none!important;
+}
+.button::before,
+.shopify-challenge__button::before,
+.customer button::before{
+    display:none;
+}
+
+.button:not([disabled]):hover::after, .shopify-challenge__button:hover::after, .customer button:hover::after, .shopify-payment-button__button--unbranded:hover::after {
+	 box-shadow: none!important;
+}
+h5.title {
+    text-transform: uppercase;
+    font-family: var(--font-nav-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-nav-weight);
+    letter-spacing: 1.7px;
+    font-size: 12px;
+}
+h5.title.h2 {
+	font-size: 12px;
+}
+.slider-mobile-gutter.page-width.page-width-desktop {
+	padding: 0;
+	max-width: 1146px;
+}
+.grid {
+	column-gap: 20px;
+	row-gap: 20px;
+}
+h3, .h3 {
+	font-size: 25px;
+	line-height: 30px;
+}
+h5, .h5 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 12px;
+    text-transform: uppercase;
+    font-family: var(--font-nav-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-nav-weight);
+    letter-spacing: 1.7px;
+    font-size: 12px;
+}
+.hide {
+	display: none!important;
+}
+h6 {
+	color: currentColor;
+	font-size: 12px;
+	letter-spacing: 0;
+	margin: 0 0 13px;
+}

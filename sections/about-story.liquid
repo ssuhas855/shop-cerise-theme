@@ -1,0 +1,118 @@
+<section class="about-story">
+  <div class="about-story__inner page-width">
+    <div class="about-story__grid">
+
+      <!-- Left Images -->
+      <div class="about-story_row">
+       <div class="about-story__images about-story__images--left">
+        {% if section.settings.left_image_1 != blank  %}
+        <div class="about-story__image img_1"><img src="{{ section.settings.left_image_1 | image_url: width: 600 }}" alt="Left Image 1" loading="lazy" width="" height="" /></div>
+       {% endif %}
+        {% if section.settings.left_image_2 != blank  %}
+        <div class="about-story__image img_2"><img src="{{ section.settings.left_image_2 | image_url: width: 600 }}" alt="Left Image 2" loading="lazy" width="" height="" /></div>
+    {% endif %}  
+    </div>
+
+        <div class="about-story__content">
+        <div class="about-story__text-block">
+            {% if section.settings.main_heading != blank  %}
+            <h3 class="about-story__title h3">
+            {{ section.settings.main_heading }}
+            </h3>
+            {% endif %}
+            {% if section.settings.main_text != blank  %}
+            <p class="about-story__desc">
+            {{ section.settings.main_text }}
+            </p>
+            {% endif %}
+        </div>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+
+<div class="about-story_row right_img">
+
+      <div class="about-story__content">        
+        <div class="about-story__text-block">
+            {% if section.settings.main_heading1 != blank  %}
+          <h3 class="about-story__title h3">
+            {{ section.settings.main_heading1 }}
+            </h3>
+            {% endif %}
+            {% if section.settings.main_text2 != blank  %}
+            <p class="about-story__desc">
+            {{ section.settings.main_text2 }}
+            </p>
+            {% endif %}
+        </div>
+      </div>
+
+      <!-- Right Images -->
+      <div class="about-story__images about-story__images--right">
+        {% if section.settings.right_image_1 != blank  %}
+        <div class="about-story__image img_1"><img src="{{ section.settings.right_image_1 | image_url: width: 600 }}" alt="Right Image 1" loading="lazy" width="" height="" /></div>
+      {% endif %}
+        {% if section.settings.right_image_2 != blank  %}
+        <div class="about-story__image img_2"><img src="{{ section.settings.right_image_2 | image_url: width: 600 }}" alt="Right Image 2" loading="lazy" width="" height="" /></div>
+       {% endif %} 
+    </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Story",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image_1",
+      "label": "Left Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image_2",
+      "label": "Left Image 2"
+    },
+    
+    {
+      "type": "textarea",
+      "id": "main_heading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "main_text",
+      "label": "Main Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_1",
+      "label": "Right Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_2",
+      "label": "Right Image 2"
+    },
+    {
+      "type": "textarea",
+      "id": "main_heading1",
+      "label": "Main Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "main_text2",
+      "label": "Main Text"
+    },
+  ],
+  "presets": [
+    {
+      "name": "About Story"
+    }
+  ]
+}
+{% endschema %}

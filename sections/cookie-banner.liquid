@@ -1,0 +1,88 @@
+
+<div id="cookie-banner" class="cookie-banner color-{{ section.settings.color_scheme }} gradient">
+  <p>
+    {{ section.settings.cookie_text }}
+    <a href="{{ section.settings.policy_link }}" target="_blank">
+      {{ section.settings.link_text }}
+    </a>
+  </p>
+  <button id="accept-cookies" class="button button--primary">{{ section.settings.button_label }}</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+
+  // Helper to get cookie value
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
+  // Helper to set cookie for 365 days
+  function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  // Show banner with fade-in
+  if (!getCookie("cookiesAccepted")) {
+    setTimeout(() => {
+      banner.classList.add("show");
+    }, 300); // small delay for smoother entry
+  }
+
+  // When accepted, fade-out then hide
+  acceptBtn.addEventListener("click", function() {
+    banner.classList.remove("show");
+    banner.classList.add("hide");
+    setCookie("cookiesAccepted", "true", 365);
+
+    // Optional: fully remove from DOM after fade-out
+    setTimeout(() => {
+      banner.style.display = "none";
+    }, 600);
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Cookie Banner",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    },  
+    {
+      "type": "textarea",
+      "id": "cookie_text",
+      "label": "Cookie message",
+      "default": "We use cookies to give you the best experience on our website."
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Privacy link text",
+      "default": "Privacy Policy"
+    },
+    {
+      "type": "url",
+      "id": "policy_link",
+      "label": "Privacy Policy link"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button text",
+      "default": "Accept"
+    }    
+  ]
+}
+{% endschema %}

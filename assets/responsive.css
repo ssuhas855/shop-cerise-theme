@@ -1,0 +1,866 @@
+@media(max-width:1499px){
+.header__inline-menu .list-menu--inline,
+.header__icons {
+	gap: 15px;
+}
+}
+/* END 1499px */
+
+@media(max-width:1399px){
+.logo svg {
+	height: auto;
+	width: 240px;
+}
+.header__inline-menu .list-menu--inline,
+.header__icons {
+	gap: 11px;
+}
+.about-cerise__content {
+	margin-left: 8%;
+}
+}
+/* END 1399px */
+
+
+@media(max-width:1299px){
+.slider-mobile-gutter.page-width.page-width-desktop {	
+	max-width: 860px;
+}
+div.cerise-textiles__text {
+	margin-bottom: 200px;
+}
+.about-cerise__image.about-cerise__image--top {
+	max-width: 295px;
+}
+.about-cerise__image.about-cerise__image--bottom {
+	max-width: 248px;
+}
+.about-cerise__images-left, .about-cerise__images-right {
+	width: 29%;
+}
+.about-cerise__images-right {
+	width: 29%;
+}
+.about-cerise__images-right .about-cerise__image.about-cerise__image--bottom {
+	max-width: 144px;
+}
+.about-cerise__images-right .about-cerise__image.about-cerise__image--top {
+	max-width: 254px;
+	padding-bottom: 66px;
+}
+.about-cerise__content {
+	margin-left: 4%;
+}
+#product-grid .grid__item:nth-child(5n+1), #product-grid .grid__item:nth-child(5n+2) {	
+	max-width: 416px;
+}
+.product__title h1 {
+	font-size: 40px;
+	margin-top: 30px;
+}
+.product-form__input .form__label {
+	font-size: 16px;
+
+}
+.swatch {
+	width: 40px;
+}
+.swatch-input__label i {
+	width: 52px;
+	height: 52px;
+	top: -6px;
+	left: -6px;
+}
+.var-input__label {
+	padding: 0 15px;
+}
+.input__Size .variant_box {	
+	gap: 15px;
+}
+.button, .shopify-challenge__button, .customer button {
+	font-size: 17px;
+}
+.template-product .richtext-section h3 {
+	font-size: 36px;
+	line-height: 46px;
+}
+.product-form__submit > span .price {
+font-size: 100%;
+}
+.cart-item__details {
+	width: 40rem;
+}
+.about-story__image {	
+	max-width: 330px;
+}
+.about-story__image.img_2 {
+	max-width: 395px;
+}
+.about-story__images--right .about-story__image.img_1 {
+	max-width: 150px;	
+}
+.about-story__images--right .about-story__image.img_2 {
+	top: 53px;
+}
+.about-story_row.right_img {
+	margin-top: -120px;
+}
+#about-story_third .about-story__image.img_1 {
+	max-width: 204px;
+}
+#about-story_third .about-story__image.img_2 {
+	max-width: 275px;
+	top: 60px;
+}
+.imgbox3 {
+	max-width: 118px;
+}
+.imgbox1 {
+	max-width: 210px;
+}
+.imgbox2 {
+	max-width: 208px;
+}
+.about-story__top-imgs {
+	margin-bottom: 98px;
+}
+.imgbox4 {
+	max-width: 260px;	
+}
+.imgbox5 {
+	max-width: 558px;
+}
+#about-story_third {	
+	margin-top: -7px;
+}
+}
+/* END 1299px */
+
+
+@media(max-width:1199px){
+div.cart-count-bubble {
+	font-size: 13px;
+}
+.image_box {
+	width: 58%;
+}
+.ret_text {
+	width: 42%;
+}
+.ret_text_wrapper h3 {
+	font-size: 22px;
+}
+h3, .h3 {
+	font-size: 22px;
+}
+.cerise-textiles__text h3 {
+	font-size: 34px;
+	line-height: 42px;
+}
+.footer-block__details-content.footer-block-newsletter {	
+	padding-left: 50px;
+}
+.tab-button {
+	font-size: 11px;
+}
+.tab-buttons {
+	gap: 10px;
+
+}
+.contact.page-width.page-width--narrow {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.contact_info-rte {
+	max-width: 346px;
+}
+.faq_links {
+	max-width: 300px;
+	gap: 21px;
+}
+#faqs_body #MainContent {
+	padding: 51px 35px 0;
+}
+.faq_row {	
+	width: calc(100% - 300px);
+}
+.accordion-wrapper h5 {
+	padding: 40px 47px 20px;
+}
+.accordion-header {
+	padding: 16px 30px 16px 47px;
+}
+.accordion-text {
+	font-size: 16px;
+	line-height: 24px;
+}
+.accordion-content {
+	padding: 0 40px 0 50px;
+}
+.cart-item__details {
+	width: 40rem;
+}
+.about-story__image {
+	max-width: 250px;
+}
+.about-story__image.img_2 {
+	max-width: 295px;
+}
+.about-story__images--right .about-story__image.img_1 {
+	max-width: 120px;
+}
+.about-story__images--right .about-story__image.img_2 {
+  max-width: 194px;
+  top: 93px;
+}
+.about-story_row.right_img {
+	margin-top: -50px;
+}
+#about-story_second .about-story__images--left {
+	width: 60%;
+}
+#about-story_second .about-story__text-block {
+	max-width: 330px;
+	margin: 0 auto;
+}
+#about-story_third .about-story__image.img_1 {
+	max-width: 174px;
+}
+#about-story_third .about-story__image.img_2 {
+	max-width: 215px;
+	top: 50px;
+	left: 126px;
+}
+.about-story__top-imgs {
+	
+	margin-right: 16px;
+	margin-bottom: 78px;
+}
+.imgbox3 {
+	max-width: 98px;
+}
+.imgbox2 {
+	max-width: 158px;
+	margin-right: 67px;
+}
+.imgbox1 {
+	max-width: 170px;
+	left: -77px;
+  top: -59px;
+}
+.imgbox4 {
+	max-width: 180px;
+}
+#about-story_third .about-story__images {
+	width: 35%;
+}
+.imgbox5 {
+	max-width: 478px;
+}
+.about-story__text-block {	
+	max-width: 453px;
+}
+.imgbox5_rte svg {
+	height: auto;
+	width: 159px;
+}
+}
+/* END 1199px */
+
+
+@media(max-width:989px){
+.header__search, .header__icon--account {
+	display: none!important;
+}
+.logo svg {
+	height: auto;
+	width: 170px;
+}
+.header__heading {
+	margin-top: 20px;
+	margin-bottom: 7px;
+
+}
+.header__icon--menu {
+	position: absolute;
+	top: 32px;
+	left: 30px;
+}
+.slider-mobile-gutter.page-width.page-width-desktop {
+	max-width: 600px;
+}
+.card-wrapper .swiper-button-next2 {
+	right: 15px;
+}
+.card-wrapper .swiper-button-prev2 {
+	left: 15px;
+}
+
+.cerise-textiles__text h3 {
+	font-size: 26px;
+	line-height: 34px;
+	max-width: 270px;
+}
+div.cerise-textiles__text {
+	margin-bottom: 230px;
+}
+.swiper-button-next, .swiper-button-prev {
+	width: 70px;
+}
+.about-cerise {
+	padding: 61px 25px;
+}
+.about-cerise__image.about-cerise__image--top {
+	max-width: 145px;
+}
+.about-cerise__image.about-cerise__image--bottom {
+	max-width: 118px;
+}
+.about-cerise__images-right .about-cerise__image.about-cerise__image--top {
+	max-width: 144px;
+	padding-bottom: 46px;
+}
+.about-cerise__images-right .about-cerise__image.about-cerise__image--bottom {
+	max-width: 84px;
+}
+.about-cerise__images-left, .about-cerise__images-right {
+	width: 26%;
+}
+.about-cerise__logo svg {
+	width: 150px;
+	height: auto;
+}
+.about-cerise__content {
+	width: 34%;
+
+}
+.ret_text_wrapper h3, h3, .h3 {
+	font-size: 20px;
+	line-height: 26px;
+}
+.two_border.top_border {
+	margin-top: 15px;
+}
+.footer__content-top.page-width {
+	max-width: none;
+	padding: 0 25px;
+}
+.footer-block__heading {
+	font-size: 20px;
+}
+.footer-block__details-content.footer-block-newsletter {
+	padding-left: 20px;
+}
+.footer__content-bottom {
+	padding: 9px 25px;
+}
+.ret_text_wrapper {
+	padding: 0 25px;
+}
+.template-index #MainContent {
+	margin-top: -39px;
+}
+#product-grid .grid__item:nth-child(5n+1), #product-grid .grid__item:nth-child(5n+2) {
+	max-width: 35%;
+}
+.grid--2-col-tablet-down .grid__item {
+	width: calc(33.333% - var(--grid-desktop-horizontal-spacing) / 2);
+}
+.product__title h1 {
+	font-size: 30px;
+	margin-top: 20px;
+}
+.product__description.rte p {
+	line-height: 24px;
+	font-size: 16px;	
+}
+.product__info-container .product-form, .product__info-container .product__description, .product__info-container .icon-with-text {
+	margin: 1.5rem 0;
+}
+.product-form__input .form__label {
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.product-form__input--swatch {
+	flex-direction: column;
+	gap: 15px;
+}
+.variant_box {
+	gap: 15px;
+	justify-content: start;
+	width: 100%;
+}
+.var-input__label {
+	padding: 0 9px;
+}
+.input__Size .variant_box {
+	justify-content: start;
+	gap: 10px;
+}
+.var-input__label {
+	font-size: 12px;
+}
+.product-form__input .form__label {
+	padding: 0;
+}
+.visually_hidden.h5 {
+	font-size: 12px;
+}
+.button, .shopify-challenge__button, .customer button {
+	font-size: 14px;
+}
+.tab-content p {
+	font-size: 16px;
+	line-height: 24px;
+}
+.tab-buttons {
+	margin-bottom: 18px;
+}
+.template-product .rich-text__wrapper.rich-text__wrapper--left.page-width {
+	padding: 0 67px;
+}
+.template-product .richtext-section h3 {
+	font-size: 30px;
+	line-height: 40px;
+}
+.card__heading.h3{
+	font-size: 18px;
+    line-height: 22px;
+}
+product-recommendations .swiper-button-next, product-recommendations .swiper-button-prev {
+	width: 60px;
+	height: 19px;
+}
+.contact_info-rte p {
+	font-size: 16px;
+	line-height: 22px;
+	
+}
+.field__input {
+	font-size: 17px;
+}
+#contact_form-section {
+	padding-bottom: 100px;
+}
+#faqs_body #MainContent {
+	padding: 41px 25px 0;
+}
+.faq_links a {
+	font-size: 16px;
+}
+.faq_links {
+	max-width: 220px;
+	gap: 15px;
+}
+.faq_row {
+	width: calc(100% - 220px);
+}`
+.accordion-wrapper h5 {
+	padding: 40px 27px 20px;
+}
+.accordion-question.h3 {
+	font-size: 18px;
+}
+.accordion-header {
+	padding: 16px 20px 16px 27px;
+}
+.accordion-content {
+	padding: 0 20px 0 30px;
+}
+.accordion-wrapper h5 {
+	font-size: 13px;
+}
+.faq_note {
+	padding: 72px 25px 111px 25px;
+	text-align: center;
+}
+.page-section {
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-bottom: 65px;
+}
+.page-header {	
+	padding-bottom: 40px;
+	margin-bottom: 60px;
+}
+.page-width.page-wrapper {
+	padding: 0 20px;
+}
+.cart-item__details {
+	width: 30rem;
+}
+.page-width {
+	padding: 0 25px;
+}
+.cart-item > td + td {
+	padding-left: 2rem;
+}
+.cart-item__details {
+	width: 23rem;
+}
+#MainContent .cart-items .cart-item__quantity {
+	width: 57%;
+}
+.cart-item__totals.right.small-hide .price.price--end {
+	margin-top: 5px;
+}
+.cart-item cart-remove-button {
+	width: auto;
+	height: auto;
+	bottom: 14px;
+}
+cart-remove-button .button {
+	min-width: inherit;
+	min-height: inherit;
+	background: transparent !important;
+	margin-left:10px;
+}
+.tax-note {	
+	text-align: left;
+}
+.title-wrapper-with-link .title {
+	margin: 0;
+	font-size: 30px;
+}
+.title-wrapper-with-link a {
+	font-size: 14px;
+}
+cart-items .title-wrapper-with-link{
+	margin-bottom:0;
+}
+.footer_text {
+	font-size: 16px;
+	line-height: 24px;
+}
+.copyright_right ul li::before {
+	margin: 0 10px;
+}
+.about-story__image {
+	max-width: 200px;
+}
+.about-story__image.img_2 {
+	max-width: 245px;
+	left: 100px;
+}
+.about-story__text-block p {
+	line-height: 24px;
+	font-size: 16px;
+}
+.about-story__text-block {
+	max-width: 353px;
+}
+.right_img .about-story__text-block {
+	max-width: 370px;
+}
+.about-story_row.right_img {
+	margin-top: 0px;
+}
+#about-story_second {	
+	margin-top: 30px;
+}
+#about-story_second .about-story__text-block {
+	max-width: 240px;	
+}
+#about-story_second .about-story__content {
+	width: 39%;
+}
+#about-story_third .about-story__image.img_1 {
+	max-width: 144px;
+}
+#about-story_third .about-story__image.img_2 {
+	max-width: 165px;
+	left: 76px;
+}
+.imgbox2 {
+	max-width: 128px;
+	margin-right: 47px;
+}
+.imgbox3 {
+	max-width: 78px;
+}
+.imgbox4 {
+	max-width: 140px;
+}
+#about-story_third .about-story__content {
+	width: 36%;
+	margin-top: 80px;
+}
+.imgbox5 {
+	max-width: 428px;
+}
+.imgbox5_rte p {
+	max-width: 233px;
+	font-size: 14px;
+}
+}
+/* END 989px */
+
+@media(max-width:767px){
+p.announcement-bar__message {
+	padding: 10px 0;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+}
+.logo svg {
+	height: auto;
+	width: 140px;
+}
+.header__menu-item, .svgtext-wrapper {
+	letter-spacing: 1.2px;
+	font-size: 12px;
+}
+div.cart-count-bubble {
+	font-size: 11px;
+	margin-left: 6px;
+}
+.header:not(.drawer-menu).page-width {
+	padding: 0 20px;
+}
+.header__icon--menu {
+	left: 25px;
+	top: 24px;
+}
+.header__heading {
+	margin-top: 13px;
+	margin-bottom: 7px;
+}
+.image_box {
+	width: 100%;
+}
+.ret_text {
+	width: 100%;
+}
+.template-index #MainContent {
+	margin-top: 0px;
+}
+.collection__title.title-wrapper h5 {
+	margin-bottom: 30px;
+}
+.slider-mobile-gutter.page-width.page-width-desktop {	
+	padding: 0 15px;
+}
+.slider-mobile-gutter.page-width.page-width-desktop .grid {
+	column-gap: 10px;
+	row-gap: 10px;
+}
+.card-wrapper .swiper-button-next2 {
+	right: 10px;
+}
+.card-wrapper .swiper-button-next2 svg,
+.card-wrapper .swiper-button-prev2 svg{
+	height:auto;
+	width:9px;
+}
+.card-wrapper .swiper-button-prev2 {
+	left: 10px;
+}
+.h5.tag_h5 {
+	margin: -3px 0 -15px;
+	font-size: 11px;
+	letter-spacing: 1.2px;
+}
+.card-information {
+	padding-top: 0;
+}
+.swiper-button-next, .swiper-button-prev {
+	width: 50px;
+}
+.cerise-textiles__content {
+	flex-direction:column-reverse;
+}
+.cerise-textiles {
+	padding: 42px 20px 53px;
+}
+div.cerise-textiles__slider {
+	width: 100%;
+}
+div.cerise-textiles__text {
+	margin-bottom: 30px;
+	width: 100%;
+}
+.cerise-textiles__text h3 {
+	font-size: 26px;
+	line-height: 34px;
+	max-width: none;
+	right: 0;
+	float: left;
+	text-align: center;
+}
+.cerise-textiles__title.h5 {
+	margin-bottom: 35px;
+}
+.cerise-textiles__content .swiper-btn {
+	justify-content: center;
+	margin-top: 28px;
+}
+.about-cerise__images-left, .about-cerise__images-right {
+	width: 100%;
+}
+.about-cerise__images-left:first-child {
+	padding-top: 60px;
+}
+.about-cerise {
+	padding: 51px 20px;
+}
+.about-cerise__image.about-cerise__image--top {
+	max-width: 75%;
+}
+.about-cerise__image.about-cerise__image--bottom {
+	max-width: 80%;
+}
+.about-cerise__content {
+	width: 90%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+.about-cerise__images-right {
+	justify-content: center;
+	align-items: center;
+	padding-right: 70px;
+	max-width: 450px;
+}
+.about-cerise__images-right .about-cerise__image.about-cerise__image--top {
+	max-width: 95%;
+	padding-bottom: 46px;
+}
+.about-cerise__images-right .about-cerise__image.about-cerise__image--bottom {
+	max-width: 60%;
+}
+.footer__content-top.page-width {
+	max-width: none;
+	padding: 0 20px;
+}
+.footer__blocks-wrapper {
+	clear: both;
+	padding: 15px 0 35px;
+}
+.footer-block.grid__item.footer-block--menu {
+	width: 100%;
+	text-align: center;
+	padding: 18px 0 20px;
+	margin-bottom: 0;
+	margin: 0;
+}
+.footer-block__details-content {
+	margin-bottom: 4rem;
+	margin: 0 auto;
+	display: table;
+	text-align: center;
+}
+.footer-block__details-content .list-menu__item--link {
+	letter-spacing: 1.2px;
+	text-align: center;
+	margin: 0 auto;
+	display: table;
+}
+.footer-block__details-content.footer-block-newsletter {
+	padding-left: 0;
+}
+.footer-block:nth-child(4) {
+	width: 100%;
+	border-left: 0px solid currentColor;
+	padding: 27px 0 32px;
+	border-top: 1px solid;
+	float: left;
+	margin: 10px 0;
+}
+.two_border {
+	gap: 6px;
+}
+.footer__content-bottom {
+	padding: 9px 20px;
+	flex-direction: column-reverse;
+	gap: 5px;
+}
+.footer__content-bottom {
+	letter-spacing: 1.2px;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+.copyright_right ul li::before {
+	margin: 0 7px;
+}
+.section-sections--20637355704562__footer-padding {
+	padding-top: 55px;
+}
+.footer_text {
+	padding: 23px 0 34px;
+}
+.grid--2-col-tablet-down .grid__item {	
+	width:48.5% !important;
+	flex-grow: inherit;
+}
+#product-grid .grid__item:nth-child(5n+1), #product-grid .grid__item:nth-child(5n+2) {
+	max-width: none;
+}
+#product-grid .grid__item {
+	margin-bottom: 20px;
+}
+#product-grid{
+	column-gap: 10px;
+  row-gap: 10px;
+}
+.grid__item.product__media-wrapper {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+.product__info-wrapper.grid__item {
+	max-width: 100% !important;
+	width: 100% !important;	
+}
+.slider-counter.caption {
+	opacity: 1;
+	width: 25px;
+}
+.slider-button .svg-wrapper > svg {
+	height: auto;
+	width: 13px;
+}
+.product__title h1 {
+	font-size: 28px;
+	margin-top: 50px;
+}
+.template-product .rich-text__wrapper.rich-text__wrapper--left.page-width {
+	padding: 0 20px;
+	width: 100%;
+}
+.template-product .richtext-section h3 {
+	font-size: 26px;
+	line-height: 36px;
+	margin-bottom: 0;
+}
+.related-products__heading {
+	margin: 40px 0 40px;
+}
+.related-products.page-width {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 40px;
+}
+.drawer__inner {
+	width: 100%;
+	padding: 0 20px;
+	max-width: none;
+}
+.imgbox5_rte svg {
+	height: auto;
+	width: 139px;
+}
+#about-story_third .imgbox5_rte h3 {
+	letter-spacing: 0;
+	color: currentColor;
+	margin: 0;
+	padding: 0 40px;
+}
+.imgbox5_rte p {
+	line-height: 18px;
+}
+.imgbox5_rte {
+	top: 48%;
+}
+.imgbox5 {
+	margin: 20px auto 0;
+	left: -12px;
+}
+}
+/* END 767px */

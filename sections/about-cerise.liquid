@@ -1,0 +1,193 @@
+<section class="about-cerise color-{{ section.settings.color_scheme }} gradient">
+  <div class="about-cerise__container">
+    <div class="about-cerise__images-left {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {% if section.settings.image_left_top != blank %}
+        <div class="about-cerise__image about-cerise__image--top">
+            <picture>
+  <!-- Mobile image (for screens 767px and below) -->
+  <source
+    media="(max-width: 767px)"
+    srcset="{{ section.settings.image_left_top | image_url: width: 750 }}">
+
+  <!-- Default (desktop) image -->
+  {{
+    section.settings.image_left_top
+    | image_url: width: 1500
+    | image_tag:
+        sizes: '(max-width: 767px) 100vw, 1500px',
+        widths: '352, 750, 1200, 1500',
+        fetchpriority: fetch_priority
+  }}
+</picture>   
+
+    {% if section.settings.image_left_bottom != blank %}
+    <div class="about-cerise__image about-cerise__image--bottom">
+    <picture>
+    <!-- Mobile image (for screens 767px and below) -->
+    <source
+    media="(max-width: 767px)"
+    srcset="{{ section.settings.image_left_bottom | image_url: width: 750 }}">
+
+    <!-- Default (desktop) image -->
+    {{
+    section.settings.image_left_bottom
+    | image_url: width: 1500
+    | image_tag:
+    sizes: '(max-width: 767px) 100vw, 1500px',
+    widths: '352, 750, 1200, 1500',
+    fetchpriority: fetch_priority
+    }}
+    </picture>        
+    </div>
+    {% endif %}
+
+
+
+        </div>
+      {% endif %}
+     
+    </div>
+
+    <div class="about-cerise__content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {% if section.settings.title != blank %}
+      <h5 class="about-cerise__title">{{ section.settings.title }}</h5>
+            {% endif %}
+      {% if section.settings.logo-svg != blank %}
+            <div class="about-cerise__logo">{{ section.settings.logo-svg }}</div>
+                  {% endif %}
+            {% if section.settings.text != blank %}
+      <div class="about-cerise__text h3">{{ section.settings.text }}</div>
+            {% endif %}
+      {% if section.settings.link != blank %}
+        <a class="about-cerise__link h5" href="{{ section.settings.link }}">{{ section.settings.link_text }}</a>
+      {% endif %}
+    </div>
+
+    <div class="about-cerise__images-right {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {% if section.settings.image_right_top != blank %}
+        <div class="about-cerise__image about-cerise__image--top">
+            <picture>
+  <!-- Mobile image (for screens 767px and below) -->
+  <source
+    media="(max-width: 767px)"
+    srcset="{{ section.settings.image_right_top | image_url: width: 750 }}">
+
+  <!-- Default (desktop) image -->
+  {{
+    section.settings.image_right_top
+    | image_url: width: 1500
+    | image_tag:
+        sizes: '(max-width: 767px) 100vw, 1500px',
+        widths: '352, 750, 1200, 1500',
+        fetchpriority: fetch_priority
+  }}
+</picture>
+
+
+ {% if section.settings.image_right_bottom != blank %}
+        <div class="about-cerise__image about-cerise__image--bottom">
+
+<picture>
+<!-- Mobile image (for screens 767px and below) -->
+<source
+media="(max-width: 767px)"
+srcset="{{ section.settings.image_right_bottom | image_url: width: 750 }}">
+
+<!-- Default (desktop) image -->
+{{
+section.settings.image_right_bottom
+| image_url: width: 1500
+| image_tag:
+sizes: '(max-width: 767px) 100vw, 1500px',
+widths: '352, 750, 1200, 1500',
+fetchpriority: fetch_priority
+}}
+</picture>
+</div>
+{% endif %}
+
+
+          
+        </div>
+      {% endif %}
+     
+    </div>
+  </div>
+</section>
+
+
+
+
+{% schema %}
+{
+  "name": "About Cerise",
+  "settings": [
+            {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-5"
+    }, 
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "About Cerise"
+    },
+    {
+      "type": "html",
+      "id": "logo-svg",
+      "label": "Logo"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Description",
+      "default": "<p>Two forever friends with a love for handicrafts, textiles, pattern, and color. The best travel partners who just happen to <em>love shopping.</em></p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left_top",
+      "label": "Left Top Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left_bottom",
+      "label": "Left Bottom Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right_top",
+      "label": "Right Top Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right_bottom",
+      "label": "Right Bottom Image"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Read More Link"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Read Our Story"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#7b5b27"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Cerise",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
