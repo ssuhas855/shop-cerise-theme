@@ -1,6 +1,3 @@
-body{
-    background: green!IMPORTANT;
-}
 @font-face {
     font-family: 'PP Editorial Old';
     src: url('//cdn.shopify.com/s/files/1/0790/9068/0050/files/PPEditorialOld-Regular.eot');
@@ -187,4 +184,15 @@ h6 {
 	font-size: 12px;
 	letter-spacing: 0;
 	margin: 0 0 13px;
+}
+.large--hide{
+    display: none!important;
+}
+@media(max-width:767px){
+    .large--hide{
+    display: inherit!important;
+}
+.small--hide{
+    display: none!important;
+}
 }

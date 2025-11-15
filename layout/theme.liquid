@@ -336,7 +336,25 @@
  <div class="faq_wrapper">
  {% endif %}   
       {% if page.handle == 'faqs' %}
-        <div class="faq_links">
+
+<!-- Mobile Dropdown UL/LI -->
+<div class="faq_mobile_dropdown large--hide">
+  <div class="faq_dropdown_btn">
+    <span class="faq_dropdown_label h3">
+      {{ linklists.faqs-page-links.links.first.title }}
+    </span>
+    <span class="arrow">▼</span>
+  </div>
+
+  <ul class="faq_dropdown_list">
+    {% for link in linklists.faqs-page-links.links %}
+      <li data-val="{{ link.title | handle }}_faq" class="h3">{{ link.title }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+        <div class="faq_links small--hide">
             {%- for link in linklists.faqs-page-links.links -%}
               <a href="javascript:void(0)" class="h3{% if forloop.first %} active{%endif %}" data-val="{{ link.title | handle }}_faq">{{ link.title }}</a>
               {%- endfor -%}
@@ -361,6 +379,7 @@
     
 {% if page.handle == 'faqs' %} 
 <div class="faq_note">{{ page.content }}</div>
+
  {% endif %} 
 
 

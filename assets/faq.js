@@ -25,37 +25,76 @@ document.addEventListener("DOMContentLoaded", () => {
  
  
  
- // Handle left menu link clicks
-document.addEventListener("DOMContentLoaded", () => {
- 
-  const faqLinks = document.querySelectorAll(".faq_links a");
+ document.addEventListener("DOMContentLoaded", () => {
+
+  const faqLinks = document.querySelectorAll(".faq_links a"); // desktop
   const faqSections = document.querySelectorAll(".custom-accordion");
 
+  const dropdownBtn = document.querySelector(".faq_dropdown_btn");
+  const dropdownList = document.querySelector(".faq_dropdown_list");
+  const dropdownItems = document.querySelectorAll(".faq_dropdown_list li");
+  const dropdownLabel = document.querySelector(".faq_dropdown_label");
+
+  /* -------------------------
+     DESKTOP LEFT MENU LINKS
+  ---------------------------*/
   faqLinks.forEach(link => {
     link.addEventListener("click", () => {
-      // Remove 'active' class from all links
-      faqLinks.forEach(l => l.classList.remove("active"));
-      link.classList.add("active");
-
-      // Get data attribute from clicked link
-      const targetVal = link.getAttribute("data-val");
-
-      // Hide all FAQ sections
-      faqSections.forEach(section => {
-        section.style.display = "none";
-      });
-
-      // Show only the matching section
-      const targetSection = document.getElementById(targetVal);
-      if (targetSection) {
-        targetSection.style.display = "block";
-      }
+      handleFaqSwitch(link.getAttribute("data-val"), link.textContent);
     });
   });
 
-  // Show the first section by default
-  faqSections.forEach((section, index) => {
-    section.style.display = index === 0 ? "block" : "none";
+  /* -------------------------
+      MOBILE DROPDOWN BUTTON
+  ---------------------------*/
+  if (dropdownBtn) {
+    dropdownBtn.addEventListener("click", () => {
+      dropdownList.style.display =
+        dropdownList.style.display === "block" ? "none" : "block";
+    });
+  }
+
+  /* -------------------------
+       MOBILE DROPDOWN ITEMS
+  ---------------------------*/
+  dropdownItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const value = item.getAttribute("data-val");
+      const text = item.textContent;
+
+      // Update visible label
+      dropdownLabel.textContent = text;
+
+      // Close dropdown
+      dropdownList.style.display = "none";
+
+      // Switch FAQ section
+      handleFaqSwitch(value, text);
+    });
   });
+
+  /* -------------------------
+        FUNCTION: Switch Section
+  ---------------------------*/
+  function handleFaqSwitch(targetVal, labelText = null) {
+    // Update desktop active state
+    faqLinks.forEach(l => l.classList.remove("active"));
+    const matchingLink = document.querySelector(`.faq_links a[data-val="${targetVal}"]`);
+    if (matchingLink) matchingLink.classList.add("active");
+
+    // Show proper section
+    faqSections.forEach(section => {
+      section.style.display = section.id === targetVal ? "block" : "none";
+    });
+  }
+
+  /* -------------------------
+        SHOW FIRST SECTION BY DEFAULT
+  ---------------------------*/
+  if (faqSections.length > 0) {
+    const firstSection = faqSections[0];
+    firstSection.style.display = "block";
+  }
 });
+
 
