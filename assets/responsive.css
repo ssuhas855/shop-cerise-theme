@@ -618,6 +618,27 @@ cart-items .title-wrapper-with-link{
 .contact_info-rte {
 	max-width: 296px;
 }
+#MainContent .customer {
+	padding: 50px 30px 130px;
+}
+:is(.account, .order) h1 {
+	margin-bottom: 1rem;
+	font-size: 30px;
+}
+.customer > div:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.header__search {
+	display: inline-flex !important;
+}
+account-icon {
+	display: none!important;
+}
+.header--has-social .menu-drawer__utility-links {
+	padding: 2rem 2rem;
+}
 }
 /* END 989px */
 
@@ -1132,7 +1153,94 @@ cart-items .title-wrapper-with-link {
 .totals {
 	justify-content: space-between;	
 }
+.field__input, .customer .field input, .select__select, .customer select {
+	padding: 10px 20px !important;
+	min-height: 60px;
+	font-size: 16px;
+}
+.field__label, .customer .field label {
+	padding-top: 15px;
+}
+#MainContent .customer {
+	padding: 50px 10px 130px;
+}
+.header__search {
+	display: inline-flex !important;
+}
+div.cart-count-bubble {
+	font-size: 8px;
+	margin-left: -1px;
+	width: 20px;
+	height: 20px;
+	margin-top: 3px;
+	position: absolute;
+	right: -8px;
+	top: -5px;
+	left: auto;
+}
+.logo svg {
+	height: auto;
+	width: 130px;
+}
+.header__icon--menu .icon {
+	width: 15px;
+	height: 15px;
 
 }
-/* END 767px */
+#Search-In-Modal,
+#Search-In-Modal::placeholder {
+	font-size: 18px !important;
+}
+.search-modal__form {
+	max-width: 293px;
+	position: relative;
+}
+.search-modal__form .icon.icon-search {
+	top: 1px !important;
+}
+.search__button .icon {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+.search-modal__form .search__button.field__button {
+	top: -10px;
+}
+.header__icons {
+	gap: 5px;
+}
+.header__icon--search .svg-wrapper {
+	width: 21px;
+	height: auto;
+	margin-top: 3px;
+	margin-right: -7px;
+}
+.modal__close-button.link {
+	top: 21px;
+	right: 14px;
+}
+.icon.icon-cart {
+	height: auto;
+	padding: 0;
+	width: 33px;
+	margin-top: -3px;
+	margin-right: -4px;
+}
+.header__icon--cart {
+	margin-right: 0;
+}
+.section-header.animate {	
+	background: #fffcf6;
+}
+.template-search #product-grid .grid.product-grid {
+	gap: 1%;
+	align-items: start;
+}
+.template-search #product-grid .grid__item {
+	width: 49% !important;
+}
+.template-search #product-grid {
+	margin: 0px 0 0;
+}
+}
+/* END 767px */ 
 

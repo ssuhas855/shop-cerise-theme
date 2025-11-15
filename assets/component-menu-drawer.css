@@ -241,3 +241,10 @@ details[open].menu-opening > .menu-drawer__submenu {
     transition: none !important;
   }
 }
+
+.menu-drawer__menu-item {
+	padding: 1.1rem 2rem;
+	font-size: 14px;
+	letter-spacing: 1.7px;
+	font-weight: 600;
+}

@@ -801,7 +801,7 @@ li[data-address] > h2 {
 	align-items: start;
 }
 #MainContent .customer {
-	padding: 60px 0 150px;
+	padding: 60px 50px 150px;
 }
 .customer h2.form__message {
 	display: none!important;
@@ -826,4 +826,7 @@ li[data-address] > h2 {
 }
 .select {
 	flex-direction: column;
+}
+.login .field + a {
+	clear: both;
 }

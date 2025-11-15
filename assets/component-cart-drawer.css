@@ -457,7 +457,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	width: 36%;
 }
 .cart-item__name.h4 {
-	font-size: 15px;
+	font-size: 18px;
 	text-transform: none;
 	letter-spacing: 0;
   font-family: var(--font-heading-family);
@@ -594,7 +594,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	font-size: 14px;
 	letter-spacing: 0;
 	font-weight: bold;
-	line-height: 21px;
+	line-height: 18px;
 	margin: 10px 0 0px;
 }
 .product-option {
