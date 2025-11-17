@@ -67,7 +67,7 @@ cart-items .title-wrapper-with-link {
 
 .cart-item__details > * + * {
   margin-top: 0.6rem;
-  margin-top: 3px;
+  margin-top: 0px;
 }
 
 .cart-item__media {
