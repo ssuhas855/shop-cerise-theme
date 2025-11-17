@@ -639,6 +639,9 @@ account-icon {
 .header--has-social .menu-drawer__utility-links {
 	padding: 2rem 2rem;
 }
+.faq_note {
+	padding: 120px 30px;	
+}
 }
 /* END 989px */
 
@@ -1247,6 +1250,9 @@ div.cart-count-bubble {
 }
 cart-drawer.is-empty .drawer__inner {
 	width: 100vw;
+}
+.faq_note {
+	padding: 80px 20px;	
 }
 }
 /* END 767px */ 
