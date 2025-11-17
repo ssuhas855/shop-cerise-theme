@@ -1245,6 +1245,9 @@ div.cart-count-bubble {
 	margin-left: 0;
 	margin-right: 0;
 }
+cart-drawer.is-empty .drawer__inner {
+	width: 100vw;
+}
 }
 /* END 767px */ 
 
