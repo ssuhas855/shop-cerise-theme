@@ -1203,3 +1203,6 @@ display: flex;
 .cart__items {
 	border-bottom: .1rem solid currentColor;
 }
+.faq_note {
+	padding: 120px 50px;	
+}
