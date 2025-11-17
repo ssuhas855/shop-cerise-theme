@@ -1206,3 +1206,11 @@ display: flex;
 .faq_note {
 	padding: 120px 50px;	
 }
+.faq_note a {
+    text-decoration: none;
+    color: currentColor;
+}
+.faq_note a:hover {
+    text-decoration: underline;
+    color: currentColor;
+}
