@@ -144,3 +144,6 @@ p.form-status.form__message {
 form#ContactForm {
     position: relative;
 }
+.field_box {
+    position: static;
+}
