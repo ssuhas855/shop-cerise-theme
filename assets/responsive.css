@@ -1434,6 +1434,9 @@ cart-drawer.is-empty .drawer__inner {
 .quantity__input[type="number"] {
 	font-size: 14px;
 }
+#challenge-form-container{
+	padding:0 25px;
+}
 }
 /* END 767px */ 
 
