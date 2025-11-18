@@ -717,7 +717,10 @@ ul.list.list-social.list-unstyled {
 	margin: 0 0 20px;
 }
 .product-tabs.small--hide {
-	display: none;
+	display: none!important;
+}
+.product-accordion.large--hide {
+	display: inherit !important;
 }
 
 }
