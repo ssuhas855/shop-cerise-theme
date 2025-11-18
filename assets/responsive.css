@@ -742,6 +742,9 @@ ul.list.list-social.list-unstyled {
 .header__icon--menu {
 	top: 25px;
 }
+.header__icons {
+	margin-top: 25px;
+}
 }
 /* END 989px */
 
