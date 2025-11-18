@@ -159,7 +159,6 @@
   </div>
 </div>
 
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('ContactForm');
@@ -167,75 +166,82 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!form || !emailInput) return;
 
-  // EMAIL REGEX (simple + safe)
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   form.addEventListener('submit', function (e) {
-    e.preventDefault();
+    e.preventDefault();          // stop default submit
+    e.stopImmediatePropagation(); // Shopify override fix
+    e.stopPropagation();          // double safety
 
     // Remove old error
     const oldError = document.querySelector('#email-error-custom');
     if (oldError) oldError.remove();
     emailInput.classList.remove('field--error');
 
-    //------------------------------------
-    // 🔍 Validate Email Before AJAX
-    //------------------------------------
+    //----------------------------------
+    // 🔍 Email validation BEFORE AJAX
+    //----------------------------------
     const email = emailInput.value.trim();
-
     if (!emailRegex.test(email)) {
       emailInput.classList.add('field--error');
       emailInput.insertAdjacentHTML(
         'afterend',
         `<small id="email-error-custom" class="contact__field-error" style="color:#d02e2e;">
-            Please enter a valid email address.
-         </small>`
+          Please enter a valid email address.
+        </small>`
       );
-      return; // ❌ stop — don't send AJAX
+      return; // ❌ stop — do NOT reload or send
     }
 
-    //------------------------------------
-    // ✅ If email is valid → Send AJAX
-    //------------------------------------
+    //----------------------------------
+    // 🚀 AJAX Submit (no reload)
+    //----------------------------------
     const formData = new FormData(form);
 
-    fetch('/contact#contact_form-section', {
+    fetch('/contact?view=ajax', {      // IMPORTANT!! prevents redirect
       method: 'POST',
       body: formData,
-      headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      headers: { 
+        'X-Requested-With': 'XMLHttpRequest'
+      }
     })
-      .then(res => res.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
+    .then(r => r.text())
+    .then(html => {
 
-        const success = doc.querySelector('.form-status.form__message');
-        const serverError = doc.querySelector('.contact__field-error');
+      // Prevent ANY Shopify redirect
+      if (history.pushState) {
+        history.pushState({}, "", window.location.pathname);
+      }
 
-        // SUCCESS MESSAGE
-        if (success) {
-          form.insertAdjacentHTML(
-            'beforebegin',
-            `<p class="form-status form__message">${success.innerHTML}</p>`
-          );
-          form.reset();
-          return;
-        }
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
 
-        // SERVER ERROR MESSAGE (Shopify email error)
-        if (serverError) {
-          emailInput.insertAdjacentHTML(
-            'afterend',
-            `<small class="contact__field-error">${serverError.innerHTML}</small>`
-          );
-        }
-      })
-      .catch(err => {
-        console.error("AJAX error:", err);
-      });
+      const success = doc.querySelector('.form-status');
+      const serverError = doc.querySelector('.contact__field-error');
+
+      // SUCCESS MESSAGE
+      if (success) {
+        form.insertAdjacentHTML(
+          'beforebegin',
+          `<p class="form-status form__message">${success.innerHTML}</p>`
+        );
+        form.reset();
+        return;
+      }
+
+      // SERVER VALIDATION ERROR
+      if (serverError) {
+        emailInput.insertAdjacentHTML(
+          'afterend',
+          `<small class="contact__field-error">${serverError.innerHTML}</small>`
+        );
+      }
+    })
+    .catch(err => console.error("AJAX error", err));
   });
 });
 </script>
+
 
 
 
