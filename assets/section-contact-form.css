@@ -141,3 +141,6 @@ p.form-status.form__message {
     bottom: 0;
     left: 0;
 }
+form#ContactForm {
+    position: relative;
+}
