@@ -1387,7 +1387,10 @@ cart-drawer.is-empty .drawer__inner {
 	padding: 30px 20px;
 	width: 94%;
 }
-
+.form-status.form-status-list.form__message {
+	margin: 0 0 30px;
+	line-height: 22px;
+}
 
 
 }
