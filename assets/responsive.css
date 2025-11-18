@@ -280,6 +280,10 @@ h3, .h3 {
 .template-index #MainContent {
 	margin-top: -43px;
 }
+.header__heading {
+	margin-top: 6px;
+	margin-bottom: 10px;
+}
 }
 /* END 1199px */
 
