@@ -1301,6 +1301,11 @@ cart-drawer.is-empty .drawer__inner {
 	left: 0;
 	width: 90%;
 }
+.about-story__images--right .about-story__image.img_2 {
+	max-width: none;
+	top: 53px;
+	width: 67%;
+}
 }
 /* END 767px */ 
 
