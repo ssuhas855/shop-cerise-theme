@@ -654,6 +654,9 @@ line-height:28px;
 .icon.icon-cart path {
 	stroke: currentColor;
 }
+.header__icon--menu path {
+    stroke: currentColor;
+}
 }
 /* END 989px */
 
