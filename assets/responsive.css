@@ -1448,6 +1448,9 @@ cart-drawer.is-empty .drawer__inner {
 .grid--peek.slider .grid__item:first-of-type {
 	 margin-left: 0; 
 }
+.shopify-challenge__container {
+    padding: 0 25px;
+}
 }
 /* END 767px */ 
 
