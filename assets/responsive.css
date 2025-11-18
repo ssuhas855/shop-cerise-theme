@@ -726,6 +726,9 @@ ul.list.list-social.list-unstyled {
 .product-accordion.large--hide {
 	display: inherit !important;
 }
+.menu-drawer__navigation .link::after {
+	display: none!important;
+}
 
 }
 /* END 989px */
