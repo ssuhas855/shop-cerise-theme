@@ -1293,6 +1293,9 @@ cart-drawer.is-empty .drawer__inner {
 	color: rgb(var(--color-button-text));
     box-shadow: none!important;
 }
+.about-story__images.about-story__images--right {
+	width: 100%;
+}
 }
 /* END 767px */ 
 
