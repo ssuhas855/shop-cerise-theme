@@ -113,75 +113,16 @@
             "title": "I want to return my housecoat, how do I get started? ",
             "answer": "<p>We hope you love your new housecoat. If not, we accept returns within 14 days of purchase. Items must be unworn and returned in their original packaging, including the housecoat bag. Customers cover return shipping. Once received in original condition, we’ll issue a refund minus the original shipping cost.</p><p>Please note, we may decline returns that show signs of wear. To start a return, email us at hello@cerise-goods.com with your order number and reason—we’ll reply with next steps.</p>"
           }
-        },
-        "faq_xWGKEm": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
-          }
-        },
-        "faq_rC9tBx": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
-          }
         }
       },
       "block_order": [
         "faq_nMD7Nm",
         "faq_xXEHeH",
-        "faq_3krPHz",
-        "faq_xWGKEm",
-        "faq_rC9tBx"
+        "faq_3krPHz"
       ],
       "name": "Shipping & Returns",
       "settings": {
         "section_title": "Shipping & Returns"
-      }
-    },
-    "faq_returns_zYiQJF": {
-      "type": "faq-returns",
-      "blocks": {
-        "faq_48jBpy": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_kQWrzh": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_CGDrTJ": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_rETRXp": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_48jBpy",
-        "faq_kQWrzh",
-        "faq_CGDrTJ",
-        "faq_rETRXp"
-      ],
-      "name": "FAQs Returns",
-      "settings": {
-        "section_title": "Returns"
       }
     },
     "faq_wholesale_kqhMh4": {
@@ -230,9 +171,9 @@
         "faq_VPkNNf",
         "faq_nDJ9bq"
       ],
-      "name": "FAQs Wholesale",
+      "name": "Travel",
       "settings": {
-        "section_title": "Wholesale"
+        "section_title": "Travel"
       }
     }
   },
@@ -242,7 +183,6 @@
     "faq_materials_manufacturing_zc3G6a",
     "faq_shipping_delivery_wbrzzr",
     "faq_ordering_fxbGKb",
-    "faq_returns_zYiQJF",
     "faq_wholesale_kqhMh4"
   ]
 }
