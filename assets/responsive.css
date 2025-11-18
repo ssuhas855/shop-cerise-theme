@@ -664,6 +664,59 @@ line-height:28px;
 ul.list.list-social.list-unstyled {
     display: none!important;
 }
+.product-accordion {
+  border-top: 1px solid currentColor;
+  color: rgba(var(--color-foreground), 1);
+  margin-top: 40px;
+}
+
+
+.accordion-header {
+  width: 100%;
+  padding: 18px 0;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(var(--color-foreground), 1);
+   position: relative;
+}
+/* PLUS icon default */
+.accordion-header::after {
+  content: "+";
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  font-weight: 400;
+}
+
+/* MINUS icon when open */
+.accordion-header.active::after {
+  content: "–";
+}
+.accordion-header.active {
+  
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+.accordion-body p {
+  padding: 15px 0;
+}
+.product__info-container {
+	text-align: left;
+}
+.product-accordion ul {
+	padding: 0 0 0 10px;
+	margin: 0 0 20px;
+}
+
 }
 /* END 989px */
 
@@ -1313,58 +1366,7 @@ cart-drawer.is-empty .drawer__inner {
 .about-cerise__images-left:first-child {
     padding-top: 10px;
 }
-.product-accordion {
-  border-top: 1px solid currentColor;
-  color: rgba(var(--color-foreground), 1);
-  margin-top: 40px;
-}
 
-
-.accordion-header {
-  width: 100%;
-  padding: 18px 0;
-  border: none;
-  text-align: left;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: 600;
-  color: rgba(var(--color-foreground), 1);
-   position: relative;
-}
-/* PLUS icon default */
-.accordion-header::after {
-  content: "+";
-  position: absolute;
-  right: 0px;
-  font-size: 16px;
-  transition: 0.3s ease;
-  font-weight: 400;
-}
-
-/* MINUS icon when open */
-.accordion-header.active::after {
-  content: "–";
-}
-.accordion-header.active {
-  
-}
-
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 15px;
-}
-.accordion-body p {
-  padding: 15px 0;
-}
-.product__info-container {
-	text-align: left;
-}
-.product-accordion ul {
-	padding: 0 0 0 10px;
-	margin: 0 0 20px;
-}
 
 
 
