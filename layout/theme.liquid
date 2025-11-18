@@ -392,6 +392,8 @@
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
+    {{ 'responsive.css' | asset_url | stylesheet_tag }} 
+
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
@@ -470,7 +472,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-{{ 'responsive.css' | asset_url | stylesheet_tag }} 
+
 
 </body>
 </html>
