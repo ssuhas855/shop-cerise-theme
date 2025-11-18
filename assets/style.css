@@ -1225,3 +1225,6 @@ display: flex;
 .rte a {
 	color: rgba(var(--color-link), 1);	
 }
+.rte a:hover{
+	text-decoration:none;
+}
