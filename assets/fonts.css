@@ -46,6 +46,9 @@
     font-style: normal;
     font-display: swap;
 }
+*{
+    -webkit-font-smoothing: antialiased !important;
+}
 
 :root {
     --font-body-family: 'GT America';
