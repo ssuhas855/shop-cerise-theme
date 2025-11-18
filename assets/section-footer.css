@@ -668,7 +668,7 @@ padding: 28px 0 43px;
 .copyright_right ul li:first-child span{
   color:#007aff;
   padding-right: 2px;
-  color: #84b6d8;
+  color: currentColor;
 }
 .footer-block__details-content > li:not(:last-child) {
 	margin-right: 0;
