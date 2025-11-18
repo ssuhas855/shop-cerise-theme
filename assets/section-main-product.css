@@ -1689,3 +1689,35 @@ color:#F7DAC7;
 .template-product .rich-text__blocks {
 	max-width: 990px;
 }
+.product-accordion {
+  border-top: 1px solid #ddd;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 15px;
+  background: #f8f8f8;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.accordion-header.active {
+  background: #eaeaea;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+.accordion-body p {
+  padding: 15px 0;
+}
