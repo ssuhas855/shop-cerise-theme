@@ -553,6 +553,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	position: absolute;
 	left: 103%;
 	bottom: 10px;
+  cursor: pointer;
 }
 .drawer__close {
 	right: -15px;
