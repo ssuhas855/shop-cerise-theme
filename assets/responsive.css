@@ -1451,6 +1451,10 @@ cart-drawer.is-empty .drawer__inner {
 .shopify-challenge__container {
     padding: 0 25px;
 }
+cart-drawer-items {
+	width: calc(100% + 10px );
+	padding-right: 10px;
+}
 }
 /* END 767px */ 
 
