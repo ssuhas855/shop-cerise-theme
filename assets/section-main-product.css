@@ -1690,11 +1690,11 @@ color:#F7DAC7;
 	max-width: 990px;
 }
 .product-accordion {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid currentColor;
 }
 
 .accordion-item {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid currentColor;
 }
 
 .accordion-header {
