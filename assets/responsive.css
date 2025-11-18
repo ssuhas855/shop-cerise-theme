@@ -648,6 +648,9 @@ line-height:28px;
 .about-story__text-block h3 {
 	line-height:28px;
 }
+.accordion-wrapper h5 {
+	padding: 40px 25px 20px;
+}
 }
 /* END 989px */
 
