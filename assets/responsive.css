@@ -651,6 +651,9 @@ line-height:28px;
 .accordion-wrapper h5 {
 	padding: 40px 25px 20px;
 }
+.icon.icon-cart path {
+	stroke: currentColor;
+}
 }
 /* END 989px */
 
