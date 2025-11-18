@@ -745,6 +745,9 @@ ul.list.list-social.list-unstyled {
 .header__icons {
 	margin-top: 25px;
 }
+.menu-drawer__account {
+	display: inline-flex !important;
+}
 }
 /* END 989px */
 
