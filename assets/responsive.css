@@ -732,7 +732,9 @@ ul.list.list-social.list-unstyled {
 .section-header.animate {	
 	background: #fffcf6;
 }
-
+.template-index #MainContent {
+	margin-top: -19px;
+}
 }
 /* END 989px */
 
