@@ -1418,7 +1418,10 @@ cart-drawer.is-empty .drawer__inner {
 #product-grid {
 	margin: 20px 0 0;
 }
-
+.header__heading {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
 }
 /* END 767px */ 
 
