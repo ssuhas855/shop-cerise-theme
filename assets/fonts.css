@@ -49,7 +49,9 @@
 *{
     -webkit-font-smoothing: antialiased !important;
 }
-
+body{
+    opacity:0;
+}
 :root {
     --font-body-family: 'GT America';
     --font-body-style: normal;
