@@ -305,7 +305,7 @@
     </script>
 
 {{ 'fonts.css' | asset_url | stylesheet_tag }}
-  
+{{ 'style.css' | asset_url | stylesheet_tag }}  
 
 
 <!-- Google tag (gtag.js) -->
@@ -392,17 +392,7 @@
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
-   <!-- Preload style.css -->
-<link rel="preload" href="{{ 'style.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-<!-- Preload responsive.css -->
-<link rel="preload" href="{{ 'responsive.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-<!-- Fallback for browsers with no preload support -->
-<noscript>
-  <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
-  <link rel="stylesheet" href="{{ 'responsive.css' | asset_url }}">
-</noscript>
+    {{ 'responsive.css' | asset_url | stylesheet_tag }} 
 
     <script>
       window.shopUrl = '{{ request.origin }}';
