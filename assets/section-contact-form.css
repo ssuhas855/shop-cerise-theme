@@ -155,3 +155,6 @@ small.email-error {
     font-family: var(--font-nav-family);
     font-style: var(--font-body-style);
 }
+.cart-drawer__form{
+	padding-right: 10px;
+}
