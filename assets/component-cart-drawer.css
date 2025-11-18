@@ -546,6 +546,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   font-family: var(--font-nav-family);
     font-style: var(--font-body-style);
     font-weight: var(--font-nav-weight);
+    cursor:pointer;
 }
 .cart-item cart-remove-button {
 	display: flex;
