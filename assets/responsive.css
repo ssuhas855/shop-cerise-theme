@@ -1329,8 +1329,21 @@ cart-drawer.is-empty .drawer__inner {
   cursor: pointer;
   font-weight: 600;
   color: rgba(var(--color-foreground), 1);
+   position: relative;
+}
+/* PLUS icon default */
+.accordion-header::after {
+  content: "+";
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  transition: 0.3s ease;
 }
 
+/* MINUS icon when open */
+.accordion-header.active::after {
+  content: "–";
+}
 .accordion-header.active {
   
 }
