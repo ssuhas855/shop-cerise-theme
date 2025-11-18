@@ -486,6 +486,8 @@ div.cerise-textiles__text {
 	height: 19px;
 	margin-top: 0;	
   color:currentColor;
+  width: 100px;
+	height: auto;
 }
 .swiper-button-next::after, .swiper-button-prev::after {
 	display:none!important;
