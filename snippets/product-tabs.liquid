@@ -106,18 +106,36 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".accordion-header");
+  const headers = document.querySelectorAll(".accordion-header");
 
-  items.forEach((header) => {
+  headers.forEach((header) => {
     header.addEventListener("click", () => {
-      const body = header.nextElementSibling;
 
-      header.classList.toggle("active");
-      body.style.maxHeight = body.style.maxHeight ? null : body.scrollHeight + "px";
+      // Close all open items except the one clicked
+      headers.forEach((otherHeader) => {
+        const otherBody = otherHeader.nextElementSibling;
+        if (otherHeader !== header) {
+          otherHeader.classList.remove("active");
+          otherBody.style.maxHeight = null;
+        }
+      });
+
+      // Toggle clicked one
+      const body = header.nextElementSibling;
+      const isOpen = header.classList.contains("active");
+
+      if (isOpen) {
+        header.classList.remove("active");
+        body.style.maxHeight = null;
+      } else {
+        header.classList.add("active");
+        body.style.maxHeight = body.scrollHeight + "px";
+      }
     });
   });
 });
 </script>
+
 
 
 
