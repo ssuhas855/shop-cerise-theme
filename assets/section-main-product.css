@@ -1689,36 +1689,3 @@ color:#F7DAC7;
 .template-product .rich-text__blocks {
 	max-width: 990px;
 }
-.product-accordion {
-  border-top: 1px solid currentColor;
-  color: rgba(var(--color-foreground), 1);
-}
-
-.accordion-item {
-  border-bottom: 1px solid currentColor;
-}
-
-.accordion-header {
-  width: 100%;
-  padding: 15px 0;
-  border: none;
-  text-align: left;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: 600;
-  color: rgba(var(--color-foreground), 1);
-}
-
-.accordion-header.active {
-  
-}
-
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 15px;
-}
-.accordion-body p {
-  padding: 15px 0;
-}
