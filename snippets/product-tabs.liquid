@@ -108,19 +108,28 @@
 document.addEventListener("DOMContentLoaded", function () {
   const headers = document.querySelectorAll(".accordion-header");
 
+  // --- Open first accordion by default ---
+  if (headers.length > 0) {
+    const firstHeader = headers[0];
+    const firstBody = firstHeader.nextElementSibling;
+
+    firstHeader.classList.add("active");
+    firstBody.style.maxHeight = firstBody.scrollHeight + "px";
+  }
+
+  // --- Normal one-at-a-time behavior ---
   headers.forEach((header) => {
     header.addEventListener("click", () => {
 
-      // Close all open items except the one clicked
       headers.forEach((otherHeader) => {
         const otherBody = otherHeader.nextElementSibling;
+
         if (otherHeader !== header) {
           otherHeader.classList.remove("active");
           otherBody.style.maxHeight = null;
         }
       });
 
-      // Toggle clicked one
       const body = header.nextElementSibling;
       const isOpen = header.classList.contains("active");
 
@@ -135,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
 
 
 
