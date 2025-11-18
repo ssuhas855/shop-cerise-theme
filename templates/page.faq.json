@@ -134,42 +134,10 @@
             "title": "I saw that you two travel to India often. Can you help me plan my trip?",
             "answer": "<p>We love nothing more than talking about our travels! We would be happy to help you plan a trip. Please get in touch with us at hello@cerise-goods.com.</p>"
           }
-        },
-        "faq_rX3cJG": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_YjhwVe": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_VPkNNf": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_nDJ9bq": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
         }
       },
       "block_order": [
-        "faq_hXDjez",
-        "faq_rX3cJG",
-        "faq_YjhwVe",
-        "faq_VPkNNf",
-        "faq_nDJ9bq"
+        "faq_hXDjez"
       ],
       "name": "Travel",
       "settings": {
