@@ -1278,6 +1278,11 @@ cart-drawer.is-empty .drawer__inner {
 	margin-bottom: 32px;
 	margin-top: 10px;
 }
+.contact__button .button:focus{
+    background-color: rgba(var(--color-button), var(--alpha-button-background));
+	color: rgb(var(--color-button-text));
+    box-shadow: none!important;
+}
 }
 /* END 767px */ 
 
