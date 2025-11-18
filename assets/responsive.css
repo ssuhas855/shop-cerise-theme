@@ -243,7 +243,7 @@ h3, .h3 {
 .about-story__top-imgs {
 	
 	margin-right: 16px;
-	margin-bottom: 78px;
+	margin-bottom: 50px;
 }
 .imgbox3 {
 	max-width: 98px;
@@ -279,6 +279,10 @@ h3, .h3 {
 }
 .template-index #MainContent {
 	margin-top: -43px;
+}
+.header__heading {
+	margin-top: 6px;
+	margin-bottom: 10px;
 }
 }
 /* END 1199px */
@@ -638,6 +642,120 @@ account-icon {
 }
 .header--has-social .menu-drawer__utility-links {
 	padding: 2rem 2rem;
+}
+.faq_note {
+	padding: 120px 30px;	
+}
+.ret_text_wrapper h3, h3, .h3 {
+line-height:28px;
+}
+.about-story__text-block h3 {
+	line-height:28px;
+}
+.accordion-wrapper h5 {
+	padding: 40px 25px 20px;
+}
+.icon.icon-cart path {
+	stroke: currentColor;
+}
+.header__icon--menu path {
+    stroke: currentColor;
+}
+.product-form__input .form__label {
+    padding: 0 0 10px;
+   width:100%;
+}
+ul.list.list-social.list-unstyled {
+    display: none!important;
+}
+.product-accordion {
+  border-top: 1px solid currentColor;
+  color: rgba(var(--color-foreground), 1);
+  margin-top: 40px;
+}
+
+
+.product__info-wrapper .accordion-header {
+  width: 100%;
+  padding: 18px 0;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(var(--color-foreground), 1);
+   position: relative;
+   letter-spacing: 1.7px;
+    font-family: var(--font-nav-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-nav-weight);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+/* PLUS icon default */
+.product__info-wrapper .accordion-header::after {
+  content: "+";
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  font-weight: 400;
+}
+
+/* MINUS icon when open */
+.product__info-wrapper .accordion-header.active::after {
+  content: "–";
+}
+.product__info-wrapper .accordion-header.active {
+  
+}
+
+.product__info-wrapper .accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+.product__info-wrapper .accordion-body p {
+  padding: 15px 0;
+}
+.product__info-wrapper .product__info-container {
+	text-align: left;
+}
+.product__info-wrapper .product-accordion ul {
+	padding: 0 0 0 10px;
+	margin: 0 0 20px;
+}
+.product-tabs.small--hide {
+	display: none!important;
+}
+.product-accordion.large--hide {
+	display: inherit !important;
+}
+.menu-drawer__navigation .link::after {
+	display: none!important;
+}
+.section-header {	
+	background: #fffcf6;
+}
+.template-index #MainContent {
+	margin-top: 0px;
+}
+.header__heading {
+	margin-top: 5px;
+	margin-bottom: 6px;
+}
+.header__icon--menu {
+	top: 25px;
+}
+.header__icons {
+	margin-top: 25px;
+}
+.menu-drawer__account {
+	display: inline-flex !important;
+}
+.var-input__label {
+	padding: 0 12px;
 }
 }
 /* END 989px */
@@ -1048,6 +1166,7 @@ div.cerise-textiles__text {
  .faq_mobile_dropdown {
     display: block;
     position: relative;
+	z-index: 1;
   }
   .faq_wrapper {
 	border-top: 0px solid currentColor;
@@ -1221,8 +1340,8 @@ div.cart-count-bubble {
 .icon.icon-cart {
 	height: auto;
 	padding: 0;
-	width: 33px;
-	margin-top: -3px;
+	width: 30px;
+	margin-top: -1px;
 	margin-right: -4px;
 }
 .header__icon--cart {
@@ -1240,6 +1359,101 @@ div.cart-count-bubble {
 }
 .template-search #product-grid {
 	margin: 0px 0 0;
+}
+.product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
+	margin-left: 0;
+	margin-right: 0;
+}
+cart-drawer.is-empty .drawer__inner {
+	width: 100vw;
+}
+.faq_note {
+	padding: 80px 20px;	
+}
+.newsletter-box {
+	min-height: 520px;
+	padding: 30px 20px;
+}
+.newsletter-popup {	
+	align-items: center;
+	justify-content: center;
+}
+.popup-logo {
+	max-width: 238px;
+}
+.popup-subtitle {
+	margin-bottom: 32px;
+	margin-top: 10px;
+}
+.contact__button .button:focus{
+    background-color: rgba(var(--color-button), var(--alpha-button-background));
+	color: rgb(var(--color-button-text));
+    box-shadow: none!important;
+}
+.about-story__images.about-story__images--right {
+	width: 100%;
+}
+.imgbox5 {
+	
+	left: 0;
+	width: 90%;
+}
+.about-story__images--right .about-story__image.img_2 {
+	width: 67%;
+}
+.imgbox4 {
+	padding-top: 0;
+}
+.about-cerise__images-left:first-child {
+    padding-top: 10px;
+}
+.header__icons {
+	margin-top: 19px;
+}
+.header__icon--menu {
+	top: 24px;
+}
+.newsletter-box {
+	min-height: 460px;
+	padding: 30px 20px;
+	width: 94%;
+}
+.form-status.form-status-list.form__message {
+	margin: 0 0 30px;
+	line-height: 22px;
+}
+.contact_info {	
+	margin: 0 0 30px;
+}
+#product-grid {
+	margin: 20px 0 0;
+}
+.header__heading {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.quantity__input[type="number"] {
+	font-size: 14px;
+}
+#challenge-form-container{
+	padding:0 25px;
+}
+.accordion-wrapper h5 {
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.header__search {
+	margin-right: 5px;
+}
+.grid--peek.slider .grid__item:first-of-type {
+	 margin-left: 0; 
+}
+.shopify-challenge__container {
+    padding: 0 25px;
+}
+cart-drawer-items {
+	width: calc(100% + 10px );
+	padding-right: 10px;
 }
 }
 /* END 767px */ 

@@ -15,7 +15,7 @@ p.announcement-bar__message {
 }
 .header__heading {
 	transform: rotate(2.88deg);
-    margin-top: 39px;
+    margin-top: 0px;
     margin-bottom: 7px;
     transform: rotate(1.5deg);
 }
@@ -57,6 +57,7 @@ p.announcement-bar__message {
 	margin-top: 25px;
 	padding-right: 0;
     gap:20px;
+	margin-top: 31px;
 }
 .header {
 	align-items: start;
@@ -273,6 +274,8 @@ details[open] .modal-overlay::after {
   min-height:601px;
   padding: 40px 30px;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .close-popup {
@@ -484,6 +487,8 @@ div.cerise-textiles__text {
 	height: 19px;
 	margin-top: 0;	
   color:currentColor;
+  width: 100px;
+	height: auto;
 }
 .swiper-button-next::after, .swiper-button-prev::after {
 	display:none!important;
@@ -732,8 +737,8 @@ flex-wrap:wrap;
 }
 product-recommendations .swiper-button-next, 
 product-recommendations .swiper-button-prev {
-	width: 90px;
-	height: 19px;
+	width: 100px;
+	height: auto;
 }
 div.cart-count-bubble {
 	position: static;
@@ -963,7 +968,7 @@ div.cart-count-bubble {
 	text-align: center;
 	margin: 0 auto;
 	position: absolute;
-	left: 56%;
+	left: 54%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
@@ -1202,4 +1207,24 @@ display: flex;
 }
 .cart__items {
 	border-bottom: .1rem solid currentColor;
+}
+.faq_note {
+	padding: 120px 50px;	
+}
+.faq_note a {
+    text-decoration: none;
+    color: currentColor;
+}
+.faq_note a:hover {
+    text-decoration: underline;
+    color: currentColor;
+}
+.template-index #MainContent {
+	margin-top: -35px;
+}
+.rte a {
+	color: rgba(var(--color-link), 1);	
+}
+.rte a:hover{
+	text-decoration:none;
 }

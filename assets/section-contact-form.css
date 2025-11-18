@@ -127,3 +127,34 @@ h3.title {
 	letter-spacing: 0;
 	margin: 0 0 40px;
 }
+.contact .form__message {
+    margin-bottom: 20px;
+}
+small.email-error {
+    color: currentColor!important;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+p.form-status.form__message {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+}
+form#ContactForm {
+    position: relative;
+}
+.field_box {
+    position: static;
+}
+small.email-error {
+    right: auto;
+    left: 0;
+    bottom: -50px;
+	font-size: 16px;
+    font-family: var(--font-nav-family);
+    font-style: var(--font-body-style);
+}
+.cart-drawer__form{
+	padding-right: 10px;
+}

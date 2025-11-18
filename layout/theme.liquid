@@ -42,9 +42,9 @@
     {{ content_for_header }}
 
 <!-- Include Swiper.js -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3gJwYpMe3QewGELvNa8kCq2Ud2PzUGmuLr2c4EPaFcg=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+<script src="{{ 'jquery-3.7.1.min.js' | asset_url }}"  integrity="sha256-3gJwYpMe3QewGELvNa8kCq2Ud2PzUGmuLr2c4EPaFcg=" crossorigin="anonymous"></script>
+ {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
 
 
 
@@ -262,6 +262,13 @@
       }
     {% endstyle %}
 
+<script>
+  window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+
     {{ 'base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -392,6 +399,8 @@
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
+    {{ 'responsive.css' | asset_url | stylesheet_tag }} 
+
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
@@ -470,7 +479,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-{{ 'responsive.css' | asset_url | stylesheet_tag }} 
+{% if template == 'customers/register' %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form[action='/account']");
+  if (form) {
+    form.addEventListener("submit", function () {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = "return_to";
+      input.value = "/account"; // change this to any page
+      form.appendChild(input);
+    });
+  }
+});
+</script>
+{% endif %}
 
-</body>
+
+</body> 
 </html>

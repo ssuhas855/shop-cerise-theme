@@ -46,7 +46,16 @@
     font-style: normal;
     font-display: swap;
 }
-
+*{
+    -webkit-font-smoothing: antialiased !important;
+}
+body{
+    opacity:0;
+    transition: opacity 0.2s ease; /* smooth fade-in */
+}
+body.loaded {
+  opacity: 1;
+}
 :root {
     --font-body-family: 'GT America';
     --font-body-style: normal;
@@ -196,3 +205,4 @@ h6 {
     display: none!important;
 }
 }
+

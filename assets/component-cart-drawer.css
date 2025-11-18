@@ -417,6 +417,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .drawer__inner {
 	width: 399px;
   padding: 0 30px;
+  width: 440px;
 }
 .drawer__header {
 	border-bottom: 1px solid;
@@ -525,7 +526,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 .quantity__input[type="number"] {
 	-moz-appearance: textfield;
-	font-size: 18px;
+	font-size: 14px;
   outline: none;
   outline: none;
   background: transparent;
@@ -538,13 +539,17 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	margin: 0;
 	height: auto;
 	background: transparent;
-	text-decoration: none;
+	text-decoration: underline;
 	color: currentColor;
   font-size: 12px;
 	letter-spacing: 1.5px;
   font-family: var(--font-nav-family);
     font-style: var(--font-body-style);
     font-weight: var(--font-nav-weight);
+    cursor:pointer;
+}
+.cart-remove-button:hover{
+  	text-decoration: none;
 }
 .cart-item cart-remove-button {
 	display: flex;
@@ -552,6 +557,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	position: absolute;
 	left: 103%;
 	bottom: 10px;
+  cursor: pointer;
 }
 .drawer__close {
 	right: -15px;

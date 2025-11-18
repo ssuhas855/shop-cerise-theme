@@ -29,7 +29,9 @@
     {%- endif -%}
 
 {%- if section.settings.text != blank -%}
+  <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   {{ section.settings.text  }}
+  </div>
 {%- endif -%}
 </div>
 
@@ -46,7 +48,7 @@
         assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
       endif
     -%}
-    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+   <form id="ContactForm" class="contact_ajax_form" onsubmit="return false;">
       {%- if form.posted_successfully? -%}
         <p class="form-status form-status-list form__message" tabindex="-1" autofocus>
           {{- 'icon-success.svg' | inline_asset_content -}}
@@ -150,12 +152,61 @@
           SEND MESSAGE
         </button>
       </div>
-    {%- endform -%}
+   </form>
+
 </div>
 
 
   </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("ContactForm");
+  const emailInput = document.getElementById("ContactForm-email");
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // clear existing errors
+    const oldErr = document.querySelector('.email-error');
+    if (oldErr) oldErr.remove();
+    emailInput.classList.remove("field--error");
+
+    // validate email
+    if (!emailRegex.test(emailInput.value.trim())) {
+      emailInput.classList.add("field--error");
+      emailInput.insertAdjacentHTML(
+        "afterend",
+        `<small class="email-error" style="color:#d02e2e;">Enter a valid email.</small>`
+      );
+      return;
+    }
+
+    // prepare form data
+    const data = new FormData(form);
+
+    fetch("/contact", {
+      method: "POST",
+      body: data
+    })
+      .then(res => res.text())
+      .then(res => {
+        form.insertAdjacentHTML(
+          "afterbegin",
+          `<p class='form-status form__message'>Message sent successfully.</p>`
+        );
+        form.reset();
+      })
+      .catch(err => console.error(err));
+  });
+});
+</script>
+
+
+
 
 {% schema %}
 {
