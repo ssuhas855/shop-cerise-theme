@@ -130,3 +130,9 @@ h3.title {
 .contact .form__message {
     margin-bottom: 20px;
 }
+small.email-error {
+    color: currentColor!important;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
