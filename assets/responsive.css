@@ -739,6 +739,9 @@ ul.list.list-social.list-unstyled {
 	margin-top: 5px;
 	margin-bottom: 6px;
 }
+.header__icon--menu {
+	top: 25px;
+}
 }
 /* END 989px */
 
