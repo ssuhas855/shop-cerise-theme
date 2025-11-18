@@ -1263,6 +1263,9 @@ cart-drawer.is-empty .drawer__inner {
 .faq_note {
 	padding: 80px 20px;	
 }
+.newsletter-box {
+	min-height: 520px;
+}
 }
 /* END 767px */ 
 
