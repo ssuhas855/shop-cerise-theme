@@ -736,8 +736,8 @@ flex-wrap:wrap;
 }
 product-recommendations .swiper-button-next, 
 product-recommendations .swiper-button-prev {
-	width: 90px;
-	height: 19px;
+	width: 100px;
+	height: auto;
 }
 div.cart-count-bubble {
 	position: static;
