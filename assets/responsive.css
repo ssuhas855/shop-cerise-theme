@@ -1266,6 +1266,11 @@ cart-drawer.is-empty .drawer__inner {
 .newsletter-box {
 	min-height: 520px;
 }
+.newsletter-popup {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 }
 /* END 767px */ 
 
