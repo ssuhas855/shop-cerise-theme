@@ -138,7 +138,7 @@ small.email-error {
 }
 p.form-status.form__message {
     position: absolute;
-    bottom: 0;
+    bottom: -70px;
     left: 0;
 }
 form#ContactForm {
