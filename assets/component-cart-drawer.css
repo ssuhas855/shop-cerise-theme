@@ -526,7 +526,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 .quantity__input[type="number"] {
 	-moz-appearance: textfield;
-	font-size: 18px;
+	font-size: 14px;
   outline: none;
   outline: none;
   background: transparent;
