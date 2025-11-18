@@ -1442,6 +1442,9 @@ cart-drawer.is-empty .drawer__inner {
 	font-size: 14px;
 	letter-spacing: 1px;
 }
+.header__search {
+	margin-right: 5px;
+}
 }
 /* END 767px */ 
 
