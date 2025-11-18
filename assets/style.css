@@ -15,7 +15,7 @@ p.announcement-bar__message {
 }
 .header__heading {
 	transform: rotate(2.88deg);
-    margin-top: 39px;
+    margin-top: 0px;
     margin-bottom: 7px;
     transform: rotate(1.5deg);
 }
