@@ -42,9 +42,9 @@
     {{ content_for_header }}
 
 <!-- Include Swiper.js -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3gJwYpMe3QewGELvNa8kCq2Ud2PzUGmuLr2c4EPaFcg=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+<script src="{{ 'jquery-3.7.1.min.js' | asset_url }}"  integrity="sha256-3gJwYpMe3QewGELvNa8kCq2Ud2PzUGmuLr2c4EPaFcg=" crossorigin="anonymous"></script>
+ {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
 
 
 
