@@ -729,6 +729,9 @@ ul.list.list-social.list-unstyled {
 .menu-drawer__navigation .link::after {
 	display: none!important;
 }
+.section-header.animate {	
+	background: #fffcf6;
+}
 
 }
 /* END 989px */
