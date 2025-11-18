@@ -1271,6 +1271,9 @@ cart-drawer.is-empty .drawer__inner {
 	align-items: center;
 	justify-content: center;
 }
+.popup-logo {
+	max-width: 238px;
+}
 }
 /* END 767px */ 
 
