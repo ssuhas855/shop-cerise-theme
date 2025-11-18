@@ -5,7 +5,7 @@
   (up to fifth)
 {% endcomment %}
 
-<div class="product-tabs">
+<div class="product-tabs small--hide">
   <div class="tab-buttons">
     {% assign tabs = '' %}
 
@@ -44,6 +44,67 @@
 </div>
 
 
+
+<div class="product-accordion large--hide">
+
+  {% if product.metafields.custom.tab_title_firtst %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_firtst | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_first | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if product.metafields.custom.tab_title_second %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_second | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_second | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if product.metafields.custom.tab_title_third %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_third | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_third | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if product.metafields.custom.tab_title_fourth %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_fourth | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_fourth | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if product.metafields.custom.tab_title_fifth %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_fifth | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_fifth | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll('.tab-button');
@@ -60,6 +121,46 @@ document.addEventListener('DOMContentLoaded', () => {
       // Activate clicked tab
       button.classList.add('active');
       document.getElementById(target).classList.add('active');
+    });
+  });
+});
+
+// MOBILE ACCORDION 
+document.addEventListener("DOMContentLoaded", function () {
+  const headers = document.querySelectorAll(".accordion-header");
+
+  // --- Open first accordion by default ---
+  if (headers.length > 0) {
+    const firstHeader = headers[0];
+    const firstBody = firstHeader.nextElementSibling;
+
+    firstHeader.classList.add("active");
+    firstBody.style.maxHeight = firstBody.scrollHeight + "px";
+  }
+
+  // --- Accordion one-by-one ---
+  headers.forEach((header) => {
+    header.addEventListener("click", () => {
+
+      headers.forEach((otherHeader) => {
+        const otherBody = otherHeader.nextElementSibling;
+
+        if (otherHeader !== header) {
+          otherHeader.classList.remove("active");
+          otherBody.style.maxHeight = null;
+        }
+      });
+
+      const body = header.nextElementSibling;
+      const isOpen = header.classList.contains("active");
+
+      if (isOpen) {
+        header.classList.remove("active");
+        body.style.maxHeight = null;
+      } else {
+        header.classList.add("active");
+        body.style.maxHeight = body.scrollHeight + "px";
+      }
     });
   });
 });

@@ -17,55 +17,50 @@
         "padding_bottom": 28
       }
     },
-    "faq_ordering_fxbGKb": {
-      "type": "faq-ordering",
+    "faq_materials_manufacturing_FtaxAP": {
+      "type": "faq-materials-manufacturing",
       "blocks": {
-        "faq_nMD7Nm": {
+        "faq_39F8eR": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
+            "title": "Where are Cerise housecoats made?",
+            "answer": "<p>Our housecoats are designed in Venice, California, and Richmond, Virginia. The housecoat fabric is hand blockprinted and sewn in India. </p>"
           }
         },
-        "faq_xXEHeH": {
+        "faq_eXTnjK": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there <strong>anything </strong>better than an ice-cold, bone dry dirty <a href=\"#\" title=\"#\">martini</a> at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p><ul><li>Inspired by the classic martini</li><li>Inspired by the classic martini</li><li>Inspired by the classic martini</li></ul><p>Inspired by the classic martini</p>"
-          }
-        },
-        "faq_3krPHz": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
-          }
-        },
-        "faq_xWGKEm": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
-          }
-        },
-        "faq_rC9tBx": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week? This ring is here to remind you what awaits the end of your hustle. Inspired by the classic martini garnish (three stuffed olives, of course) this ring features three enamel-filled circles with a diamond “garnish” on one side, and a matching silhouette on the other. Santé!</p>"
+            "title": "What materials are in Cerise housecoats? ",
+            "answer": "<p>Cerise housecoats are made of 100% cotton. We use AZO-free dyes, which means our fabrics are colored without the harmful chemicals commonly used in textile dyeing. They’re safer for your skin, gentler on the planet, and meet international clean-dye standards — perfect for something you wear every day.</p>"
           }
         }
       },
       "block_order": [
-        "faq_nMD7Nm",
-        "faq_xXEHeH",
-        "faq_3krPHz",
-        "faq_xWGKEm",
-        "faq_rC9tBx"
+        "faq_39F8eR",
+        "faq_eXTnjK"
       ],
-      "name": "FAQs Ordering",
+      "name": "FAQs Materials & Manufacturing",
       "settings": {
-        "section_title": "ORDERS"
+        "section_title": "Materials & Manufacturing"
+      }
+    },
+    "faq_materials_manufacturing_zc3G6a": {
+      "type": "faq-materials-manufacturing",
+      "blocks": {
+        "faq_ghhzGr": {
+          "type": "faq",
+          "settings": {
+            "title": "How do I care for my housecoat? ",
+            "answer": "<p>Your housecoat can be machine-washed in cold water and dried on a delicate setting.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_ghhzGr"
+      ],
+      "name": "FAQs Housecoat Care",
+      "settings": {
+        "section_title": "Housecoat care"
       }
     },
     "faq_shipping_delivery_wbrzzr": {
@@ -74,119 +69,60 @@
         "faq_tNkCYk": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+            "title": "Are you available in any stores?",
+            "answer": "<p>Not yet, but we will keep you posted! Wholesale opportunities are more than welcome! For more information and details, please get in touch at hello@cerise-goods.com. </p>"
           }
         },
         "faq_KELnH4": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_bgKYqr": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_4YhtWf": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+            "title": " I’d love to host a pop-up in my town/at my store!",
+            "answer": "<p>Great, please get in touch at <a href=\"mailto:hello@cerise-goods.com\"><span style=\"text-decoration:underline\">hello@cerise-goods.com</span></a> and we can make that happen.</p>"
           }
         }
       },
       "block_order": [
         "faq_tNkCYk",
-        "faq_KELnH4",
-        "faq_bgKYqr",
-        "faq_4YhtWf"
+        "faq_KELnH4"
       ],
-      "name": "FAQs Shipping & Delivery",
+      "name": "FAQs Wholesale",
       "settings": {
-        "section_title": "Shipping & Delivery"
+        "section_title": "Wholesale"
       }
     },
-    "faq_returns_zYiQJF": {
-      "type": "faq-returns",
+    "faq_ordering_fxbGKb": {
+      "type": "faq-ordering",
       "blocks": {
-        "faq_48jBpy": {
+        "faq_nMD7Nm": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+            "title": "How long will it take to get my housecoat? ",
+            "answer": "<p>Orders are processed within 24–36 hours, Monday–Friday, and shipped via UPS. Orders placed on Friday ship the following Monday. Once shipped, you’ll receive an email with tracking details.</p><p>We don’t currently offer rush shipping. </p>"
           }
         },
-        "faq_kQWrzh": {
+        "faq_xXEHeH": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+            "title": "I’d like to send a housecoat as a gift. Is this possible?",
+            "answer": "<p>We certainly can send a housecoat as a gift. Email us <a href=\"mailto:athello@cerise-goods.com\"><span style=\"text-decoration:underline\">at hello@cerise-goods.com</span></a> with the details, and we’ll take care of it.</p>"
           }
         },
-        "faq_CGDrTJ": {
+        "faq_3krPHz": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_rETRXp": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+            "title": "I want to return my housecoat, how do I get started? ",
+            "answer": "<p>We hope you love your new housecoat. If not, we accept returns within 14 days of purchase. Items must be unworn and returned in their original packaging, including the housecoat bag. Customers cover return shipping. Once received in original condition, we’ll issue a refund minus the original shipping cost.</p><p>Please note, we may decline returns that show signs of wear. To start a return, email us at hello@cerise-goods.com with your order number and reason—we’ll reply with next steps.</p>"
           }
         }
       },
       "block_order": [
-        "faq_48jBpy",
-        "faq_kQWrzh",
-        "faq_CGDrTJ",
-        "faq_rETRXp"
+        "faq_nMD7Nm",
+        "faq_xXEHeH",
+        "faq_3krPHz"
       ],
-      "name": "FAQs Returns",
+      "name": "Shipping & Returns",
       "settings": {
-        "section_title": "Returns"
-      }
-    },
-    "faq_materials_manufacturing_FtaxAP": {
-      "type": "faq-materials-manufacturing",
-      "blocks": {
-        "faq_39F8eR": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_eXTnjK": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_zidRyw": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_39F8eR",
-        "faq_eXTnjK",
-        "faq_zidRyw"
-      ],
-      "name": "FAQs Materials & Manufacturing",
-      "settings": {
-        "section_title": "Materials & Manufacturing"
+        "section_title": "Shipping & Returns"
       }
     },
     "faq_wholesale_kqhMh4": {
@@ -195,58 +131,26 @@
         "faq_hXDjez": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_rX3cJG": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_YjhwVe": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_VPkNNf": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_nDJ9bq": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+            "title": "I saw that you two travel to India often. Can you help me plan my trip?",
+            "answer": "<p>We love nothing more than talking about our travels! We would be happy to help you plan a trip. Please get in touch with us at hello@cerise-goods.com.</p>"
           }
         }
       },
       "block_order": [
-        "faq_hXDjez",
-        "faq_rX3cJG",
-        "faq_YjhwVe",
-        "faq_VPkNNf",
-        "faq_nDJ9bq"
+        "faq_hXDjez"
       ],
-      "name": "FAQs Wholesale",
+      "name": "Travel",
       "settings": {
-        "section_title": "Wholesale"
+        "section_title": "Travel"
       }
     }
   },
   "order": [
     "main",
-    "faq_ordering_fxbGKb",
-    "faq_shipping_delivery_wbrzzr",
-    "faq_returns_zYiQJF",
     "faq_materials_manufacturing_FtaxAP",
+    "faq_materials_manufacturing_zc3G6a",
+    "faq_shipping_delivery_wbrzzr",
+    "faq_ordering_fxbGKb",
     "faq_wholesale_kqhMh4"
   ]
 }

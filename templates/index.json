@@ -16,7 +16,7 @@
         "image": "shopify://shop_images/hero.webp",
         "mobile_image": "shopify://shop_images/hero_mo.webp",
         "heading": "",
-        "text": "<h3>PORTA works hand in hand with designers and makers from all over Europe to bring you products that are steeped in tradition while also updated for the contemporary eye.</h3>",
+        "text": "<h3>Cerise is a collection of pieces gathered from the people and places that inspire us most. We seek out pieces that have a story — rooted in craft, rich in color, and thoughtfully made for everyday life.</h3>",
         "button_link": "",
         "button_label": "",
         "image_position": "left"
@@ -173,7 +173,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "section_heading": "TEXTILES",
-        "info_text": "Some sort of text here about Cerise and how we source things.",
+        "info_text": "One-of-a-kind vintage Indian quilts stitched with color, craft and character.",
         "background_color": "#5e0945"
       }
     },
@@ -189,9 +189,38 @@
         "image_left_bottom": "shopify://shop_images/about2.webp",
         "image_right_top": "shopify://shop_images/about3.webp",
         "image_right_bottom": "shopify://shop_images/about4.webp",
-        "link": "#",
+        "link": "shopify://pages/about",
         "link_text": "Read Our Story",
         "background_color": "#7b5b27"
+      }
+    },
+    "1763434835d01f4d61": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_3gGT9c": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 60,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "#cbd8e1",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_3gGT9c"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -201,6 +230,7 @@
     "featured_collection_DPjRxk",
     "featured_collection_swiper_MJ4gnV",
     "cerise_textiles_w6jBwM",
-    "about_cerise_7iUWJV"
+    "about_cerise_7iUWJV",
+    "1763434835d01f4d61"
   ]
 }

@@ -668,8 +668,19 @@ padding: 28px 0 43px;
 .copyright_right ul li:first-child span{
   color:#007aff;
   padding-right: 2px;
-  color: #84b6d8;
+  color: currentColor;
 }
 .footer-block__details-content > li:not(:last-child) {
 	margin-right: 0;
+}
+.footer-block:nth-child(4) {
+	padding: 30px 0 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer_newswrapper h3 {
+	letter-spacing: 0;
+	margin: 0;
 }

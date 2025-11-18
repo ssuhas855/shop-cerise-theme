@@ -29,7 +29,9 @@
     {%- endif -%}
 
 {%- if section.settings.text != blank -%}
+  <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   {{ section.settings.text  }}
+  </div>
 {%- endif -%}
 </div>
 
