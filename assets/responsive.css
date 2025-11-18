@@ -748,6 +748,9 @@ ul.list.list-social.list-unstyled {
 .menu-drawer__account {
 	display: inline-flex !important;
 }
+.var-input__label {
+	padding: 0 12px;
+}
 }
 /* END 989px */
 
