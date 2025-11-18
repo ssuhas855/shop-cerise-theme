@@ -1275,6 +1275,10 @@ cart-drawer.is-empty .drawer__inner {
 .popup-logo {
 	max-width: 238px;
 }
+.popup-subtitle {
+	margin-bottom: 32px;
+	margin-top: 10px;
+}
 }
 /* END 767px */ 
 
