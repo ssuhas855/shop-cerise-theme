@@ -147,3 +147,8 @@ form#ContactForm {
 .field_box {
     position: static;
 }
+small.email-error {
+    right: auto;
+    left: 0;
+    bottom: -50px;
+}
