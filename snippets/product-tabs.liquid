@@ -5,7 +5,7 @@
   (up to fifth)
 {% endcomment %}
 
-<div class="product-tabs">
+<div class="product-tabs small--hide">
   <div class="tab-buttons">
     {% assign tabs = '' %}
 
@@ -42,6 +42,84 @@
     <div class="tab-content" id="tab-5">{{ product.metafields.custom.tab_content_fifth | metafield_tag }}</div>
   {% endif %}
 </div>
+
+
+
+<div class="product-accordion large--hide">
+
+  {% if product.metafields.custom.tab_title_firtst %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_firtst | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_first | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if product.metafields.custom.tab_title_second %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_second | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_second | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if product.metafields.custom.tab_title_third %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_third | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_third | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if product.metafields.custom.tab_title_fourth %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_fourth | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_fourth | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if product.metafields.custom.tab_title_fifth %}
+  <div class="accordion-item">
+    <button class="accordion-header">
+      {{ product.metafields.custom.tab_title_fifth | metafield_tag }}
+    </button>
+    <div class="accordion-body">
+      {{ product.metafields.custom.tab_content_fifth | metafield_tag }}
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".accordion-header");
+
+  items.forEach((header) => {
+    header.addEventListener("click", () => {
+      const body = header.nextElementSibling;
+
+      header.classList.toggle("active");
+      body.style.maxHeight = body.style.maxHeight ? null : body.scrollHeight + "px";
+    });
+  });
+});
+</script>
+
+
 
 
 <script>
