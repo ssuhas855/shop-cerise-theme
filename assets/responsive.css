@@ -1376,7 +1376,9 @@ cart-drawer.is-empty .drawer__inner {
 .about-cerise__images-left:first-child {
     padding-top: 10px;
 }
-
+.header__icons {
+	margin-top: 21px;
+}
 
 
 
