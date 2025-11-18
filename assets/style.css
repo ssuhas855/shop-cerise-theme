@@ -1219,3 +1219,6 @@ display: flex;
     text-decoration: underline;
     color: currentColor;
 }
+.template-index #MainContent {
+	margin-top: -35px;
+}
