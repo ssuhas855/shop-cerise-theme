@@ -735,6 +735,10 @@ ul.list.list-social.list-unstyled {
 .template-index #MainContent {
 	margin-top: -19px;
 }
+.header__heading {
+	margin-top: 5px;
+	margin-bottom: 6px;
+}
 }
 /* END 989px */
 
