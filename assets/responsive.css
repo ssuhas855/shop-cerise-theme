@@ -719,7 +719,7 @@ ul.list.list-social.list-unstyled {
 .product__info-wrapper .accordion-body p {
   padding: 15px 0;
 }
-..product__info-wrapper .product__info-container {
+.product__info-wrapper .product__info-container {
 	text-align: left;
 }
 .product__info-wrapper .product-accordion ul {
