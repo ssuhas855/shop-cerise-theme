@@ -33,19 +33,11 @@
             "title": "What materials are in Cerise housecoats? ",
             "answer": "<p>Cerise housecoats are made of 100% cotton. We use AZO-free dyes, which means our fabrics are colored without the harmful chemicals commonly used in textile dyeing. They’re safer for your skin, gentler on the planet, and meet international clean-dye standards — perfect for something you wear every day.</p>"
           }
-        },
-        "faq_zidRyw": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
         }
       },
       "block_order": [
         "faq_39F8eR",
-        "faq_eXTnjK",
-        "faq_zidRyw"
+        "faq_eXTnjK"
       ],
       "name": "FAQs Materials & Manufacturing",
       "settings": {
@@ -239,6 +231,13 @@
       "settings": {
         "section_title": "Wholesale"
       }
+    },
+    "faq_materials_manufacturing_zc3G6a": {
+      "type": "faq-materials-manufacturing",
+      "name": "Housecoat Care",
+      "settings": {
+        "section_title": "Housecoat care"
+      }
     }
   },
   "order": [
@@ -247,6 +246,7 @@
     "faq_ordering_fxbGKb",
     "faq_shipping_delivery_wbrzzr",
     "faq_returns_zYiQJF",
-    "faq_wholesale_kqhMh4"
+    "faq_wholesale_kqhMh4",
+    "faq_materials_manufacturing_zc3G6a"
   ]
 }
