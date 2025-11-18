@@ -675,7 +675,7 @@ ul.list.list-social.list-unstyled {
 }
 
 
-.accordion-header {
+.product__info-wrapper .accordion-header {
   width: 100%;
   padding: 18px 0;
   border: none;
@@ -693,7 +693,7 @@ ul.list.list-social.list-unstyled {
     text-transform: uppercase;
 }
 /* PLUS icon default */
-.accordion-header::after {
+.product__info-wrapper .accordion-header::after {
   content: "+";
   position: absolute;
   right: 0px;
@@ -703,26 +703,26 @@ ul.list.list-social.list-unstyled {
 }
 
 /* MINUS icon when open */
-.accordion-header.active::after {
+.product__info-wrapper .accordion-header.active::after {
   content: "–";
 }
-.accordion-header.active {
+.product__info-wrapper .accordion-header.active {
   
 }
 
-.accordion-body {
+.product__info-wrapper .accordion-body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding: 0 15px;
 }
-.accordion-body p {
+.product__info-wrapper .accordion-body p {
   padding: 15px 0;
 }
-.product__info-container {
+..product__info-wrapper product__info-container {
 	text-align: left;
 }
-.product-accordion ul {
+.product__info-wrapper .product-accordion ul {
 	padding: 0 0 0 10px;
 	margin: 0 0 20px;
 }
