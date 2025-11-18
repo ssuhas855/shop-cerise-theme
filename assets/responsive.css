@@ -1382,6 +1382,11 @@ cart-drawer.is-empty .drawer__inner {
 .header__icon--menu {	
 	top: 26px;
 }
+.newsletter-box {
+	min-height: 460px;
+	padding: 30px 20px;
+	width: 94%;
+}
 
 
 
