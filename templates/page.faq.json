@@ -44,6 +44,25 @@
         "section_title": "Materials & Manufacturing"
       }
     },
+    "faq_materials_manufacturing_zc3G6a": {
+      "type": "faq-materials-manufacturing",
+      "blocks": {
+        "faq_ghhzGr": {
+          "type": "faq",
+          "settings": {
+            "title": "How do I care for my housecoat? ",
+            "answer": "<p>Your housecoat can be machine-washed in cold water and dried on a delicate setting.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_ghhzGr"
+      ],
+      "name": "Housecoat Care",
+      "settings": {
+        "section_title": "Housecoat care"
+      }
+    },
     "faq_ordering_fxbGKb": {
       "type": "faq-ordering",
       "blocks": {
@@ -231,22 +250,15 @@
       "settings": {
         "section_title": "Wholesale"
       }
-    },
-    "faq_materials_manufacturing_zc3G6a": {
-      "type": "faq-materials-manufacturing",
-      "name": "Housecoat Care",
-      "settings": {
-        "section_title": "Housecoat care"
-      }
     }
   },
   "order": [
     "main",
     "faq_materials_manufacturing_FtaxAP",
+    "faq_materials_manufacturing_zc3G6a",
     "faq_ordering_fxbGKb",
     "faq_shipping_delivery_wbrzzr",
     "faq_returns_zYiQJF",
-    "faq_wholesale_kqhMh4",
-    "faq_materials_manufacturing_zc3G6a"
+    "faq_wholesale_kqhMh4"
   ]
 }
