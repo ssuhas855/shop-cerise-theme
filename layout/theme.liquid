@@ -472,6 +472,22 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+{% if template == 'customers/register' %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form[action='/account']");
+  if (form) {
+    form.addEventListener("submit", function () {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = "return_to";
+      input.value = "/account"; // change this to any page
+      form.appendChild(input);
+    });
+  }
+});
+</script>
+{% endif %}
 
 
 </body>
