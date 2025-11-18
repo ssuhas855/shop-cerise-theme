@@ -193,6 +193,35 @@
         "link_text": "Read Our Story",
         "background_color": "#7b5b27"
       }
+    },
+    "1763434835d01f4d61": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_3gGT9c": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_3gGT9c"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -201,6 +230,7 @@
     "featured_collection_DPjRxk",
     "featured_collection_swiper_MJ4gnV",
     "cerise_textiles_w6jBwM",
-    "about_cerise_7iUWJV"
+    "about_cerise_7iUWJV",
+    "1763434835d01f4d61"
   ]
 }
