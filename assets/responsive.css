@@ -1310,6 +1310,9 @@ cart-drawer.is-empty .drawer__inner {
 .imgbox4 {
 	padding-top: 0;
 }
+.about-cerise__images-left:first-child {
+    padding-top: 10px;
+}
 }
 /* END 767px */ 
 
