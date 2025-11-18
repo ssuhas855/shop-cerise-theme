@@ -17,6 +17,41 @@
         "padding_bottom": 28
       }
     },
+    "faq_materials_manufacturing_FtaxAP": {
+      "type": "faq-materials-manufacturing",
+      "blocks": {
+        "faq_39F8eR": {
+          "type": "faq",
+          "settings": {
+            "title": "Where are Cerise housecoats made?",
+            "answer": "<p>Our housecoats are designed in Venice, California, and Richmond, Virginia. The housecoat fabric is hand blockprinted and sewn in India. </p>"
+          }
+        },
+        "faq_eXTnjK": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_zidRyw": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_39F8eR",
+        "faq_eXTnjK",
+        "faq_zidRyw"
+      ],
+      "name": "FAQs Materials & Manufacturing",
+      "settings": {
+        "section_title": "Materials & Manufacturing"
+      }
+    },
     "faq_ordering_fxbGKb": {
       "type": "faq-ordering",
       "blocks": {
@@ -65,7 +100,7 @@
       ],
       "name": "FAQs Ordering",
       "settings": {
-        "section_title": "ORDERS"
+        "section_title": "Materials and Manufacturing:"
       }
     },
     "faq_shipping_delivery_wbrzzr": {
@@ -154,41 +189,6 @@
         "section_title": "Returns"
       }
     },
-    "faq_materials_manufacturing_FtaxAP": {
-      "type": "faq-materials-manufacturing",
-      "blocks": {
-        "faq_39F8eR": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_eXTnjK": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_zidRyw": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_39F8eR",
-        "faq_eXTnjK",
-        "faq_zidRyw"
-      ],
-      "name": "FAQs Materials & Manufacturing",
-      "settings": {
-        "section_title": "Materials & Manufacturing"
-      }
-    },
     "faq_wholesale_kqhMh4": {
       "type": "faq-wholesale",
       "blocks": {
@@ -243,10 +243,10 @@
   },
   "order": [
     "main",
+    "faq_materials_manufacturing_FtaxAP",
     "faq_ordering_fxbGKb",
     "faq_shipping_delivery_wbrzzr",
     "faq_returns_zYiQJF",
-    "faq_materials_manufacturing_FtaxAP",
     "faq_wholesale_kqhMh4"
   ]
 }
