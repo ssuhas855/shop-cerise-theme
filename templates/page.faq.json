@@ -76,30 +76,14 @@
         "faq_KELnH4": {
           "type": "faq",
           "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_bgKYqr": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_4YhtWf": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+            "title": " I’d love to host a pop-up in my town/at my store!",
+            "answer": "<p>Great, please get in touch at <a href=\"mailto:hello@cerise-goods.com\"><span style=\"text-decoration:underline\">hello@cerise-goods.com</span></a> and we can make that happen.</p>"
           }
         }
       },
       "block_order": [
         "faq_tNkCYk",
-        "faq_KELnH4",
-        "faq_bgKYqr",
-        "faq_4YhtWf"
+        "faq_KELnH4"
       ],
       "name": "Wholesale",
       "settings": {
