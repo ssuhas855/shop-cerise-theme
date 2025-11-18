@@ -642,6 +642,12 @@ account-icon {
 .faq_note {
 	padding: 120px 30px;	
 }
+.ret_text_wrapper h3, h3, .h3 {
+line-height:28px;
+}
+.about-story__text-block h3 {
+	line-height:28px;
+}
 }
 /* END 989px */
 
