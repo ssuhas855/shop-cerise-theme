@@ -1338,6 +1338,7 @@ cart-drawer.is-empty .drawer__inner {
   right: 0px;
   font-size: 16px;
   transition: 0.3s ease;
+  font-weight: 400;
 }
 
 /* MINUS icon when open */
