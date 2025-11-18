@@ -273,6 +273,8 @@ details[open] .modal-overlay::after {
   min-height:601px;
   padding: 40px 30px;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .close-popup {
