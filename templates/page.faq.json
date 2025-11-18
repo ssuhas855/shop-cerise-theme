@@ -63,6 +63,49 @@
         "section_title": "Housecoat care"
       }
     },
+    "faq_shipping_delivery_wbrzzr": {
+      "type": "faq-shipping-delivery",
+      "blocks": {
+        "faq_tNkCYk": {
+          "type": "faq",
+          "settings": {
+            "title": "Are you available in any stores?",
+            "answer": "<p>Not yet, but we will keep you posted! Wholesale opportunities are more than welcome! For more information and details, please get in touch at hello@cerise-goods.com. </p>"
+          }
+        },
+        "faq_KELnH4": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_bgKYqr": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        },
+        "faq_4YhtWf": {
+          "type": "faq",
+          "settings": {
+            "title": "Where does Cerise ship to?",
+            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_tNkCYk",
+        "faq_KELnH4",
+        "faq_bgKYqr",
+        "faq_4YhtWf"
+      ],
+      "name": "Wholesale",
+      "settings": {
+        "section_title": "Wholesale"
+      }
+    },
     "faq_ordering_fxbGKb": {
       "type": "faq-ordering",
       "blocks": {
@@ -112,49 +155,6 @@
       "name": "FAQs Ordering",
       "settings": {
         "section_title": "Materials and Manufacturing:"
-      }
-    },
-    "faq_shipping_delivery_wbrzzr": {
-      "type": "faq-shipping-delivery",
-      "blocks": {
-        "faq_tNkCYk": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_KELnH4": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_bgKYqr": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        },
-        "faq_4YhtWf": {
-          "type": "faq",
-          "settings": {
-            "title": "Where does Cerise ship to?",
-            "answer": "<p>Is there anything better than an ice-cold, bone dry dirty martini at the end of a work week?</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_tNkCYk",
-        "faq_KELnH4",
-        "faq_bgKYqr",
-        "faq_4YhtWf"
-      ],
-      "name": "Wholesale",
-      "settings": {
-        "section_title": "Wholesale"
       }
     },
     "faq_returns_zYiQJF": {
@@ -256,8 +256,8 @@
     "main",
     "faq_materials_manufacturing_FtaxAP",
     "faq_materials_manufacturing_zc3G6a",
-    "faq_ordering_fxbGKb",
     "faq_shipping_delivery_wbrzzr",
+    "faq_ordering_fxbGKb",
     "faq_returns_zYiQJF",
     "faq_wholesale_kqhMh4"
   ]
