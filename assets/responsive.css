@@ -1304,6 +1304,9 @@ cart-drawer.is-empty .drawer__inner {
 .about-story__images--right .about-story__image.img_2 {
 	width: 67%;
 }
+.imgbox4 {
+	padding-top: 0;
+}
 }
 /* END 767px */ 
 
