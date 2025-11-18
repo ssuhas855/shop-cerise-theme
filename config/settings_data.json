@@ -146,7 +146,7 @@
           "color_scheme": "scheme-3",
           "cookie_text": "We use cookies to give you the best experience on our website.",
           "link_text": "Privacy Policy",
-          "policy_link": "shopify://pages/privacy-policy",
+          "policy_link": "shopify://policies/privacy-policy",
           "button_label": "Accept"
         }
       },
