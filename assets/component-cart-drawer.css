@@ -539,7 +539,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	margin: 0;
 	height: auto;
 	background: transparent;
-	text-decoration: none;
+	text-decoration: underline;
 	color: currentColor;
   font-size: 12px;
 	letter-spacing: 1.5px;
@@ -547,6 +547,9 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     font-style: var(--font-body-style);
     font-weight: var(--font-nav-weight);
     cursor:pointer;
+}
+.cart-remove-button:hover{
+  	text-decoration: none;
 }
 .cart-item cart-remove-button {
 	display: flex;
