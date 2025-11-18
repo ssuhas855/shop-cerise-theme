@@ -1222,3 +1222,6 @@ display: flex;
 .template-index #MainContent {
 	margin-top: -35px;
 }
+.rte a {
+	color: rgba(var(--color-link), 1);	
+}
