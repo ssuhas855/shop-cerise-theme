@@ -1316,6 +1316,7 @@ cart-drawer.is-empty .drawer__inner {
 .product-accordion {
   border-top: 1px solid currentColor;
   color: rgba(var(--color-foreground), 1);
+  margin-top: 40px;
 }
 
 
