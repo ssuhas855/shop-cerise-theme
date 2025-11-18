@@ -159,6 +159,86 @@
   </div>
 </div>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('ContactForm');
+  const emailInput = document.getElementById('ContactForm-email');
+
+  if (!form || !emailInput) return;
+
+  // EMAIL REGEX (simple + safe)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Remove old error
+    const oldError = document.querySelector('#email-error-custom');
+    if (oldError) oldError.remove();
+    emailInput.classList.remove('field--error');
+
+    //------------------------------------
+    // 🔍 Validate Email Before AJAX
+    //------------------------------------
+    const email = emailInput.value.trim();
+
+    if (!emailRegex.test(email)) {
+      emailInput.classList.add('field--error');
+      emailInput.insertAdjacentHTML(
+        'afterend',
+        `<small id="email-error-custom" class="contact__field-error" style="color:#d02e2e;">
+            Please enter a valid email address.
+         </small>`
+      );
+      return; // ❌ stop — don't send AJAX
+    }
+
+    //------------------------------------
+    // ✅ If email is valid → Send AJAX
+    //------------------------------------
+    const formData = new FormData(form);
+
+    fetch('/contact#contact_form-section', {
+      method: 'POST',
+      body: formData,
+      headers: { 'X-Requested-With': 'XMLHttpRequest' }
+    })
+      .then(res => res.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        const success = doc.querySelector('.form-status.form__message');
+        const serverError = doc.querySelector('.contact__field-error');
+
+        // SUCCESS MESSAGE
+        if (success) {
+          form.insertAdjacentHTML(
+            'beforebegin',
+            `<p class="form-status form__message">${success.innerHTML}</p>`
+          );
+          form.reset();
+          return;
+        }
+
+        // SERVER ERROR MESSAGE (Shopify email error)
+        if (serverError) {
+          emailInput.insertAdjacentHTML(
+            'afterend',
+            `<small class="contact__field-error">${serverError.innerHTML}</small>`
+          );
+        }
+      })
+      .catch(err => {
+        console.error("AJAX error:", err);
+      });
+  });
+});
+</script>
+
+
+
 {% schema %}
 {
   "name": "t:sections.contact-form.name",
