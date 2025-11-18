@@ -1445,6 +1445,9 @@ cart-drawer.is-empty .drawer__inner {
 .header__search {
 	margin-right: 5px;
 }
+.grid--peek.slider .grid__item:first-of-type {
+	 margin-left: 0; 
+}
 }
 /* END 767px */ 
 
