@@ -1438,6 +1438,9 @@ cart-drawer.is-empty .drawer__inner {
 #challenge-form-container{
 	padding:0 25px;
 }
+.accordion-wrapper h5 {
+	font-size: 14px;
+}
 }
 /* END 767px */ 
 
