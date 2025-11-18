@@ -1431,6 +1431,9 @@ cart-drawer.is-empty .drawer__inner {
 	margin-top: 7px;
 	margin-bottom: 7px;
 }
+.quantity__input[type="number"] {
+	font-size: 14px;
+}
 }
 /* END 767px */ 
 
