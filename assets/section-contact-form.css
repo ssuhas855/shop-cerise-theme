@@ -151,4 +151,7 @@ small.email-error {
     right: auto;
     left: 0;
     bottom: -50px;
+	font-size: 19px;
+    font-family: var(--font-nav-family);
+    font-style: var(--font-body-style);
 }
