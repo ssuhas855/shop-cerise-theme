@@ -661,6 +661,9 @@ line-height:28px;
     padding: 0 0 10px;
    width:100%;
 }
+ul.list.list-social.list-unstyled {
+    display: none!important;
+}
 }
 /* END 989px */
 
