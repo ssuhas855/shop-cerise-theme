@@ -189,7 +189,7 @@
         "image_left_bottom": "shopify://shop_images/about2.webp",
         "image_right_top": "shopify://shop_images/about3.webp",
         "image_right_bottom": "shopify://shop_images/about4.webp",
-        "link": "#",
+        "link": "shopify://pages/about",
         "link_text": "Read Our Story",
         "background_color": "#7b5b27"
       }
