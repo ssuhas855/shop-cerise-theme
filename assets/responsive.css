@@ -1267,8 +1267,7 @@ cart-drawer.is-empty .drawer__inner {
 	min-height: 520px;
 	padding: 30px 20px;
 }
-.newsletter-popup {
-	display: flex;
+.newsletter-popup {	
 	align-items: center;
 	justify-content: center;
 }
