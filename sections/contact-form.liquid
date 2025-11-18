@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(res => res.text())
       .then(res => {
         form.insertAdjacentHTML(
-          "beforebegin",
+          "afterbegin",
           `<p class='form-status form__message'>Message sent successfully.</p>`
         );
         form.reset();
