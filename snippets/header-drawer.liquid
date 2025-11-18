@@ -163,9 +163,9 @@
                 {%- endif -%}
                 {%- liquid
                   if customer
-                    echo 'Account' 
+                    echo 'customer.account_fallback' | t
                   else
-                    echo 'Account' 
+                    echo 'customer.log_in' | t
                   endif
                 -%}
               </a>

@@ -1,9 +1,7 @@
 {% if cart == empty %}
-<span class="svgtext-wrapper small--hide">Cart</span>
-         <span class="svgtext-wrapper large--hide"> {{- 'icon-cart.svg' | inline_asset_content -}}</span>
+<span class="svgtext-wrapper">Cart</span>
 {% else %}
-  <span class="svgtext-wrapper small--hide">Cart</span>
-         <span class="svgtext-wrapper large--hide"> {{- 'icon-cart.svg' | inline_asset_content -}}</span>
+  <span class="svgtext-wrapper">Cart</span>
 {% endif %}
 
 <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
