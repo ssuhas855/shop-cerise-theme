@@ -1440,6 +1440,7 @@ cart-drawer.is-empty .drawer__inner {
 }
 .accordion-wrapper h5 {
 	font-size: 14px;
+	letter-spacing: 1px;
 }
 }
 /* END 767px */ 
