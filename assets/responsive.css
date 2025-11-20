@@ -284,6 +284,18 @@ h3, .h3 {
 	margin-top: 6px;
 	margin-bottom: 10px;
 }
+.popup-subtitle {
+	width: 290px;
+}
+.var-input__label {
+	padding: 0 9px;
+}
+.input__Size .variant_box {
+	gap: 10px;
+}
+.variant_box {
+	gap: 15px;
+}
 }
 /* END 1199px */
 
@@ -403,7 +415,7 @@ div.cerise-textiles__text {
 }
 .product-form__input--swatch {
 	flex-direction: column;
-	gap: 15px;
+	gap: 0px;
 }
 .variant_box {
 	gap: 15px;
@@ -733,7 +745,7 @@ ul.list.list-social.list-unstyled {
 	display: inherit !important;
 }
 .menu-drawer__navigation .link::after {
-	display: none!important;
+	
 }
 .section-header {	
 	background: #fffcf6;
@@ -756,6 +768,9 @@ ul.list.list-social.list-unstyled {
 }
 .var-input__label {
 	padding: 0 12px;
+}
+.popup-subtitle {
+	width: 270px;
 }
 }
 /* END 989px */
@@ -1042,7 +1057,7 @@ div.cerise-textiles__text {
 }
 .about-story__content {
 	width: 100%;
-	padding: 30px 20px;
+	padding: 40px 20px;
 	text-align: center;
 }
 .about-story_row.right_img {
@@ -1066,7 +1081,7 @@ div.cerise-textiles__text {
 }
 .right_img .about-story__text-block {
 	max-width: none;
-	margin-top: 50px;
+	margin-top: 0px;
 }
 #about-story_second .about-story__images--left {
 	width: 100%;
@@ -1225,10 +1240,10 @@ div.cerise-textiles__text {
 	padding: 0;
 }
 .accordion-wrapper h5 {
-	padding: 40px 0px 15px;
+	padding: 60px 0px 15px;
 }
 #faqs_body #MainContent {
-	padding: 35px 20px 0;
+	padding: 0px 20px 0;
 }
 .shopify-policy__container {
 	padding-bottom: 130px;
@@ -1454,6 +1469,38 @@ cart-drawer.is-empty .drawer__inner {
 cart-drawer-items {
 	width: calc(100% + 10px );
 	padding-right: 10px;
+}
+body div#insta-feed {
+    margin-top: 60px!important;
+}
+.link::after {
+	transition: width .1s ease-in-out;
+}
+#about-story_second {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.right_img .about-story__content {	
+	padding: 40px 20px 20px;
+}
+.about-story__text-block {	
+	margin: 0 auto;
+	max-width: none;
+}
+.faq_mobile_dropdown.large--hide {
+	display: none !important;
+}
+.custom-accordion {
+	display: block;
+}
+.accordion-items {
+	min-height: inherit;
+}
+body div#insta-feed {
+	margin-top: 34px !important;
+}
+.swiper-button-next, .swiper-button-prev {
+	width: 70px;
 }
 }
 /* END 767px */ 

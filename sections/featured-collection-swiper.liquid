@@ -9,18 +9,18 @@
 
 {%- unless section.settings.quick_add == 'none' -%}
   {{ 'quick-add.css' | asset_url | stylesheet_tag }}
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer></script>
 {%- endunless -%}
 
 {%- if section.settings.quick_add == 'standard' -%}
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'quick-add.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 {%- if section.settings.quick_add == 'bulk' -%}
-  <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer></script>
+  <script src="{{ 'quantity-popover.js' | asset_url }}" defer></script>
+  <script src="{{ 'price-per-item.js' | asset_url }}" defer></script>
+  <script src="{{ 'quick-order-list.js' | asset_url }}" defer></script>
 {%- endif -%}
 
 <style>
@@ -34,48 +34,47 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
 </style>
 
 {%- liquid
-  assign products_to_display = section.settings.collection.all_products_count
+  assign product_count = section.settings.collection.products_count
+  assign products_to_show = section.settings.products_to_show
 
-  if section.settings.collection.all_products_count > section.settings.products_to_show
-    assign products_to_display = section.settings.products_to_show
+  if product_count > products_to_show
     assign more_in_collection = true
   endif
 -%}
 
+ {% if product_count > 0 %}
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
-  <div
-    class="collection section-{{ section.id }}-padding"
-    id="collection-{{ section.id }}"
-    data-id="{{ section.id }}"
-  >
-    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      {%- if section.settings.title != blank -%}
-        <h5 class="title inline-richtext {{ section.settings.heading_size }}">
-          {{ section.settings.title }}
-        </h5>
-      {%- endif -%}
-      {%- if section.settings.description != blank -%}
+  <div class="collection section-{{ section.id }}-padding" id="collection-{{ section.id }}" data-id="{{ section.id }}">
+    
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {% if section.settings.title != blank %}
+        <h5 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.title }}</h5>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
         <div class="collection__description {{ section.settings.description_style }} rte">
           {{ section.settings.description }}
         </div>
-      {%- endif -%}
+      {% endif %}
     </div>
 
     <!-- Swiper Slider -->
-    <div class="swiper cerise-swiper featured_swiper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="swiper cerise-swiper featured_swiper {% if settings.animations_reveal_on_scroll %}scroll-trigger animate--slide-in{% endif %}">
+      
       <div class="swiper-wrapper">
         {% assign skip_card_product_styles = false %}
-        {%- if section.settings.collection.products.size > 0 -%}
+
+        {% if product_count > 0 %}
           {% assign lazy_load = false %}
           {% paginate section.settings.collection.products by section.settings.products_to_show %}
-            {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+            {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
               {% if lazy_load == false and forloop.index > 4 %}
                 {% assign lazy_load = true %}
               {% endif %}
+              
               <div class="swiper-slide">
                 {% render 'card-product',
                   card_product: product,
@@ -90,11 +89,12 @@
                   quick_add: section.settings.quick_add
                 %}
               </div>
-              {%- assign skip_card_product_styles = true -%}
-            {%- endfor -%}
+
+              {% assign skip_card_product_styles = true %}
+            {% endfor %}
           {% endpaginate %}
-        {%- else -%}
-          {%- for i in (1..4) -%}
+        {% else %}
+          {% for i in (1..4) %}
             <div class="swiper-slide">
               {% assign placeholder_image = 'product-apparel-' | append: i %}
               {% render 'card-product',
@@ -105,61 +105,67 @@
                 placeholder_image: placeholder_image
               %}
             </div>
-          {%- endfor -%}
-        {%- endif -%}
+          {% endfor %}
+        {% endif %}
       </div>
 
-      <!-- Swiper Navigation -->
-     <div class="swiper-btn center">
-        <div class="swiper-button-prev"><svg width="91" height="19" viewBox="0 0 91 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="90.4546" y1="9.4455" x2="14.7623" y2="9.4455" stroke="#F7DAC7"/>
-<path d="M1 9.28952L14.9343 1.24456L14.9343 17.3345L1 9.28952Z" stroke="#F7DAC7"/>
-</svg>
-</div>
+      <!-- Arrows only if products exist -->
+      {% if product_count > 1 %}
+      <div class="swiper-btn center">
+        <div class="swiper-button-prev">
+          <svg width="91" height="19" viewBox="0 0 91 19" fill="none">
+            <line x1="90.4546" y1="9.4455" x2="14.7623" y2="9.4455" stroke="#F7DAC7"/>
+            <path d="M1 9.28952L14.9343 1.24456V17.3345L1 9.28952Z" stroke="#F7DAC7"/>
+          </svg>
+        </div>
         <div class="swiper-button-next">
-           <svg width="91" height="19" viewBox="0 0 91 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="9.1333" x2="75.6924" y2="9.1333" stroke="#F7DAC7"/>
-<path d="M89.4546 9.28928L75.5203 17.3342L75.5204 1.24431L89.4546 9.28928Z" stroke="#F7DAC7"/>
-</svg>
-
+          <svg width="91" height="19" viewBox="0 0 91 19" fill="none">
+            <line y1="9.1333" x2="75.6924" y2="9.1333" stroke="#F7DAC7"/>
+            <path d="M89.4546 9.28928L75.5203 17.3342V1.24431L89.4546 9.28928Z" stroke="#F7DAC7"/>
+          </svg>
         </div>
-        </div>
+      </div>
+      {% endif %}
+      
     </div>
 
-    {%- if section.settings.show_view_all and more_in_collection -%}
+    {% if section.settings.show_view_all and more_in_collection %}
       <div class="center collection__view-all">
-        <a
-          href="{{ section.settings.collection.url }}"
-          class="button"
-          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
-        >
+        <a href="{{ section.settings.collection.url }}" class="button">
           {{ 'sections.featured_collection.view_all' | t }}
         </a>
       </div>
-    {%- endif -%}
+    {% endif %}
   </div>
 </div>
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {  
-    new Swiper('.cerise-swiper', {
-      slidesPerView: 2,
-      spaceBetween: 20,
-      allowTouchMove: false,   // 👈 disables dragging
-      simulateTouch: false,    // 👈 disables mouse dragging
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      breakpoints: {
-        1024: { slidesPerView: 3 },
-        768: { slidesPerView: 3 },
-        480: { slidesPerView: 1 }
-      }
-    });
+document.addEventListener('DOMContentLoaded', function () {
+
+  const swiper = new Swiper('.cerise-swiper', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    allowTouchMove: false,
+    simulateTouch: false,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      1024: { slidesPerView: 3 },
+      768: { slidesPerView: 3 },
+      480: { slidesPerView: 1 }
+    }
   });
+
+  /* Auto-hide arrows if slider cannot slide */
+  if (swiper.slides.length <= swiper.params.slidesPerView) {
+    document.querySelectorAll('.swiper-btn').forEach(btn => btn.style.display = 'none');
+  }
+});
 </script>
+ {% endif %}
 
 {% schema %}
 {

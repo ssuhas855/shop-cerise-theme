@@ -214,3 +214,13 @@ variant-selects {
 .input__Size  input[type="radio"]:checked + label{
   background: #F7DAC7!important;
 }
+.variant_box {
+	width: 75%;
+  justify-content: start;
+}
+.product-form__input .form__label {
+	width: 25%;
+}
+.input__Size .variant_box {
+	justify-content:start;
+}

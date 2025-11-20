@@ -168,6 +168,172 @@
                       {%- if block.settings.text != blank -%}
                         {{ block.settings.text }}
                       {%- endif -%}
+
+
+
+<div class="footer-block__newsletter">
+              {%- if section.settings.newsletter_heading != blank -%}
+                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+              {%- endif -%}
+            <div id="ContactFooter">
+
+ <div id="contact_form-section-footer">
+   
+    {%- liquid
+      assign contact_form_class = 'isolate'
+      if settings.animations_reveal_on_scroll
+        assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+      endif
+    -%}
+   <form id="ContactForm-footer" class="contact_ajax_form" onsubmit="return false;">
+      {%- if form.posted_successfully? -%}
+        <p class="form-status form-status-list form__message" tabindex="-1" autofocus>
+          {{- 'icon-success.svg' | inline_asset_content -}}
+          {{ 'templates.contact.form.post_success' | t }}
+        </p>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+            {{- 'icon-error.svg' | inline_asset_content -}}
+            {{ 'templates.contact.form.error_heading' | t }}
+          </h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+      <div class="contactfooter__fields">
+       
+        <div class="field_box field--with-error">
+          <input
+            autocomplete="email"
+            type="email"
+            id="ContactForm-email"
+            class="field__input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="ContactForm-email-error"
+            {% endif %}
+            placeholder="{{ 'templates.contact.form.email' | t }}"
+          >
+          <label class="field_box__label" for="ContactForm-email">
+            {{- 'templates.contact.form.email' | t }}
+            <span aria-hidden="true">*</span></label
+          >
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                <span class="svg-wrapper">
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
+        </div>
+      </div>
+      
+      <div class="contactfooter__button">
+        <button type="submit" class="">
+          <svg class="icon icon-arrow" width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="8.55368" x2="14.2432" y2="8.55368" stroke="#F7DAC7" stroke-width="1.5"></line>
+<path d="M4.13408 17.574L14.2422 9.07402L4.13408 0.57402" stroke="#F7DAC7" stroke-width="1.5"></path>
+</svg>
+        </button>
+      </div>
+   </form>
+
+</div>
+
+
+
+
+</div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("ContactForm-footer");
+  const emailInput = document.getElementById("ContactForm-email");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Remove existing error
+    const oldErr = form.querySelector('.email-error');
+    if (oldErr) oldErr.remove();
+    emailInput.classList.remove("field--error");
+
+    const emailValue = emailInput.value.trim();
+
+    // Validate email
+    if (!emailRegex.test(emailValue)) {
+      emailInput.classList.add("field--error");
+      emailInput.insertAdjacentHTML(
+        "afterend",
+        `<small class="email-error" style="color:#d02e2e;">Enter a valid email.</small>`
+      );
+      return; // stop submission if invalid
+    }
+
+    // Remove previous success message (only on new valid submission)
+    const oldSuccess = form.querySelector('.form-status');
+    if (oldSuccess) oldSuccess.remove();
+
+    // Prepare form data
+    const data = new FormData(form);
+
+    fetch("/contact", {
+      method: "POST",
+      body: data
+    })
+    .then(res => res.text())
+    .then(res => {
+      // Add success message
+      const successMsg = document.createElement('p');
+      successMsg.className = 'form-status form__message';
+      successMsg.textContent = 'Message sent successfully.';
+      form.prepend(successMsg);
+
+      // Reset form
+      form.reset();
+
+      // Optional: auto-hide success after 5 seconds
+      setTimeout(() => {
+        successMsg.remove();
+      }, 2000);
+    })
+    .catch(err => console.error(err));
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+</div>
+
+            </div>
+
+
                       </div>
                     </div>
 

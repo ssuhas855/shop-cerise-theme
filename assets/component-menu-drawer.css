@@ -243,8 +243,22 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-	padding: 1.1rem 2rem;
+	padding: 0;
 	font-size: 14px;
 	letter-spacing: 1.7px;
 	font-weight: 600;
+  width:auto;
+  background: transparent!important;
+}
+.menu-drawer__menu.has-submenu.list-menu {
+	padding: 0 20px;  
+}
+.js .menu-drawer__menu li {
+	margin-bottom: .2rem;
+	padding: 7px 0;
+  display: flex;
+}
+.menu-drawer__utility-links:has(.menu-drawer__localization) .menu-drawer__account {
+	margin: 0;
+	padding: 0;
 }

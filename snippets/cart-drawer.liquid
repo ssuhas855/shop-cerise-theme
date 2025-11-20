@@ -186,12 +186,12 @@
                             </div>
                           {%- endif -%}
 
-
+{%comment%}
                           {% if item.product.metafields.custom.preorder_text %}
                             <p class="preorder-text">
                             <span>Preorder:</span> {{ item.product.metafields.custom.preorder_text | escape }}
                             </p>
-                            {% endif %}
+                            {% endif %} {%endcomment%}
 
                           {%- if item.product.has_only_default_variant == false
                             or item.properties.size != 0
