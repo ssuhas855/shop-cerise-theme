@@ -485,7 +485,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .product-option {
 	font-size: 14px;
 	letter-spacing: 0;
-	line-height: normal;
+	line-height: 21px;
 }
 .cart-item__name + .product-option {
 	display: none;
