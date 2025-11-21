@@ -763,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
   variantRadios.forEach(function(radio) {
     radio.addEventListener('change', function() {      
       // Delay execution by 200ms
-      setTimeout(function() {
+     
         // Collect all currently selected options
         var selectedOptions = [];
 
@@ -789,7 +789,7 @@ document.addEventListener('DOMContentLoaded', function() {
           preorderInput.value = '';
           alert("No preorder text for this variant.");
         }
-      }, 2000); // 200ms delay
+      
     });
   });
 });
