@@ -41,40 +41,10 @@
         data-type: 'add-to-cart-form'
       -%}
 
-      {%- assign v = product.selected_or_first_available_variant -%}
-
-      {%- comment %}
-        ================
-        PREORDER LOGIC
-        Applies when:
-        - inventory_quantity <= 0
-        - inventory_policy = "continue"
-        ================
-      {% endcomment -%}
-
-      {% if v.inventory_quantity <= 0 and v.inventory_policy == 'continue' %}
-        <!-- Visible preorder text -->
-        <div class="preorder-text-output">
-          {{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}
-        </div>
-
-        <!-- Hidden input for cart property -->
-        <input type="text"
+      <input type="text"
                class="preorder-hidden-input"
                name="properties[Preorder]"
                value="{{ v.metafields.custom.pre_order_text }}">
-
-        <!-- Variant ID hidden input -->
-        <input
-          type="text"
-          name="id"
-          value="{{ v.id }}"
-          {% if v.available == false or quantity_rule_soldout or v == null %}
-            disabled
-          {% endif %}
-          class="product-variant-id"
-        >
-      {% endif %}
 
       {%- if gift_card_recipient_feature_active -%}
         {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
