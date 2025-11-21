@@ -11,6 +11,7 @@
 {%- liquid
   assign product_form_id = 'product-form-' | append: section.id
 -%}
+
 {%- for value in option.values -%}
   {%- liquid
     assign swatch_focal_point = null
@@ -56,10 +57,12 @@
     {%- endcapture -%}
 
     {%- liquid
+      # Link color option to metaobject by handle (e.g. "steen-blue")
       assign color_handle = value | handleize
       assign color_metaobject = shop.metaobjects.color[color_handle]
       assign swatch_obj = value.swatch
 
+      # Prefer the Color metaobject if it has an image
       if color_metaobject and color_metaobject.image
         assign swatch_obj = color_metaobject
       endif
@@ -79,26 +82,24 @@
         additional_props: input_dataset
       %}
     {% else %}
-      <!-- Size or other option -->
-     
+      <!-- Size option -->
+ <input
+      type="radio"
+      id="{{ input_id }}"
+      name="{{ input_name | escape }}"
+      value="{{ value | escape }}"
+      form="{{ product_form_id }}"
+      {% if value.selected %}checked{% endif %}
+      {% if option_disabled %}class="disabled"{% endif %}
+      {{ input_dataset }}
+    >
+    <label class="var-input__label" for="{{ input_id }}">
+      {{ value }}
+      {{ label_unavailable }}
+    </label>
 
-      <input
-        type="radio"
-        id="{{ input_id }}"
-        name="{{ input_name | escape }}"
-        value="{{ value | escape }}"
-        form="{{ product_form_id }}"
-        {% if value.selected %}checked{% endif %}
-        {% if option_disabled %}class="disabled"{% endif %}
-        {{ input_dataset }}
-      >
-      <label class="var-input__label" for="{{ input_id }}"
-             >
-        {{ value }}
-        {{ label_unavailable }}
-      </label>
+{% endif %}
 
-    {% endif %}
 
   {%- elsif picker_type == 'button' -%}
     <input
@@ -137,4 +138,3 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
-
