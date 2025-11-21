@@ -754,29 +754,34 @@
 document.addEventListener('DOMContentLoaded', function() {
   var preorderInput = document.querySelector('.preorder-hidden-input');
 
-  // Listen for changes on all variant radios
-  var variantRadios = document.querySelectorAll('input[type="radio"]');
+  // Parent container for all variant radios
+  var variantContainer = document.querySelector('variant-selects');
 
-  variantRadios.forEach(function(radio) {
-    radio.addEventListener('change', function() {
-      // Find the associated label
-      var label = document.querySelector('label[for="' + this.id + '"]');
+  if (!variantContainer) return;
+
+  variantContainer.addEventListener('change', function(e) {
+    var target = e.target;
+
+    // Make sure the changed element is a radio input
+    if (target && target.type === 'radio') {
+      // Find the label for this radio
+      var label = variantContainer.querySelector('label[for="' + target.id + '"]');
       if (!label) return;
 
-      // Get the preorder text from the label's data-text attribute
+      // Get preorder text from data-text
       var preorderText = label.getAttribute('data-text') || '';
 
-      // Update the hidden input value
+      // Update the hidden input
       preorderInput.value = preorderText;
 
       console.log('Preorder hidden input updated:', preorderInput.value);
-    });
+    }
   });
 
-  // Initialize hidden input on page load
-  var checkedRadio = document.querySelector('input[type="radio"]:checked');
+  // Initialize on page load
+  var checkedRadio = variantContainer.querySelector('input[type="radio"]:checked');
   if (checkedRadio) {
-    var label = document.querySelector('label[for="' + checkedRadio.id + '"]');
+    var label = variantContainer.querySelector('label[for="' + checkedRadio.id + '"]');
     if (label) {
       preorderInput.value = label.getAttribute('data-text') || '';
     }
