@@ -753,26 +753,39 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var preorderInput = document.querySelector('.preorder-hidden-input');
+  var submitButton = document.querySelector('.product-form__submit');
 
-  // Global click listener
+  // Use event delegation on the document
   document.addEventListener('click', function(e) {
     var target = e.target;
 
-    // Check if the clicked element is a variant label
+    // Only handle variant labels
     if (target.classList.contains('var-input__label')) {
+      // Get the preorder text from data-text
       var preorderText = target.getAttribute('data-text') || '';
       preorderInput.value = preorderText;
 
-      console.log('Preorder hidden input updated via click:', preorderInput.value);
+      console.log('Preorder hidden input updated:', preorderInput.value);
+
+      // Check if the variant is preorder based on data attribute
+      // You could also store a data-preorder="true" on label if needed
+      if (preorderText) {
+        submitButton.querySelector('span').textContent = 'Preorder';
+      } else {
+        submitButton.querySelector('span').textContent = 'Add to Cart';
+      }
     }
   });
 
-  // Optional: initialize hidden input with selected variant on page load
+  // Initialize hidden input on page load
   var checkedRadio = document.querySelector('input[type="radio"]:checked');
   if (checkedRadio) {
     var label = document.querySelector('label[for="' + checkedRadio.id + '"]');
     if (label) {
       preorderInput.value = label.getAttribute('data-text') || '';
+      if (preorderInput.value) {
+        submitButton.querySelector('span').textContent = 'Preorder';
+      }
     }
   }
 });
