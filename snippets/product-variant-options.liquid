@@ -83,6 +83,8 @@
       %}
     {% else %}
       <!-- Size option -->
+
+      {%- assign matching_variant = product.variants | where: "option2", value | first -%}
  <input
       type="radio"
       id="{{ input_id }}"
@@ -93,7 +95,9 @@
       {% if option_disabled %}class="disabled"{% endif %}
       {{ input_dataset }}
     >
-    <label class="var-input__label" for="{{ input_id }}">
+    <label class="var-input__label" for="{{ input_id }}"
+    data-text="{{ matching_variant.metafields.custom.pre_order_text | escape }}">
+    >
       {{ value }}
       {{ label_unavailable }}
     </label>
