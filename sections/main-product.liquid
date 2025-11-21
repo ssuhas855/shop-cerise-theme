@@ -751,7 +751,35 @@
 </product-info>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the preorder hidden input
+  var preorderInput = document.getElementById('preorder-hidden-input');
 
+  // Listen for changes on Shopify variant select dropdown(s)
+  var variantSelectors = document.querySelectorAll('select[name="id"]');
+
+  variantSelectors.forEach(function(selector) {
+    selector.addEventListener('change', function() {
+      var selectedVariantId = this.value;
+
+      // Find the variant object from Shopify's global product JSON
+      var variant = window.product.variants.find(v => v.id == selectedVariantId);
+
+      if (variant && variant.metafields && variant.metafields.custom && variant.metafields.custom.pre_order_text) {
+        preorderInput.value = variant.metafields.custom.pre_order_text;
+
+        // Alert showing the new preorder text
+        alert("Preorder text updated: " + preorderInput.value);
+      } else {
+        preorderInput.value = '';
+        alert("No preorder text for this variant.");
+      }
+    });
+  });
+});
+
+</script>
 
 
 
