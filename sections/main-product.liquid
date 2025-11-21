@@ -752,29 +752,6 @@
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var preorderInput = document.querySelector('.preorder-hidden-input');
-
-  // Listen for clicks on all variant labels
-  var variantLabels = document.querySelectorAll('.var-input__label');
-  variantLabels.forEach(function(label) {
-    label.addEventListener('click', function() {
-      // Get the preorder text from the label's data-text attribute
-      var preorderText = this.getAttribute('data-text') || '';
-
-      // Update the hidden input value
-      preorderInput.value = preorderText;
-
-      console.log('Preorder hidden input updated:', preorderInput.value);
-    });
-  });
-
-  // Optional: Initialize hidden input with the selected variant's data-text
-  var checkedRadio = document.querySelector('input[type="radio"]:checked + .var-input__label');
-  if (checkedRadio) {
-    preorderInput.value = checkedRadio.getAttribute('data-text') || '';
-  }
-});
 
 </script>
 
