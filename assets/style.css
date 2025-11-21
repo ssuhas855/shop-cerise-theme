@@ -1276,8 +1276,8 @@ button.product-media-modal__toggle {
 	text-align: left;
 	color: currentColor;
 }
-#ContactFooter .field__input {
-	padding: 0!important;
+#ContactFooter .field__input { 
+	padding: 0 70px 0 0 !important; 
 	text-align: left;
 	border: none !important;
 	border-bottom: 1px solid rgb(var(--color-foreground)) !important;
