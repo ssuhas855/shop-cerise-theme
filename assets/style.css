@@ -1041,6 +1041,7 @@ div.cart-count-bubble {
 .accordion-icon {
   font-size: 1.4rem;  
   line-height: 1;
+  color: rgba(var(--color-foreground), 1)!important;
 }
 .accordion-content {
 	overflow: hidden;
