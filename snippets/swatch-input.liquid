@@ -25,7 +25,8 @@
     %}
 {% endcomment %}
 
-{% assign variant_for_value = product.variants | where: 'option1', value | first %}
+{% assign option_key = 'option' | append: option.position %}
+{% assign variant_for_value = product.variants | where: option_key, value | first %}
 {% assign preorder_text = variant_for_value.metafields.custom.pre_order_text %}
 
 
