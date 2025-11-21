@@ -750,17 +750,14 @@
   </div>
 </product-info>
 
-
 <script>
 document.addEventListener("variant:change", function (event) {
   const variant = event.detail.variant;
   if (!variant) return;
 
-  // Get preorder DOM elements
   const preorderTextBox = document.querySelector(".preorder-text-output");
   const preorderHiddenInput = document.querySelector(".preorder-hidden-input");
 
-  // If those fields do not exist on first load, create them dynamically
   if (!preorderTextBox) {
     console.warn("Preorder elements missing. Make sure Liquid added them.");
     return;
@@ -771,24 +768,29 @@ document.addEventListener("variant:change", function (event) {
     variant.inventory_quantity <= 0 &&
     variant.inventory_policy === "continue";
 
+  let preorderText = "";
+
+  if (variant.metafields &&
+      variant.metafields.custom &&
+      variant.metafields.custom.pre_order_text) {
+    preorderText = variant.metafields.custom.pre_order_text;
+  }
+
   if (isPreorder) {
     // Show preorder text
     preorderTextBox.style.display = "block";
-
-    // Get metafield preorder text (Shopify returns metafields inside 'variant.metafields')
-    let preorderText = "";
-    if (variant.metafields &&
-        variant.metafields.custom &&
-        variant.metafields.custom.pre_order_text) {
-      preorderText = variant.metafields.custom.pre_order_text;
-    }
-
     preorderTextBox.textContent = preorderText;
 
-    // Update hidden cart input
+    // Update cart property
     if (preorderHiddenInput) {
       preorderHiddenInput.value = preorderText;
     }
+
+    // 🔔 FIRE ALERT
+    if (preorderText !== "") {
+      alert(preorderText);
+    }
+
   } else {
     // Hide preorder UI
     preorderTextBox.style.display = "none";
