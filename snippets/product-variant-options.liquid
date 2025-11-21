@@ -83,7 +83,7 @@
       %}
     {% else %}
       <!-- Size option -->
-      {% assign preorder_text = product.selected_or_first_available_variant.metafields.custom.pre_order_text %}
+      {% assign preorder_text = value.metafields.custom.pre_order_text  %}
  
  <input
       type="radio"
