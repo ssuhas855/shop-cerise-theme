@@ -83,6 +83,8 @@
       %}
     {% else %}
       <!-- Size option -->
+      {% assign preorder_text = product.selected_or_first_available_variant.metafields.custom.pre_order_text %}
+ 
  <input
       type="radio"
       id="{{ input_id }}"
@@ -93,7 +95,7 @@
       {% if option_disabled %}class="disabled"{% endif %}
       {{ input_dataset }}
     >
-    <label class="var-input__label" for="{{ input_id }}">
+    <label class="var-input__label" for="{{ input_id }}" data-val="{{ preorder_text }}">
       {{ value }}
       {{ label_unavailable }}
     </label>
