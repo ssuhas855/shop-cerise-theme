@@ -73,48 +73,55 @@
         {%- endif -%}
 
         <div class="product-form__buttons">
-          {%- liquid
-            assign check_against_inventory = true
-            if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
-              assign check_against_inventory = false
-            endif
-            if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
-              assign quantity_rule_soldout = true
-            endif
-          -%}
-          <button
-            id="ProductSubmitButton-{{ section.id }}"
-            type="submit"
-            name="add"
-            class="product-form__submit button button--full-width button--primary"
-            {% if product.selected_or_first_available_variant.available == false
-              or quantity_rule_soldout
-              or product.selected_or_first_available_variant == null
-            %}
-              disabled
-            {% endif %}
-          >
-            <span>
-              {%- if product.selected_or_first_available_variant == null -%}
-                {{ 'products.product.unavailable' | t }}
-              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-               {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%} • {{ 'products.product.sold_out' | t }}
-              {%- else -%}
-               {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%} • {{ 'products.product.add_to_cart' | t }} 
-              {%- endif -%}
-            </span>
-            {%- render 'loading-spinner' -%}
-          </button>
+         {%- assign v = product.selected_or_first_available_variant -%}
+
+{%- assign check_against_inventory = true -%}
+{%- if v.inventory_management != 'shopify' or v.inventory_policy == 'continue' -%}
+  {%- assign check_against_inventory = false -%}
+{%- endif -%}
+
+{%- if v.quantity_rule.min > v.inventory_quantity and check_against_inventory -%}
+  {%- assign quantity_rule_soldout = true -%}
+{%- endif -%}
+
+<button
+  id="ProductSubmitButton-{{ section.id }}"
+  type="submit"
+  name="add"
+  class="product-form__submit button button--full-width button--primary"
+  {% if v.available == false or quantity_rule_soldout or v == null %}
+    disabled
+  {% endif %}
+>
+  <span>
+    {%- if v == null -%}
+      {{ 'products.product.unavailable' | t }}
+    {%- elsif v.available == false or quantity_rule_soldout -%}
+      {%- render 'price',
+           product: product,
+           use_variant: true,
+           show_badges: true,
+           price_class: 'price--large'
+         -%} • {{ 'products.product.sold_out' | t }}
+    {%- elsif v.inventory_policy == 'continue' and v.inventory_quantity <= 0 -%}
+      {%- render 'price',
+           product: product,
+           use_variant: true,
+           show_badges: true,
+           price_class: 'price--large'
+         -%} • Preorder
+    {%- else -%}
+      {%- render 'price',
+           product: product,
+           use_variant: true,
+           show_badges: true,
+           price_class: 'price--large'
+         -%} • {{ 'products.product.add_to_cart' | t }}
+    {%- endif -%}
+  </span>
+  {%- render 'loading-spinner' -%}
+</button>
+
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
