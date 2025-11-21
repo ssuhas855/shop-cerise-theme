@@ -24,8 +24,8 @@
       checked: checked
     %}
 {% endcomment %}
-{% assign preorder_text = product.selected_or_first_available_variant.metafields.custom.pre_order_text %}
-<div class="swt_box" data-val="{{ preorder_text }}">
+
+<div class="swt_box">
 <input
   type="{{ type | default: 'radio' }}"
   id="{{ id }}"
