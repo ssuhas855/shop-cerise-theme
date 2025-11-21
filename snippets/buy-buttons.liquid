@@ -27,12 +27,23 @@
       data-hide-errors="{{ gift_card_recipient_feature_active }}"
       data-section-id="{{ section.id }}"
     >
+      
+       <!-- Hidden input for cart property -->
+        <input type="text"
+               class="preorder-hidden-input"
+               name="properties[Preorder]"
+               value="{{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}">
+      
       <div class="product-form__error-message-wrapper" role="alert" hidden>
         <span class="svg-wrapper">
           {{- 'icon-error.svg' | inline_asset_content -}}
         </span>
         <span class="product-form__error-message"></span>
       </div>
+
+
+
+
 
       {%- form 'product',
         product,
@@ -43,11 +54,7 @@
       -%}
 
         
-        <!-- Hidden input for cart property -->
-        <input type="text"
-               class="preorder-hidden-input"
-               name="properties[Preorder]"
-               value="{{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}">
+       
 
         
         
