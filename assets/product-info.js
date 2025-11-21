@@ -13,65 +13,20 @@ if (!customElements.get('product-info')) {
 
       constructor() {
         super();
+
         this.quantityInput = this.querySelector('.quantity__input');
       }
 
       connectedCallback() {
         this.initializeProductSwapUtility();
 
-        // Subscribe to Refresh variant change
         this.onVariantChangeUnsubscriber = subscribe(
           PUB_SUB_EVENTS.optionValueSelectionChange,
           this.handleOptionValueChange.bind(this)
         );
 
         this.initQuantityHandlers();
-
         this.dispatchEvent(new CustomEvent('product-info:loaded', { bubbles: true }));
-
-        // -------------------------
-        // ⭐ PREORDER ALERT LISTENER
-        // -------------------------
-        subscribe(PUB_SUB_EVENTS.variantChange, ({ data }) => {
-          const { variant } = data;
-          if (!variant) return;
-
-          setTimeout(() => {
-            const preorderTextBox = this.querySelector(".preorder-text-output");
-            const preorderHiddenInput = this.querySelector(".preorder-hidden-input");
-
-            if (!preorderTextBox) return;
-
-            const isPreorder =
-              variant.inventory_quantity <= 0 &&
-              variant.inventory_policy === "continue";
-
-            let preorderText = "";
-            if (
-              variant.metafields &&
-              variant.metafields.custom &&
-              variant.metafields.custom.pre_order_text
-            ) {
-              preorderText = variant.metafields.custom.pre_order_text;
-            }
-
-            if (isPreorder) {
-              preorderTextBox.style.display = "block";
-              preorderTextBox.textContent = preorderText;
-
-              if (preorderHiddenInput) preorderHiddenInput.value = preorderText;
-
-              // Delayed alert to ensure DOM has updated
-              setTimeout(() => {
-                if (preorderText) alert(preorderText);
-              }, 200);
-            } else {
-              preorderTextBox.style.display = "none";
-              if (preorderHiddenInput) preorderHiddenInput.value = "";
-            }
-          }, 150);
-        });
-        // -------------------------
       }
 
       addPreProcessCallback(callback) {
@@ -91,7 +46,7 @@ if (!customElements.get('product-info')) {
       }
 
       disconnectedCallback() {
-        this.onVariantChangeUnsubscriber?.();
+        this.onVariantChangeUnsubscriber();
         this.cartUpdateUnsubscriber?.();
       }
 
@@ -170,6 +125,7 @@ if (!customElements.get('product-info')) {
             callback(html);
           })
           .then(() => {
+            // set focus to last clicked option value
             document.querySelector(`#${targetId}`)?.focus();
           })
           .catch((error) => {
@@ -188,8 +144,13 @@ if (!customElements.get('product-info')) {
 
       buildRequestUrlWithParams(url, optionValues, shouldFetchFullPage = false) {
         const params = [];
+
         !shouldFetchFullPage && params.push(`section_id=${this.sectionId}`);
-        if (optionValues.length) params.push(`option_values=${optionValues.join(',')}`);
+
+        if (optionValues.length) {
+          params.push(`option_values=${optionValues.join(',')}`);
+        }
+
         return `${url}?${params.join('&')}`;
       }
 
@@ -302,6 +263,7 @@ if (!customElements.get('product-info')) {
           const destinationSet = new Set(mediaGalleryDestinationItems.map(({ dataset }) => dataset.mediaId));
           let shouldRefresh = false;
 
+          // add items from new data not present in DOM
           for (let i = mediaGalleryDestinationItems.length - 1; i >= 0; i--) {
             if (!sourceSet.has(mediaGalleryDestinationItems[i].dataset.mediaId)) {
               mediaGallerySource.prepend(mediaGalleryDestinationItems[i]);
@@ -309,6 +271,7 @@ if (!customElements.get('product-info')) {
             }
           }
 
+          // remove items from DOM not present in new data
           for (let i = 0; i < mediaGallerySourceItems.length; i++) {
             if (!destinationSet.has(mediaGallerySourceItems[i].dataset.mediaId)) {
               mediaGallerySourceItems[i].remove();
@@ -316,8 +279,10 @@ if (!customElements.get('product-info')) {
             }
           }
 
+          // refresh
           if (shouldRefresh) [mediaGallerySourceItems, sourceSet, sourceMap] = refreshSourceData();
 
+          // if media galleries don't match, sort to match new data order
           mediaGalleryDestinationItems.forEach((destinationItem, destinationIndex) => {
             const sourceData = sourceMap.get(destinationItem.dataset.mediaId);
 
@@ -326,16 +291,20 @@ if (!customElements.get('product-info')) {
                 sourceData.item,
                 mediaGallerySource.querySelector(`li:nth-of-type(${destinationIndex + 1})`)
               );
+
+              // refresh source now that it has been modified
               [mediaGallerySourceItems, sourceSet, sourceMap] = refreshSourceData();
             }
           });
         }
 
+        // set featured media as active in the media gallery
         this.querySelector(`media-gallery`)?.setActiveMedia?.(
           `${this.dataset.section}-${variantFeaturedMediaId}`,
           true
         );
 
+        // update media modal
         const modalContent = this.productModal?.querySelector(`.product-media-modal__content`);
         const newModalContent = html.querySelector(`product-modal .product-media-modal__content`);
         if (modalContent && newModalContent) modalContent.innerHTML = newModalContent.innerHTML;
@@ -407,6 +376,7 @@ if (!customElements.get('product-info')) {
               const updatedAriaLabelledBy = updated.getAttribute('aria-labelledby');
               if (updatedAriaLabelledBy) {
                 current.setAttribute('aria-labelledby', updatedAriaLabelledBy);
+                // Update the referenced visually hidden element
                 const labelId = updatedAriaLabelledBy;
                 const currentHiddenLabel = document.getElementById(labelId);
                 const updatedHiddenLabel = html.getElementById(labelId);
@@ -433,6 +403,22 @@ if (!customElements.get('product-info')) {
 
       get variantSelectors() {
         return this.querySelector('variant-selects');
+      }
+
+      get relatedProducts() {
+        const relatedProductsSectionId = SectionId.getIdForSection(
+          SectionId.parseId(this.sectionId),
+          'related-products'
+        );
+        return document.querySelector(`product-recommendations[data-section-id^="${relatedProductsSectionId}"]`);
+      }
+
+      get quickOrderList() {
+        const quickOrderListSectionId = SectionId.getIdForSection(
+          SectionId.parseId(this.sectionId),
+          'quick_order_list'
+        );
+        return document.querySelector(`quick-order-list[data-id^="${quickOrderListSectionId}"]`);
       }
 
       get sectionId() {
