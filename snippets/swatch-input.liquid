@@ -24,7 +24,7 @@
       checked: checked
     %}
 {% endcomment %}
-<div class="swt_box">
+<div class="swt_box" data-val="{{ option.selected_or_first_available_variant.metafields.custom.pre_order_text }}">
 <input
   type="{{ type | default: 'radio' }}"
   id="{{ id }}"
