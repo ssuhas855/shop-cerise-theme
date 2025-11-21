@@ -753,23 +753,35 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Get the preorder hidden input
+  // Hidden preorder input
   var preorderInput = document.getElementById('preorder-hidden-input');
 
-  // Listen for changes on Shopify variant select dropdown(s)
-  var variantSelectors = document.querySelectorAll('select[name="id"]');
+  // All radio inputs for variants (Color, Size, etc.)
+  var variantRadios = document.querySelectorAll('variant-selects input[type="radio"]');
 
-  variantSelectors.forEach(function(selector) {
-    selector.addEventListener('change', function() {
-      var selectedVariantId = this.value;
+  // Listen for changes on all radios
+  variantRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      // Collect all currently selected options
+      var selectedOptions = [];
 
-      // Find the variant object from Shopify's global product JSON
-      var variant = window.product.variants.find(v => v.id == selectedVariantId);
+      // Loop through each option group
+      document.querySelectorAll('variant-selects fieldset').forEach(function(fieldset) {
+        var selectedRadio = fieldset.querySelector('input[type="radio"]:checked');
+        if (selectedRadio) {
+          selectedOptions.push(selectedRadio.value.trim());
+        }
+      });
+
+      // Find the variant matching all selected options
+      var variant = window.product.variants.find(function(v) {
+        return v.options.every(function(opt, index) {
+          return opt === selectedOptions[index];
+        });
+      });
 
       if (variant && variant.metafields && variant.metafields.custom && variant.metafields.custom.pre_order_text) {
         preorderInput.value = variant.metafields.custom.pre_order_text;
-
-        // Alert showing the new preorder text
         alert("Preorder text updated: " + preorderInput.value);
       } else {
         preorderInput.value = '';
@@ -778,6 +790,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
 
 </script>
 
