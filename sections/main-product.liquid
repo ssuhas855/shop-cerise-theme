@@ -751,51 +751,7 @@
 </product-info>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Hidden preorder input
-  var preorderInput = document.getElementById('preorder-hidden-input');
 
-  // All radio inputs for variants (Color, Size, etc.)
-  var variantRadios = document.querySelectorAll('variant-selects input[type="radio"]');
-
-  // Listen for changes on all radios
-  variantRadios.forEach(function(radio) {
-    radio.addEventListener('change', function() {      
-      // Delay execution by 200ms
-     
-        // Collect all currently selected options
-        var selectedOptions = [];
-
-        // Loop through each option group
-        document.querySelectorAll('variant-selects fieldset').forEach(function(fieldset) {
-          var selectedRadio = fieldset.querySelector('input[type="radio"]:checked');
-          if (selectedRadio) {
-            selectedOptions.push(selectedRadio.value.trim());
-          }
-        });
-
-        // Find the variant matching all selected options
-        var variant = window.product.variants.find(function(v) {
-          return v.options.every(function(opt, index) {
-            return opt === selectedOptions[index];
-          });
-        });
-
-        if (variant && variant.metafields && variant.metafields.custom && variant.metafields.custom.pre_order_text) {
-          preorderInput.value = variant.metafields.custom.pre_order_text;
-          alert("Preorder text updated: " + preorderInput.value);
-        } else {
-          preorderInput.value = '';
-          alert("No preorder text for this variant.");
-        }
-      
-    });
-  });
-});
-
-
-</script>
 
 
 
