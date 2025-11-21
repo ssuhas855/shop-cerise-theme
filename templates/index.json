@@ -103,14 +103,70 @@
     "cerise_textiles_w6jBwM": {
       "type": "cerise-textiles",
       "blocks": {
+        "product_rfzxe3": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-2"
+          }
+        },
+        "product_rNmtkY": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-3"
+          }
+        },
+        "product_FhfhTy": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-4"
+          }
+        },
+        "product_zXdT9Q": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-5"
+          }
+        },
+        "product_cEUNqK": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-6"
+          }
+        },
+        "product_DhpxAd": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-7"
+          }
+        },
+        "product_hKLp9b": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-7"
+          }
+        },
+        "product_DPcJfC": {
+          "type": "product",
+          "settings": {
+            "product": "housecoat-in-magda-blue-copy-1"
+          }
+        },
         "product_WzaYrn": {
           "type": "product",
           "settings": {
-            "product": "housecoat-in-magda-blue-copy-2"
+            "product": "housecoat-in-magda-blue-7"
           }
         }
       },
       "block_order": [
+        "product_rfzxe3",
+        "product_rNmtkY",
+        "product_FhfhTy",
+        "product_zXdT9Q",
+        "product_cEUNqK",
+        "product_DhpxAd",
+        "product_hKLp9b",
+        "product_DPcJfC",
         "product_WzaYrn"
       ],
       "name": "Cerise Textiles Slider",
