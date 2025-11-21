@@ -464,6 +464,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   font-family: var(--font-heading-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-heading-weight);
+  margin-bottom: 5px;
 }
 #CartDrawer .price.price--end {
 	font-size: 12px;
