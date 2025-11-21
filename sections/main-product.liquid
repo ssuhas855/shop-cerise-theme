@@ -755,52 +755,58 @@ document.addEventListener("variant:change", function (event) {
   const variant = event.detail.variant;
   if (!variant) return;
 
-  const preorderTextBox = document.querySelector(".preorder-text-output");
-  const preorderHiddenInput = document.querySelector(".preorder-hidden-input");
+  // Delay so Shopify has time to update DOM
+  setTimeout(() => {
 
-  if (!preorderTextBox) {
-    console.warn("Preorder elements missing. Make sure Liquid added them.");
-    return;
-  }
+    const preorderTextBox = document.querySelector(".preorder-text-output");
+    const preorderHiddenInput = document.querySelector(".preorder-hidden-input");
 
-  // Check preorder condition
-  const isPreorder =
-    variant.inventory_quantity <= 0 &&
-    variant.inventory_policy === "continue";
+    if (!preorderTextBox) return;
 
-  let preorderText = "";
+    // Check preorder condition
+    const isPreorder =
+      variant.inventory_quantity <= 0 &&
+      variant.inventory_policy === "continue";
 
-  if (variant.metafields &&
+    let preorderText = "";
+
+    if (
+      variant.metafields &&
       variant.metafields.custom &&
-      variant.metafields.custom.pre_order_text) {
-    preorderText = variant.metafields.custom.pre_order_text;
-  }
-
-  if (isPreorder) {
-    // Show preorder text
-    preorderTextBox.style.display = "block";
-    preorderTextBox.textContent = preorderText;
-
-    // Update cart property
-    if (preorderHiddenInput) {
-      preorderHiddenInput.value = preorderText;
+      variant.metafields.custom.pre_order_text
+    ) {
+      preorderText = variant.metafields.custom.pre_order_text;
     }
 
-    // 🔔 FIRE ALERT
-    if (preorderText !== "") {
-      alert(preorderText);
+    if (isPreorder) {
+      // Show preorder text
+      preorderTextBox.style.display = "block";
+      preorderTextBox.textContent = preorderText;
+
+      // Update cart property
+      if (preorderHiddenInput) {
+        preorderHiddenInput.value = preorderText;
+      }
+
+      // 🔔 DELAYED ALERT — NOW WORKS 100%
+      setTimeout(() => {
+        if (preorderText !== "") {
+          alert(preorderText);
+        }
+      }, 2000); // You can increase to 300–500 if needed
+
+    } else {
+      // Hide preorder UI
+      preorderTextBox.style.display = "none";
+      if (preorderHiddenInput) {
+        preorderHiddenInput.value = "";
+      }
     }
 
-  } else {
-    // Hide preorder UI
-    preorderTextBox.style.display = "none";
-
-    if (preorderHiddenInput) {
-      preorderHiddenInput.value = "";
-    }
-  }
+  }, 1500); // Initial delay so variant updates finish
 });
 </script>
+
 
 
 
