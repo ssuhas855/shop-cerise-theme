@@ -48,24 +48,13 @@
         </div>
 
         <!-- Hidden input for cart property -->
-        <input type="hidden"
+        <input type="text"
                class="preorder-hidden-input"
                name="properties[Preorder]"
                value="{{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}">
 
         <!-- Variant ID hidden input -->
-        <input
-          type="hidden"
-          name="id"
-          value="{{ product.selected_or_first_available_variant.id }}"
-          {% if product.selected_or_first_available_variant.available == false
-            or quantity_rule_soldout
-            or product.selected_or_first_available_variant == null
-          %}
-            disabled
-          {% endif %}
-          class="product-variant-id"
-        >
+       
         
 
         {%- if gift_card_recipient_feature_active -%}
