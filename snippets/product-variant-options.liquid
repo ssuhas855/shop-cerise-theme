@@ -96,7 +96,9 @@
       {{ input_dataset }}
     >
     <label class="var-input__label" for="{{ input_id }}"
-    data-text="{{ matching_variant.metafields.custom.pre_order_text | escape }}"
+    {% if matching_variant %}
+    data-text="{{ matching_variant.metafields.custom.pre_order_text | escape }}"    
+{% endif %}
     >
       {{ value }}
       {{ label_unavailable }}
