@@ -762,6 +762,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Listen for changes on all radios
   variantRadios.forEach(function(radio) {
     radio.addEventListener('change', function() {
+      alert(1);
       // Delay execution by 200ms
       setTimeout(function() {
         // Collect all currently selected options
