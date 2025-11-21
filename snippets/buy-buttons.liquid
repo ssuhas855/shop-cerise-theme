@@ -44,7 +44,7 @@
       <input type="text"
                class="preorder-hidden-input"
                name="properties[Preorder]"
-               value="{{ v.metafields.custom.pre_order_text }}">
+               value="{{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}">
 
       {%- if gift_card_recipient_feature_active -%}
         {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
