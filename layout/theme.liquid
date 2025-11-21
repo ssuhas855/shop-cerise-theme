@@ -416,12 +416,13 @@
         quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
       };
 
-      window.variantStrings = {
-        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
-        soldOut: `{{ 'products.product.sold_out' | t }}`,
-        unavailable: `{{ 'products.product.unavailable' | t }}`,
-        unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
-      };
+     window.variantStrings = {
+  addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+  soldOut: `{{ 'products.product.sold_out' | t }}`,
+  unavailable: `{{ 'products.product.unavailable' | t }}`,
+  unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
+  preorder: 'Preorder' // add your localized preorder text if needed
+};
 
       window.quickOrderListStrings = {
         itemsAdded: `{{ 'sections.quick_order_list.items_added.other' | t: quantity: '[quantity]' }}`,
