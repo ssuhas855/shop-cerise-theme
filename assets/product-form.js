@@ -8,14 +8,76 @@ if (!customElements.get('product-form')) {
         this.form = this.querySelector('form');
         this.variantIdInput.disabled = false;
         this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
-        this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+        this.cart =
+          document.querySelector('cart-notification') ||
+          document.querySelector('cart-drawer');
         this.submitButton = this.querySelector('[type="submit"]');
         this.submitButtonText = this.submitButton.querySelector('span');
 
-        if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
+        if (document.querySelector('cart-drawer'))
+          this.submitButton.setAttribute('aria-haspopup', 'dialog');
 
         this.hideErrors = this.dataset.hideErrors === 'true';
+
+        /* -----------------------------
+          ⭐ NEW: PREORDER ALERT LISTENER
+        ------------------------------ */
+        document.addEventListener("variant:change", (event) => {
+          const variant = event.detail.variant;
+          if (!variant) return;
+
+          // Delay because Refresh theme updates DOM async
+          setTimeout(() => {
+            this.handlePreorderAlert(variant);
+          }, 200); // adjust 150–300ms if needed
+        });
+        /* ----------------------------- */
       }
+
+      /* -----------------------------
+        ⭐ NEW: Preorder Alert Handler
+      ------------------------------ */
+      handlePreorderAlert(variant) {
+        const preorderTextBox = document.querySelector(".preorder-text-output");
+        const preorderHiddenInput = document.querySelector(".preorder-hidden-input");
+
+        if (!preorderTextBox) return;
+
+        const isPreorder =
+          variant.inventory_quantity <= 0 &&
+          variant.inventory_policy === "continue";
+
+        let preorderText = "";
+
+        if (
+          variant.metafields &&
+          variant.metafields.custom &&
+          variant.metafields.custom.pre_order_text
+        ) {
+          preorderText = variant.metafields.custom.pre_order_text;
+        }
+
+        if (isPreorder) {
+          preorderTextBox.style.display = "block";
+          preorderTextBox.textContent = preorderText;
+
+          if (preorderHiddenInput) {
+            preorderHiddenInput.value = preorderText;
+          }
+
+          // ⭐ Delayed alert so it ALWAYS works
+          setTimeout(() => {
+            if (preorderText !== "") {
+              alert(preorderText);
+            }
+          }, 200);
+
+        } else {
+          preorderTextBox.style.display = "none";
+          if (preorderHiddenInput) preorderHiddenInput.value = "";
+        }
+      }
+      /* ----------------------------- */
 
       onSubmitHandler(evt) {
         evt.preventDefault();
@@ -101,7 +163,8 @@ if (!customElements.get('product-form')) {
           })
           .finally(() => {
             this.submitButton.classList.remove('loading');
-            if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
+            if (this.cart && this.cart.classList.contains('is-empty'))
+              this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
 
@@ -113,9 +176,12 @@ if (!customElements.get('product-form')) {
         if (this.hideErrors) return;
 
         this.errorMessageWrapper =
-          this.errorMessageWrapper || this.querySelector('.product-form__error-message-wrapper');
+          this.errorMessageWrapper ||
+          this.querySelector('.product-form__error-message-wrapper');
         if (!this.errorMessageWrapper) return;
-        this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.product-form__error-message');
+        this.errorMessage =
+          this.errorMessage ||
+          this.errorMessageWrapper.querySelector('.product-form__error-message');
 
         this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage);
 
@@ -140,5 +206,3 @@ if (!customElements.get('product-form')) {
     }
   );
 }
-
-
