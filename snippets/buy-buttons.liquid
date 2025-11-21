@@ -27,19 +27,12 @@
       data-hide-errors="{{ gift_card_recipient_feature_active }}"
       data-section-id="{{ section.id }}"
     >
-      
-      
-      
       <div class="product-form__error-message-wrapper" role="alert" hidden>
         <span class="svg-wrapper">
           {{- 'icon-error.svg' | inline_asset_content -}}
         </span>
         <span class="product-form__error-message"></span>
       </div>
-
-
-
-
 
       {%- form 'product',
         product,
@@ -49,10 +42,30 @@
         data-type: 'add-to-cart-form'
       -%}
 
-        
-       
+        <!-- Visible preorder text -->
+        <div class="preorder-text-output" style="display:none; opacity:0; transition: opacity 0.3s;">
+          {{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}
+        </div>
 
-        
+        <!-- Hidden input for cart property -->
+        <input type="hidden"
+               class="preorder-hidden-input"
+               name="properties[Preorder]"
+               value="{{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}">
+
+        <!-- Variant ID hidden input -->
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          {% if product.selected_or_first_available_variant.available == false
+            or quantity_rule_soldout
+            or product.selected_or_first_available_variant == null
+          %}
+            disabled
+          {% endif %}
+          class="product-variant-id"
+        >
         
 
         {%- if gift_card_recipient_feature_active -%}
