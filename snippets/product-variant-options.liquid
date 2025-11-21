@@ -41,6 +41,7 @@
   {%- capture input_dataset -%}
     data-product-url="{{ value.product_url }}"
     data-option-value-id="{{ value.id }}"
+    
   {%- endcapture -%}
 
   {%- capture label_unavailable -%}
@@ -92,7 +93,8 @@
         {% if option_disabled %}class="disabled"{% endif %}
         {{ input_dataset }}
       >
-      <label class="var-input__label" for="{{ input_id }}"
+      <label class="var-input__label" for="{{ input_id }}" 
+      data-text="{{ value.metafields.custom.pre_order_text }}"
              >
         {{ value }}
         {{ label_unavailable }}
