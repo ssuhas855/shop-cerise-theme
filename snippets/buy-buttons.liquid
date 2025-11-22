@@ -42,16 +42,6 @@
         data-type: 'add-to-cart-form'
       -%}
 
-        <!-- Visible preorder text -->
-        <div class="preorder-text-output" style="display:none; opacity:0; transition: opacity 0.3s;">
-          {{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}
-        </div>
-
-        <!-- Hidden input for cart property -->
-        <input type="hidden"
-               class="preorder-hidden-input"
-               name="properties[Preorder]"
-               value="{{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}">
 
         <!-- Variant ID hidden input -->
         <input
@@ -123,7 +113,18 @@
 
       
 
+
     </product-form>
+
+{% if product.selected_or_first_available_variant.metafields.custom.pre_order_text %}
+<div id="PreorderMessage" class="preorder-message">
+  
+      {{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}
+  
+</div>
+{% endif %}
+
+
 
   {%- else -%}
     <div class="product-form">

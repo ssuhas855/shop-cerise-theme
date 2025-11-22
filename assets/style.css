@@ -4,12 +4,12 @@ p.announcement-bar__message {
     letter-spacing: 1.7px;
     line-height: normal;
     min-height: inherit;
-    font-family: var(--font-nav-family);
+    font-family: var(--font-nav-family); 
   font-style: var(--font-body-style);
   font-weight: var(--font-nav-weight);
 } 
 .header:not(.drawer-menu).page-width {
-	margin: 0;
+	margin: 0; 
 	padding: 0 30px;
 	max-width: none;    
 }
@@ -1370,4 +1370,14 @@ button.product-media-modal__toggle {
 .contactfooter__button .icon.icon-arrow {
 	height: auto;
 	width: 60px;
+}
+a.link.about-cerise__link.h5 {
+    display: table;
+    margin: 0 auto;
+    width: auto;
+    color: currentColor;
+    padding-bottom: 2px;
+}
+.product-option{
+	padding: 4px 0;;
 }
