@@ -947,7 +947,7 @@ div.cart-count-bubble {
 .imgbox4 {
 	max-width: 350px;
 	float: right;
-  margin-right:14px;
+  margin: right 0px !important;
 }
 .imgbox4 img{
 	width: 100%;
@@ -1254,7 +1254,7 @@ button.product-media-modal__toggle {
 	max-width: none;
 	width: 100%;
 }
-#ContactFooter #contact_form-section-footer{
+#ContactFoote1 #contact_form-section-footer{
 	margin: 10px auto 0;
 	width: 100%;
 	max-width: 315px;
@@ -1317,7 +1317,10 @@ button.product-media-modal__toggle {
 	border: none;
 	cursor: pointer;
 }
-#ContactFooter  .newsletter-form__button::after{
+.contactfooter__fields {
+    width: 100%;
+}
+#ContactFooter .contactfooter__button button::after{
 	display: none;
 }
 #ContactForm-footer {
@@ -1380,4 +1383,73 @@ a.link.about-cerise__link.h5 {
 }
 .product-option{
 	padding: 4px 0;;
+}
+.swatch-swatch-item {
+	width: auto !important;
+	outline: none !important;
+	height: auto !important;
+	border-radius: 0 !important;
+	text-align: center;
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
+}
+.swatch-imgbox {
+	position: relative;
+	padding: 7px;
+	background: #f7dac7;
+	float: left;
+	border-radius: 100%;
+	width: 62px;
+	height: 62px;
+	overflow: hidden;
+	border:1px solid transparent;
+}
+.active .swatch-imgbox{
+	border-color: currentColor;
+}
+.swatch-imgbox img{
+	float: left;
+	width: 100%;
+	border-radius: 100%;	
+}	
+.swatch-title {
+	line-height: 28px;
+	margin-top: 12px;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0px;
+	font-family: var(--font-nav-family);
+	font-style: var(--font-body-style);
+	font-weight: var(--font-nav-weight);
+	text-decoration: none;
+}
+.swatch-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: rgb(var(--color-foreground));
+	text-decoration: none;
+	order: 2;
+}
+.swatch-item.active {
+	order:1;
+}
+.product-color-swatches {
+	display: flex;
+	align-items: center;
+}
+	
+.shopify-email-marketing-confirmation__container {
+    padding: 150px 20px;
+}
+.shopify-email-marketing-confirmation__container a{
+	color: currentColor;
+}
+.shopify-email-marketing-confirmation__container a:hover{
+	color: currentColor;
+	text-decoration: none;
+}
+.shopify-email-marketing-confirmation__container h1{
+	display: none!important;
 }

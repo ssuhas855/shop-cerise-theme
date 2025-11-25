@@ -69,6 +69,38 @@
     -%}
 
     {% if option.name == 'Color' or option.name == 'color' %}
+    
+ {% assign color_items = product.metafields.custom.product_color_option.value %}
+
+{% if color_items != blank %}
+
+
+
+  {% for item in color_items %}
+
+    <a href="/products/{{ item.select_product_link }}" class="swatch-item {% if product.handle == item.select_product_link %}active{%endif%}">
+
+      {% if item.image != blank %}
+      <div class="swatch-imgbox">
+        <img 
+          src="{{ item.image | image_url: width: 60 }}" 
+          alt="{{ item.title }}"
+          class="swatch-img"
+        >
+      </div>
+      {% endif %}
+
+      <span class="swatch-title">{{ item.title }}</span>
+
+    </a>
+
+  {% endfor %}
+
+{% endif %}
+
+
+    
+    <div class="" style="display:none;">
       {% render 'swatch-input',
         id: input_id,
         name: input_name,
@@ -81,6 +113,10 @@
         help_text: help_text,
         additional_props: input_dataset
       %}
+      </div>
+
+
+
     {% else %}
       <!-- Size option -->
 

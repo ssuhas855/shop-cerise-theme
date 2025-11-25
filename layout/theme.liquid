@@ -459,6 +459,8 @@
 <script src="{{ 'faq.js' | asset_url }}" defer="defer"></script>
  {%- endif -%}
 
+
+{% comment %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {  
     new Swiper('.swiper-card-slider', {
@@ -478,7 +480,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 </script>
-
+{% endcomment %}
 
 {% if template == 'customers/register' %}
 <script>

@@ -23,15 +23,70 @@
     <p class="popup-subtitle h3">{{ section.settings.subtitle }}</p>
     {% endif %}
 
-    <form id="newsletter-form" class="newsletter-form" action="/" method="post">
-      <input
-        type="email"
-        name="contact[email]"
-        placeholder=""
-        required
-      >
-      <button type="submit" class="button button--primary">CONTINUE</button>
-    </form>
+    <form id="newsletter-form" class="newsletter-form" onsubmit="return false;">
+    <input type="hidden" name="form_type" value="customer">
+    <input type="hidden" name="utf8" value="✓">
+    <input type="hidden" name="contact[tags]" value="newsletter">
+
+    <input type="email" name="contact[email]" id="newsletter-email" placeholder="Email" required>
+    <button type="submit" class="button button--primary">CONTINUE</button>
+
+    <!-- AJAX message placeholder -->
+    <div id="newsletter-message"></div>
+</form>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("newsletter-form");
+  const emailInput = document.getElementById("newsletter-email");
+  const messageBox = document.getElementById("newsletter-message");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Clear previous messages
+    messageBox.textContent = "";
+    messageBox.className = "";
+
+    const email = emailInput.value.trim();
+
+    // Email validation
+    if (!emailRegex.test(email)) {
+      messageBox.textContent = "Enter a valid email address.";
+      messageBox.className = "newsletter-error";
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    fetch("/contact", {
+      method: "POST",
+      body: formData
+    })
+      .then(response => response.text())
+      .then(() => {
+        messageBox.textContent = "Thank you! You've been subscribed.";
+        messageBox.className = "newsletter-success";
+
+        form.reset();
+
+        setTimeout(() => {
+          messageBox.textContent = "";
+          messageBox.className = "";
+        }, 3000);
+      })
+      .catch(err => {
+        console.error("Newsletter AJAX Error:", err);
+        messageBox.textContent = "Something went wrong. Please try again.";
+        messageBox.className = "newsletter-error";
+      });
+  });
+});
+</script>
+
+
+
 </div>
 
   </div>

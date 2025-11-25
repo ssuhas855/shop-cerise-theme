@@ -1502,6 +1502,11 @@ body div#insta-feed {
 .swiper-button-next, .swiper-button-prev {
 	width: 70px;
 }
+.imgbox4 {
+	float: right;
+
+	
+}
 }
 /* END 767px */ 
 

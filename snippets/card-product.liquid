@@ -38,6 +38,32 @@
           <!-- Two Image Hover Effect -->
 
 
+            <div class="hover-images">
+              <a
+                href="{{ card_product.url }}">
+ {{
+    card_product.media[0]
+    | image_url: width: 800
+    | image_tag:
+        sizes: '(max-width: 767px) 100vw, 1500px',
+        widths: '352, 750, 1200, 1500',
+        fetchpriority: fetch_priority,
+        class: 'image-1'        
+  }}
+   {{
+    card_product.media[1]
+    | image_url: width: 800
+    | image_tag:
+        sizes: '(max-width: 767px) 100vw, 1500px',
+        widths: '352, 750, 1200, 1500',
+        fetchpriority: fetch_priority,
+        class: 'image-2'        
+  }}
+</a>
+
+            </div>
+
+{% comment %}
 {% if card_product.media.size == 1 %}
 <div class="hover-images">
               <a
@@ -124,6 +150,10 @@
 </div>
             </div>
           {% endif %}
+{% endcomment %}
+
+
+
         {%- endif -%}
         <div class="card__content">
           <div class="card__information">
