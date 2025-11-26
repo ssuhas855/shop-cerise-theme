@@ -772,6 +772,20 @@ ul.list.list-social.list-unstyled {
 .popup-subtitle {
 	width: 270px;
 }
+#ContactFoote1 .klaviyo-form div h1 span {
+	font-size: 18px !important;
+}
+#ContactFoote1 input[type="email"],
+#ContactFoote1 input[type="text"] { 
+	font-size: 18px !important;
+}
+#ContactFoote1 ::placeholder {
+	font-size: 18px !important;
+}
+#popup_newsletter .klaviyo-form h1 span {
+    font-size: 20px!important;
+}
+
 }
 /* END 989px */
 

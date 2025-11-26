@@ -2,8 +2,8 @@
   Full Buy Buttons Snippet with Preorder Text for Refresh Theme
   Features:
   - Updates preorder text on variant change
-  - Updates hidden input for cart properties
-  - Smooth fade-in/out animation
+  - Adds hidden input for cart properties
+  - Smooth fade-in/out notification
   - Auto-hide after 5 seconds
   - Supports multiple product forms
 {% endcomment %}
@@ -42,7 +42,6 @@
         data-type: 'add-to-cart-form'
       -%}
 
-
         <!-- Variant ID hidden input -->
         <input
           type="hidden"
@@ -51,12 +50,9 @@
           {% if product.selected_or_first_available_variant.available == false
             or quantity_rule_soldout
             or product.selected_or_first_available_variant == null
-          %}
-            disabled
-          {% endif %}
+          %} disabled {% endif %}
           class="product-variant-id"
         >
-        
 
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
@@ -72,6 +68,7 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+
           <button
             id="ProductSubmitButton-{{ section.id }}"
             type="submit"
@@ -80,50 +77,65 @@
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
-            %}
-              disabled
-            {% endif %}
+            %} disabled {% endif %}
           >
-            <span>
+            <span class="button-text">
               {%- if product.selected_or_first_available_variant == null -%}
                 {{ 'products.product.unavailable' | t }}
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-               {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%} • {{ 'products.product.sold_out' | t }}
+                {%- render 'price',
+                     product: product,
+                     use_variant: true,
+                     show_badges: true,
+                     price_class: 'price--large'
+                   -%} • {{ 'Preorder' | t }}
               {%- else -%}
-               {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%} • {{ 'products.product.add_to_cart' | t }} 
+                {%- render 'price',
+                     product: product,
+                     use_variant: true,
+                     show_badges: true,
+                     price_class: 'price--large'
+                   -%} • {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+
+          <div class="product-form__inventory">
+  {% if product.selected_or_first_available_variant.metafields.custom.pre_order_text %}
+    {{ product.selected_or_first_available_variant.metafields.custom.pre_order_text | escape }}
+  {% endif %}
+</div>
+
+
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
         </div>
+
+      <input type="text" name="properties[Preorder]"
+      value="{% if product.selected_or_first_available_variant.metafields.custom.pre_order_text %}
+    {{ product.selected_or_first_available_variant.metafields.custom.pre_order_text | escape }}
+  {% endif %}" 
+       id="preorder-text">
       {%- endform -%}
-
-      
-
-
     </product-form>
 
-{% if product.selected_or_first_available_variant.metafields.custom.pre_order_text %}
-<div id="PreorderMessage" class="preorder-message">
-  
-      {{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}
-  
+    <!-- Variant JSON data for JS -->
+    <div id="variant-data"
+     data-variants='[
+      {% for v in product.variants %}
+        {
+          "id": {{ v.id }},
+          "available": {{ v.available | json }},
+          "inventory_quantity": {{ v.inventory_quantity | default: 0 }},
+          "inventory_policy": "{{ v.inventory_policy }}",
+          "expected_shipping": "{{ v.metafields.custom.expected_shipping }}",
+          "pre_order_text": "{{ v.metafields.custom.pre_order_text | escape }}"
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+     ]'>
 </div>
-{% endif %}
-
 
 
   {%- else -%}
@@ -137,37 +149,4 @@
   {%- endif -%}
 </div>
 
-{%- if show_pickup_availability -%}
-  {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
-  {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
-    | where: 'pick_up_enabled', true
-  -%}
-
-  <pickup-availability
-    class="product__pickup-availabilities quick-add-hidden"
-    {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
-      available
-    {% endif %}
-    data-root-url="{{ routes.root_url }}"
-    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-    data-has-only-default-variant="{{ product.has_only_default_variant }}"
-    data-product-page-color-scheme="gradient color-{{ section.settings.color_scheme }}"
-  >
-    <template>
-      <pickup-availability-preview class="pickup-availability-preview">
-        <span class="svg-wrapper">
-          {{- 'icon-unavailable.svg' | inline_asset_content -}}
-        </span>
-        <div class="pickup-availability-info">
-          <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
-          <button class="pickup-availability-button link link--text underlined-link">
-            {{ 'products.product.pickup_availability.refresh' | t }}
-          </button>
-        </div>
-      </pickup-availability-preview>
-    </template>
-  </pickup-availability>
-
-  <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
