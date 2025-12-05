@@ -96,7 +96,7 @@
 
       {% assign handle = item.link %}  
 {% assign linked_product = all_products[item.link] %}
-{{ linked_product.url | handle  }}
+{{ linked_product.url | handle  }} --
     </a>
 
   {% endfor %}
