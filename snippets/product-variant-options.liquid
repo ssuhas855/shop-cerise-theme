@@ -81,7 +81,7 @@
           
 {% assign linked_product = all_products[item.link] %}
 
-    <a href="{{ linked_product.url | handle  }}" class="swatch-item {% if product.handle == item.select_product_link %}active{%endif%}">
+    <a href="{{ linked_product.url | handle | remove: 'products-'  }}" class="swatch-item {% if product.handle == item.select_product_link %}active{%endif%}">
 
       {% if item.image != blank %}
       <div class="swatch-imgbox">
