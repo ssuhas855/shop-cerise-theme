@@ -96,8 +96,9 @@
 
       {% assign handle = item.link %}  
 {% assign linked_product = all_products[handle] %}
+{% if product.handle == linked_product.url %}
 {{ linked_product.url }}
-
+{% endif %}
 
     </a>
 
