@@ -92,8 +92,16 @@
       {% endif %}
 
       <span class="swatch-title">{{ item.title }}</span>
-      {% assign linked_product = item.link | product %}
-    {{ linked_product | url }}
+
+
+      {% assign handle = item.link_handle %}  
+{% assign linked_product = all_products[handle] %}
+{% if linked_product %}
+  <a href="{{ linked_product.url }}">
+    {{ linked_product.title }}
+  </a>
+{% endif %}
+
 
     </a>
 
