@@ -93,7 +93,7 @@
 
       <span class="swatch-title">{{ item.title }}</span>
       {% assign linked_product = item.link | product %}
-    {{ linked_product.url }}
+    {{ linked_product | url }}
 
     </a>
 
