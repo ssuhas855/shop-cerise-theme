@@ -94,7 +94,7 @@
       <span class="swatch-title">{{ item.title }}</span>
 
 
-      {% assign handle = item.link_handle %}  
+      {% assign handle = item.link %}  
 {% assign linked_product = all_products[handle] %}
 {% if linked_product %}
   <a href="{{ linked_product.url }}">
