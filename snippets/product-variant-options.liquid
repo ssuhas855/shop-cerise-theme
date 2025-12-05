@@ -78,7 +78,7 @@
 
 
   {% for item in color_items %}
-{{  item.link }}
+
     <a href="/products/{{ item.select_product_link }}" class="swatch-item {% if product.handle == item.select_product_link %}active{%endif%}">
 
       {% if item.image != blank %}
@@ -92,6 +92,7 @@
       {% endif %}
 
       <span class="swatch-title">{{ item.title }}</span>
+      {{  item.link }}
 
     </a>
 
