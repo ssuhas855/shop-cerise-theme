@@ -78,8 +78,10 @@
 
 
   {% for item in color_items %}
+          
+{% assign linked_product = all_products[item.link] %}
 
-    <a href="/products/{{ item.select_product_link }}" class="swatch-item {% if product.handle == item.select_product_link %}active{%endif%}">
+    <a href="/products/{{ linked_product.url | handle  }}" class="swatch-item {% if product.handle == item.select_product_link %}active{%endif%}">
 
       {% if item.image != blank %}
       <div class="swatch-imgbox">
@@ -94,9 +96,7 @@
       <span class="swatch-title">{{ item.title }}</span>
 
 
-      {% assign handle = item.link %}  
-{% assign linked_product = all_products[item.link] %}
-{{ linked_product.url | handle  }} --
+
     </a>
 
   {% endfor %}
