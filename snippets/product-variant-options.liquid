@@ -71,13 +71,14 @@
     {% if option.name == 'Color' or option.name == 'color' %}
     
  {% assign color_items = product.metafields.custom.product_color_option.value %}
+ 
 
 {% if color_items != blank %}
 
 
 
   {% for item in color_items %}
-
+{{  item.link }}
     <a href="/products/{{ item.select_product_link }}" class="swatch-item {% if product.handle == item.select_product_link %}active{%endif%}">
 
       {% if item.image != blank %}
