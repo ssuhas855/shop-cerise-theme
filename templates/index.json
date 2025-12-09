@@ -103,10 +103,10 @@
     "cerise_textiles_w6jBwM": {
       "type": "cerise-textiles",
       "blocks": {
-        "product_HjCEfP": {
+        "product_WzaYrn": {
           "type": "product",
           "settings": {
-            "product": "blanket-03"
+            "product": "housecoat-in-magda-blue-copy-2"
           }
         },
         "product_4EYYmW": {
@@ -115,17 +115,24 @@
             "product": "blanket-02"
           }
         },
-        "product_WzaYrn": {
+        "product_HjCEfP": {
           "type": "product",
           "settings": {
-            "product": "housecoat-in-magda-blue-copy-2"
+            "product": "blanket-03"
+          }
+        },
+        "product_j4MiyQ": {
+          "type": "product",
+          "settings": {
+            "product": "blanket-04"
           }
         }
       },
       "block_order": [
-        "product_HjCEfP",
+        "product_WzaYrn",
         "product_4EYYmW",
-        "product_WzaYrn"
+        "product_HjCEfP",
+        "product_j4MiyQ"
       ],
       "name": "Cerise Textiles Slider",
       "settings": {
