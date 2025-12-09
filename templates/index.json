@@ -103,6 +103,18 @@
     "cerise_textiles_w6jBwM": {
       "type": "cerise-textiles",
       "blocks": {
+        "product_HjCEfP": {
+          "type": "product",
+          "settings": {
+            "product": "blanket-03"
+          }
+        },
+        "product_4EYYmW": {
+          "type": "product",
+          "settings": {
+            "product": "blanket-02"
+          }
+        },
         "product_WzaYrn": {
           "type": "product",
           "settings": {
@@ -111,6 +123,8 @@
         }
       },
       "block_order": [
+        "product_HjCEfP",
+        "product_4EYYmW",
         "product_WzaYrn"
       ],
       "name": "Cerise Textiles Slider",
