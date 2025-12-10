@@ -13,7 +13,7 @@
       "type": "image-with-text-custom",
       "name": "Custom Image with Text",
       "settings": {
-        "image": "shopify://shop_images/home-banner-2_702c0251-3b7c-4a98-9a83-cc835a0cee00.png",
+        "image": "shopify://shop_images/cerise-home-banner.png",
         "mobile_image": "shopify://shop_images/hero_mo.webp",
         "heading": "",
         "text": "<h3>Cerise is a collection of finds gathered from the people and places that inspire us most. We seek out pieces that have a story — rooted in craft, rich in color, and thoughtfully made for everyday life.</h3>",
