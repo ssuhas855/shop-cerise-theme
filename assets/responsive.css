@@ -1517,10 +1517,15 @@ body div#insta-feed {
 	width: 70px;
 }
 .imgbox4 {
-	float: right;
-
-	
+	float: right;	
 }
+.grid--2-col-tablet-down .grid__item{
+	width:48%;
+}
+#product-grid {
+	column-gap: 2%;
+}
+
 }
 /* END 767px */ 
 
