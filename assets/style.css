@@ -1631,3 +1631,11 @@ input#preorder-flag,
 #preorder-text{
     display: none!important;
 }
+.about-story__svg {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	padding: 48px 0 20px;
+}
