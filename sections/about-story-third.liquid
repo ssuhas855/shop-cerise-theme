@@ -21,6 +21,15 @@
             {{ section.settings.main_heading }}
             </h3>
             {% endif %}
+
+
+          {% if section.settings.main_svg != blank  %}
+            <div class="about-story__svg">
+            {{ section.settings.main_svg }}
+            {{ section.settings.main_svg_2 }}
+            </div>
+            {% endif %}
+
             {% if section.settings.main_text != blank  %}
             <p class="about-story__desc">
             {{ section.settings.main_text }}
