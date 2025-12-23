@@ -1643,3 +1643,11 @@ input#preorder-flag,
 	font-size: 10px;
 	text-transform: uppercase;	
 }
+.card__badge {
+	position: absolute;
+	top: -4px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: fit-content;
+}
