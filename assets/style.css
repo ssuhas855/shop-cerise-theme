@@ -1639,3 +1639,7 @@ input#preorder-flag,
 	gap: 30px;
 	padding: 48px 0 20px;
 }
+.badge {
+	font-size: 10px;
+	text-transform: uppercase;	
+}
