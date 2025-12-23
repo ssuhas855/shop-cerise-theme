@@ -1651,3 +1651,6 @@ input#preorder-flag,
 	margin: 0 auto;
 	width: fit-content;
 }
+.product-form__buttons .button:disabled + .product-form__inventory{
+	display:none!important;
+}
