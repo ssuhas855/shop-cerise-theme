@@ -50,6 +50,7 @@
         fetchpriority: fetch_priority,
         class: 'image-1'        
   }}
+  {% if card_product.media[1] != blank %}
    {{
     card_product.media[1]
     | image_url: width: 800
@@ -59,6 +60,18 @@
         fetchpriority: fetch_priority,
         class: 'image-2'        
   }}
+{% else %}
+
+{{
+    card_product.media[0]
+    | image_url: width: 800
+    | image_tag:
+        sizes: '(max-width: 767px) 100vw, 1500px',
+        widths: '352, 750, 1200, 1500',
+        fetchpriority: fetch_priority,
+        class: 'image-1'        
+  }}
+{% endif %}  
 </a>
 
             </div>
