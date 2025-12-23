@@ -208,7 +208,7 @@
       <div class="card__content">
         <div class="card__information">
           {% if card_product.tags contains 'pre-order' %}
-             {% if card_product.available == false %}
+             {% if card_product.available == true %}
 <h5 class="h5 tag_h5">Sold out</h5>
              {% else %}
             <h5 class="h5 tag_h5">Preorder</h5>
