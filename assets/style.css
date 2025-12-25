@@ -1661,7 +1661,13 @@ input#preorder-flag,
 .white-header .svgtext-wrapper {
 	color: #f7dac7;
 }
+.white-header .logo svg path{
+	fill: #f7dac7;
+}
 .white-header2 .header__menu-item, 
 .white-header2 .svgtext-wrapper {
 	color: #f7dac7;
+}
+.white-header2 .logo svg path{
+	fill: #f7dac7;
 }
