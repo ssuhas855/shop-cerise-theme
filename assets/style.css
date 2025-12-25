@@ -1671,6 +1671,11 @@ input#preorder-flag,
 .white-header .link::after {
 	background: #f7dac7;
 }
+.white-header .cart-count-bubble {
+	background-color:#f7dac7;
+	color:rgb(100, 27, 76);
+
+}
 
 
 .white-header2 .header__menu-item, 
@@ -1686,4 +1691,9 @@ input#preorder-flag,
 }
 .white-header2 .link::after {
 	background: #f7dac7;
+}
+.white-header2 .cart-count-bubble {
+	background-color:#f7dac7;
+	color:rgb(100, 27, 76);
+
 }
