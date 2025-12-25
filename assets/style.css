@@ -1665,7 +1665,7 @@ input#preorder-flag,
 	fill: #f7dac7;
 }
 .white-header .search-svg circle,
-.white-header .search-svg path{
+.white-header .search-svg line{
 	stroke:#f7dac7;
 }
 .white-header .link::after {
@@ -1681,7 +1681,7 @@ input#preorder-flag,
 	fill: #f7dac7;
 }
 .white-header2 .search-svg circle,
-.white-header2 .search-svg path{
+.white-header2 .search-svg line{
 	stroke:#f7dac7;
 }
 .white-header2 .link::after {
