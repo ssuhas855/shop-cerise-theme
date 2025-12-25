@@ -504,18 +504,14 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
   const section = document.querySelector(".cerise_textiles-section, .about_cerise-section");
-
   if (!section) return;
-
   const rect = section.getBoundingClientRect();
-
   if (rect.top <= 0 && rect.bottom > 0) {
     header.classList.add("white-header");
   } else {
     header.classList.remove("white-header");
   }
 });
-
 </script>
 {% endif %}
 
