@@ -501,22 +501,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 {% if template == 'index' %}
 <script>
-document.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  const body = document.body;
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".site-header");
+  const section = document.querySelector(".color-scheme-2, .color-scheme-5");
 
-  const isTargetScheme =
-    body.classList.contains("color-scheme-2") ||
-    body.classList.contains("color-scheme-5");
+  if (!section) return;
 
-  const offsetTop = header.offsetTop;
+  const rect = section.getBoundingClientRect();
 
-  if (isTargetScheme && window.scrollY > offsetTop) {
+  if (rect.top <= 0 && rect.bottom > 0) {
     header.classList.add("white-header");
   } else {
     header.classList.remove("white-header");
   }
 });
+
 </script>
 {% endif %}
 
