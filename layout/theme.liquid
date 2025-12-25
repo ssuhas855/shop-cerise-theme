@@ -503,7 +503,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <script>
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
-  const section = document.querySelector(".cerise_textiles-section, .about_cerise-section");
+  const section = document.querySelector(".cerise_textiles-section");
   if (!section) return;
   const rect = section.getBoundingClientRect();
   if (rect.top <= 0 && rect.bottom > 0) {
@@ -511,6 +511,17 @@ window.addEventListener("scroll", function () {
   } else {
     header.classList.remove("white-header");
   }
+
+const header2 = document.querySelector(".header");
+  const section2 = document.querySelector(".about_cerise-section");
+  if (!section2) return;
+  const rect2 = section2.getBoundingClientRect();
+  if (rect2.top <= 0 && rect2.bottom > 0) {
+    header2.classList.add("white-header");
+  } else {
+    header2.classList.remove("white-header");
+  }
+
 });
 </script>
 {% endif %}
