@@ -1657,6 +1657,8 @@ input#preorder-flag,
 #insta-feed h2, .instafeed-shopify h2 {
 	color: rgba(222, 55, 37);
 }
+
+@media(min-width:990px){
 .white-header .header__menu-item, 
 .white-header .svgtext-wrapper {
 	color: #f7dac7;
@@ -1696,4 +1698,5 @@ input#preorder-flag,
 	background-color:#f7dac7;
 	color:rgb(100, 27, 76);
 
+}
 }
