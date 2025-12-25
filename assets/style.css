@@ -1654,3 +1654,6 @@ input#preorder-flag,
 .product-form__buttons .button:disabled + .product-form__inventory{
 	display:none!important;
 }
+#insta-feed h2, .instafeed-shopify h2 {
+	color: rgba(222,55,42);
+}
