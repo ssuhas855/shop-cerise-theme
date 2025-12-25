@@ -1668,6 +1668,9 @@ input#preorder-flag,
 .white-header .search-svg path{
 	stroke:#f7dac7;
 }
+.white-header .link::after {
+	background: #f7dac7;
+}
 
 
 .white-header2 .header__menu-item, 
@@ -1680,4 +1683,7 @@ input#preorder-flag,
 .white-header2 .search-svg circle,
 .white-header2 .search-svg path{
 	stroke:#f7dac7;
+}
+.white-header2 .link::after {
+	background: #f7dac7;
 }
