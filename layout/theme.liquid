@@ -499,6 +499,26 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 {% endif %}
 
+{% if template == 'index' %}
+<script>
+document.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const body = document.body;
+
+  const isTargetScheme =
+    body.classList.contains("color-scheme-2") ||
+    body.classList.contains("color-scheme-5");
+
+  const offsetTop = header.offsetTop;
+
+  if (isTargetScheme && window.scrollY > offsetTop) {
+    header.classList.add("white-header");
+  } else {
+    header.classList.remove("white-header");
+  }
+});
+</script>
+{% endif %}
 
 </body> 
 </html>
