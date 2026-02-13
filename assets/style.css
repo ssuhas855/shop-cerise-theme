@@ -674,14 +674,9 @@ flex-wrap:wrap;
 	margin: 50px 0 0;
 	align-items: start;
 	justify-content: center;
-	row-gap:0;
 }
-#product-grid .grid__item {
-  margin-bottom:35px;
-}
-#product-grid .grid__item .card__information {
-	padding-bottom: 20px;
-	padding-top: 19px;
+#product-grid .grid__item{
+  margin-bottom:50px;
 }
 #product-grid .grid__item:nth-child(5n+1),
 #product-grid .grid__item:nth-child(5n+2){
