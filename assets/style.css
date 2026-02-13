@@ -674,6 +674,7 @@ flex-wrap:wrap;
 	margin: 50px 0 0;
 	align-items: start;
 	justify-content: center;
+	row-gap:0;
 }
 #product-grid .grid__item{
   margin-bottom:50px;
