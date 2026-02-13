@@ -676,7 +676,7 @@ flex-wrap:wrap;
 	justify-content: center;
 	row-gap:0;
 }
-#product-grid .grid__item{
+#product-grid .grid__item {
   margin-bottom:35px;
 }
 #product-grid .grid__item .card__information {
