@@ -1525,6 +1525,9 @@ body div#insta-feed {
 #product-grid {
 	column-gap: 2%;
 }
+.product__media-list.contains-media.grid{
+	scroll-padding-left: 0;
+}
 
 }
 /* END 767px */ 
