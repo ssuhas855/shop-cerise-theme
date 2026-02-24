@@ -175,7 +175,104 @@ document.addEventListener('DOMContentLoaded', function () {
     return input;
   }
 
-  
+  const preorderFlagInput = ensureHiddenProperty('Preorder', 'preorder-flag');
+  const preorderTextInput = document.getElementById('preorder-text'); // user created input
+
+  // ----------------------------------------------------
+  // Get current variant
+  // ----------------------------------------------------
+  function getCurrentVariantId() {
+    const idInput = form.querySelector('input[name="id"]');
+    if (idInput?.value) return idInput.value;
+
+    const select = form.querySelector('select[name="id"]');
+    if (select?.value) return select.value;
+
+    return null;
+  }
+
+  // ----------------------------------------------------
+  // Update UI and input values
+  // ----------------------------------------------------
+  function updateForVariant(variantId) {
+    const addToCartBtn = document.querySelector('.product-form__submit');
+    const addToCartBtnText = document.querySelector('.product-form__submit .button-text');
+    if (!addToCartBtn || !addToCartBtnText) return;
+
+    const v = variantsById[String(variantId)];
+    if (!v) return;
+
+    const isPreorder = Number(v.inventory_quantity) <= 0 && v.inventory_policy === 'continue';
+    const preorderText = v.metafields?.custom?.pre_order_text || v.pre_order_text || v.expected_shipping || "";
+
+    // ------------------------------
+    // PREORDER
+    // ------------------------------
+    if (isPreorder) {
+      addToCartBtn.disabled = false;
+      addToCartBtn.classList.add('is-preorder');
+      addToCartBtnText.textContent = 'Preorder';
+
+      if (availabilityEl) availabilityEl.textContent = preorderText;
+
+      preorderFlagInput.value = preorderText;
+
+      // ⭐ Update #preorder-text input with latest flag + inventory
+      if (preorderTextInput) {
+        preorderTextInput.value = preorderFlagInput.value  ;
+      }
+
+      return;
+    }
+
+    // ------------------------------
+    // IN STOCK
+    // ------------------------------
+    if (v.available) {
+      addToCartBtn.disabled = false;
+      addToCartBtn.classList.remove('is-preorder');
+      addToCartBtnText.textContent = 'Add to cart';
+
+      preorderFlagInput.value = '';
+      if (preorderTextInput) preorderTextInput.value = '';
+
+      if (availabilityEl) availabilityEl.textContent = '';
+      return;
+    }
+
+    // ------------------------------
+    // SOLD OUT
+    // ------------------------------
+    addToCartBtn.disabled = true;
+    addToCartBtn.classList.remove('is-preorder');
+    addToCartBtnText.textContent = 'Sold out';
+
+    preorderFlagInput.value = '';
+    if (preorderTextInput) preorderTextInput.value = '';
+    if (availabilityEl) availabilityEl.textContent = 'Sold out';
+  }
+
+  // ----------------------------------------------------
+  // Variant change event
+  // ----------------------------------------------------
+  document.addEventListener('variant:change', function (e) {
+    const id = e?.detail?.variant?.id;
+    setTimeout(() => updateForVariant(id), 50);
+  });
+
+  // Fallback for select/input
+  const idInput = form.querySelector('input[name="id"], select[name="id"]');
+  if (idInput) {
+    idInput.addEventListener('change', function (e) {
+      setTimeout(() => updateForVariant(e.target.value), 50);
+    });
+  }
+
+  // Initial variant
+  const initialId = getCurrentVariantId();
+  if (initialId) updateForVariant(initialId);
+});
+
 
 
 
