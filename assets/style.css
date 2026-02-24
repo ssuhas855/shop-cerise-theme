@@ -1629,7 +1629,7 @@ font-family: var(--font-heading-family)!important;
 }
 input#preorder-flag,
 #preorder-text{
-    /*display: none!important;*/
+    display: none!important;
 }
 .about-story__svg {
 	width: 100%;
