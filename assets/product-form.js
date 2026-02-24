@@ -145,7 +145,7 @@ if (!customElements.get('product-form')) {
 document.addEventListener('DOMContentLoaded', function () {
 
   const form = document.querySelector('form[action^="/cart/add"]');
-  const availabilityEl = document.querySelector('.product-form__inventory_new');
+  const availabilityEl = document.querySelector('.product-form__inventory');
 
   const variantDataEl = document.getElementById('variant-data');
   if (!variantDataEl || !form) return;
