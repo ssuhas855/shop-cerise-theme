@@ -291,7 +291,7 @@ alert(1);
       inventoryDiv.style.display = "none";
     }
 
-  }, 5000); // 1000ms = 1 second
+  }, 1000); // 1000ms = 1 second
 
 });
 
