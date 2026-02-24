@@ -277,7 +277,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-setTimeout(function() {
-  console.log(document.querySelector(".product-form__inventory"));
-  console.log(document.getElementById("preorder-text"));
-}, 2000); 
+function updatePreorderText() {
+
+  const inventoryDiv = document.querySelector(".product-form__inventory");
+  const preorderInput = document.getElementById("preorder-text");
+
+  if (!inventoryDiv || !preorderInput) return;
+
+  if (preorderInput.value.trim() !== "") {
+    inventoryDiv.innerHTML = preorderInput.value;
+    inventoryDiv.style.display = "block";
+  } else {
+    inventoryDiv.style.display = "none";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", updatePreorderText);
+document.addEventListener("shopify:section:load", updatePreorderText);
