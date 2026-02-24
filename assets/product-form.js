@@ -277,13 +277,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-const inventoryDiv = document.querySelector(".product-form__inventory");
-const preorderInput = document.getElementById("preorder-text");
+document.addEventListener("DOMContentLoaded", function() {
 
-if (preorderInput.value && preorderInput.value.trim() !== "") {
-  inventoryDiv.innerHTML = preorderInput.value;
-} else {
-  inventoryDiv.innerHTML = "";  
-}
+  setTimeout(function() {
+alert(1);
+    const inventoryDiv = document.querySelector(".product-form__inventory");
+    const preorderInput = document.getElementById("preorder-text");
 
+    if (preorderInput && preorderInput.value.trim() !== "") {
+      inventoryDiv.innerHTML = preorderInput.value;
+      inventoryDiv.style.display = "block";
+    } else {
+      inventoryDiv.style.display = "none";
+    }
+
+  }, 1000); // 1000ms = 1 second
+
+});
 
