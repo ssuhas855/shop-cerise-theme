@@ -277,21 +277,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-
-  setTimeout(function() {
-alert(1);
-    const inventoryDiv = document.querySelector(".product-form__inventory");
-    const preorderInput = document.getElementById("preorder-text");
-
-    if (preorderInput && preorderInput.value.trim() !== "") {
-      inventoryDiv.innerHTML = preorderInput.value;
-      inventoryDiv.style.display = "block";
-    } else {
-      inventoryDiv.style.display = "none";
-    }
-
-  }, 1000); // 1000ms = 1 second
-
-});
+alert("JS Working");
 
