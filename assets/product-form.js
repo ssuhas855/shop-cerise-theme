@@ -277,5 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-alert("JS Working");
-
+setTimeout(function() {
+  console.log(document.querySelector(".product-form__inventory"));
+  console.log(document.getElementById("preorder-text"));
+}, 2000); 
