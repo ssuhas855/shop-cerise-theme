@@ -104,7 +104,7 @@
           "type": "faq",
           "settings": {
             "title": "I’d like to send a housecoat as a gift. Is this possible?",
-            "answer": "<p>We certainly can send a housecoat as a gift. Email us <a href=\"mailto:athello@cerise-goods.com\"><span style=\"text-decoration:underline\">at hello@cerise-goods.com</span></a> with the details, and we’ll take care of it.</p>"
+            "answer": "<p>We certainly can send a housecoat as a gift. Email us <a href=\"mailto:hello@cerise-goods.com\" title=\"mailto:hello@cerise-goods.com\"><span style=\"text-decoration:underline\">hello@cerise-goods.com</span></a> with the details, and we’ll take care of it.</p>"
           }
         },
         "faq_3krPHz": {
