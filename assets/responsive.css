@@ -786,7 +786,9 @@ ul.list.list-social.list-unstyled {
 #popup_newsletter .klaviyo-form h1 span {
     font-size: 20px!important;
 }
-
+.rich-text__text h1 {
+  font-size: 20px;
+}
 }
 /* END 989px */
 
