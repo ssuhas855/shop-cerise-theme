@@ -443,7 +443,8 @@ letter-spacing: 1.7px;
 	max-width: 389px;
 	text-align: center;
 }
-.ret_text_wrapper h3 {
+.ret_text_wrapper h3,
+.ret_text_wrapper h1 {
 	font-size: 25px;
 	line-height: 30px;
 	font-weight: 400;
