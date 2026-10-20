@@ -88,7 +88,7 @@
       <div class="swatch-imgbox">
         <img 
           src="{{ item.image | image_url: width: 60 }}" 
-          alt="{{ item.image.alt | default: item.alt | escape }}"
+          alt="{{ item.image.value.alt | escape }}"
           class="swatch-img"
         >
       </div>
