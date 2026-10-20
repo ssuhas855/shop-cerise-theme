@@ -77,31 +77,30 @@
 
 
 
-  
-{% for item in color_items %}
-  {% assign swatch_image = item.image.value | default: item.image %}
+  {% for item in color_items %}
+          
+{% assign linked_product = all_products[item.link] %}
+{% assign linked = linked_product.url | handle | remove: 'products-' %}
 
-  {% assign linked_product = all_products[item.link] %}
-  {% assign linked = linked_product.url | handle | remove: 'products-' %}
+    <a href="{{ linked }}" class="swatch-item {% if product.handle == linked %}active{%endif%}">
 
-  <a href="{{ linked }}" class="swatch-item {% if product.handle == linked %}active{% endif %}">
-
-    {% if swatch_image != blank %}
+      {% if item.image != blank %}
       <div class="swatch-imgbox">
-        <img
-          src="{{ swatch_image | image_url: width: 60 }}"
-          alt="{{ swatch_image.alt | escape }}"
+        <img 
+          src="{{ item.image | image_url: width: 60 }}" 
+          alt="{{ item.image.alt | default: item.alt | escape }}"
           class="swatch-img"
-          width="60"
-          height="60"
         >
       </div>
-    {% endif %}
+      {% endif %}
 
-    <span class="swatch-title">{{ item.title }}</span>
-  </a>
-{% endfor %}
+      <span class="swatch-title">{{ item.title }}</span>
 
+
+
+    </a>
+
+  {% endfor %}
 
 {% endif %}
 
