@@ -789,6 +789,9 @@ ul.list.list-social.list-unstyled {
 .rich-text__text h1 {
   font-size: 20px;
 }
+.collection-hero__title {
+	font-size: 20px;
+}
 }
 /* END 989px */
 
