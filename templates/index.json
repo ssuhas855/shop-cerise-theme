@@ -16,10 +16,34 @@
         "image": "shopify://shop_images/cerise-home-banner.png",
         "mobile_image": "shopify://shop_images/cerise-mobile-banner_4de20706-25bc-434b-8df2-e54a0fb8e8bf.png",
         "heading": "",
-        "text": "<h1>Cerise is a collection of finds gathered from the people and places that inspire us most. We seek out pieces that have a story — rooted in craft, rich in color, and thoughtfully made for everyday life.</h1>",
+        "text": "<h3>Cerise is a collection of finds gathered from the people and places that inspire us most. We seek out pieces that have a story — rooted in craft, rich in color, and thoughtfully made for everyday life.</h3>",
         "button_link": "",
         "button_label": "",
         "image_position": "left"
+      }
+    },
+    "rich_text_ciyVb9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7YX9jY": {
+          "type": "heading",
+          "settings": {
+            "heading": "&nbsp;Hand block-printed housecoats and one-of-a-kind vintage blankets&nbsp;",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7YX9jY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "featured-collection-0": {
@@ -191,6 +215,7 @@
   },
   "order": [
     "image_with_text_custom_D6Q3Jc",
+    "rich_text_ciyVb9",
     "featured-collection-0",
     "featured_collection_DPjRxk",
     "featured_collection_swiper_MJ4gnV",
