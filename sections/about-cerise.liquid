@@ -13,10 +13,11 @@
   {{
     section.settings.image_left_top
     | image_url: width: 1500
-    | image_tag:
+    | image_tag:        
         sizes: '(max-width: 767px) 100vw, 1500px',
         widths: '352, 750, 1200, 1500', 
-        fetchpriority: fetch_priority
+        fetchpriority: fetch_priority,
+        alt: section.settings.image_left_top.alt | escape
   }}
 </picture>   
 
