@@ -6,10 +6,10 @@
       <div class="about-story_row">
        <div class="about-story__images about-story__images--left">
         {% if section.settings.left_image_1 != blank  %}
-        <div class="about-story__image img_1"><img src="{{ section.settings.left_image_1 | image_url: width: 600 }}" alt="Left Image 1" loading="lazy" width="" height="" /></div>
+        <div class="about-story__image img_1"><img src="{{ section.settings.left_image_1 | image_url: width: 600 }}" alt="{{ left_image_1.alt | escape }}" loading="lazy" width="" height="" /></div>
        {% endif %}
         {% if section.settings.left_image_2 != blank  %}
-        <div class="about-story__image img_2"><img src="{{ section.settings.left_image_2 | image_url: width: 600 }}" alt="Left Image 2" loading="lazy" width="" height="" /></div>
+        <div class="about-story__image img_2"><img src="{{ section.settings.left_image_2 | image_url: width: 600 }}" alt="{{ left_image_2.alt | escape }}" loading="lazy" width="" height="" /></div>
     {% endif %}  
     </div>
 
