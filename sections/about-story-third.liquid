@@ -7,10 +7,10 @@
 
        <div class="about-story__images about-story__images--left">
         {% if section.settings.left_image_1 != blank  %}
-        <div class="about-story__image img_1"><img src="{{ section.settings.left_image_1 | image_url: width: 600 }}" alt="section.settings.left_image_1.alt | escape" loading="lazy" width="" height="" /></div>
+        <div class="about-story__image img_1"><img src="{{ section.settings.left_image_1 | image_url: width: 600 }}" alt="{{ section.settings.left_image_1.alt | escape }}" loading="lazy" width="" height="" /></div>
        {% endif %}
         {% if section.settings.left_image_2 != blank  %}
-        <div class="about-story__image img_2"><img src="{{ section.settings.left_image_2 | image_url: width: 600 }}" alt="section.settings.left_image_2.alt | escape" loading="lazy" width="" height="" /></div>
+        <div class="about-story__image img_2"><img src="{{ section.settings.left_image_2 | image_url: width: 600 }}" alt="{{ section.settings.left_image_2.alt | escape }}" loading="lazy" width="" height="" /></div>
     {% endif %}  
     </div>
 
@@ -44,17 +44,17 @@
 
         <div class="about-story__top-imgs">
         {% if section.settings.right_image_1 != blank  %}
-        <div class="imgbox1"><img src="{{ section.settings.right_image_1 | image_url: width: 600 }}" alt="Right Image 1" loading="lazy" width="" height="" /></div>
+        <div class="imgbox1"><img src="{{ section.settings.right_image_1 | image_url: width: 600 }}" alt="{{ section.settings.right_image_1.alt | escape }}" loading="lazy" width="" height="" /></div>
       {% endif %}
         {% if section.settings.right_image_2 != blank  %}
-        <div class="imgbox2"><img src="{{ section.settings.right_image_2 | image_url: width: 600 }}" alt="Right Image 2" loading="lazy"  width="" height="" /></div>
+        <div class="imgbox2"><img src="{{ section.settings.right_image_2 | image_url: width: 600 }}" alt="{{ section.settings.right_image_2.alt | escape }}" loading="lazy"  width="" height="" /></div>
        {% endif %}        
         {% if section.settings.right_image_3 != blank  %}
-        <div class="imgbox3"><img src="{{ section.settings.right_image_3 | image_url: width: 600 }}" alt="Right Image 3" loading="lazy"  width="" height="" /></div>
+        <div class="imgbox3"><img src="{{ section.settings.right_image_3 | image_url: width: 600 }}" alt="{{ section.settings.right_image_3.alt | escape }}" loading="lazy"  width="" height="" /></div>
       {% endif %}
       </div>
         {% if section.settings.right_image_4 != blank  %}
-        <div class="imgbox4"><img src="{{ section.settings.right_image_4 | image_url: width: 600 }}" alt="Right Image 4" loading="lazy"  width="" height="" /></div>
+        <div class="imgbox4"><img src="{{ section.settings.right_image_4 | image_url: width: 600 }}" alt="{{ section.settings.right_image_4.alt | escape }}" loading="lazy"  width="" height="" /></div>
        {% endif %} 
     </div>
 
@@ -65,7 +65,7 @@
 
 {% if section.settings.right_image_5 != blank  %}
         <div class="imgbox5">
-          <img src="{{ section.settings.right_image_5 | image_url: width: 700 }}" alt="Right Image 5" loading="lazy"  width="" height="" />
+          <img src="{{ section.settings.right_image_5 | image_url: width: 700 }}" alt="{{ section.settings.right_image_5.alt | escape }}" loading="lazy"  width="" height="" />
          <div class="imgbox5_rte">
 
 <svg width="278" height="104" viewBox="0 0 278 104" fill="none" xmlns="http://www.w3.org/2000/svg">
