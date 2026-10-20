@@ -51,10 +51,10 @@
       <!-- Right Images -->
       <div class="about-story__images about-story__images--right">
         {% if section.settings.right_image_1 != blank  %}
-        <div class="about-story__image img_1"><img src="{{ section.settings.right_image_1 | image_url: width: 600 }}" alt="Right Image 1" loading="lazy" width="" height="" /></div>
+        <div class="about-story__image img_1"><img src="{{ section.settings.right_image_1 | image_url: width: 600 }}" alt="{{ section.settings.right_image_1.alt | escape }}" loading="lazy" width="" height="" /></div>
       {% endif %}
         {% if section.settings.right_image_2 != blank  %}
-        <div class="about-story__image img_2"><img src="{{ section.settings.right_image_2 | image_url: width: 600 }}" alt="Right Image 2" loading="lazy" width="" height="" /></div>
+        <div class="about-story__image img_2"><img src="{{ section.settings.right_image_2 | image_url: width: 600 }}" alt="{{ section.settings.right_image_2.alt | escape }}" loading="lazy" width="" height="" /></div>
        {% endif %} 
     </div>
 </div>
