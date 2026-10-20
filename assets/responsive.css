@@ -1531,7 +1531,10 @@ body div#insta-feed {
 .product__media-list.contains-media.grid{
 	scroll-padding-left: 0;
 }
-
+.section-template--20783340716274__rich_text_ciyVb9-padding {
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
 }
 /* END 767px */ 
 
