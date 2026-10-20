@@ -25,16 +25,15 @@
     "rich_text_ciyVb9": {
       "type": "rich-text",
       "blocks": {
-        "heading_7YX9jY": {
-          "type": "heading",
+        "text_KT9Q3c": {
+          "type": "text",
           "settings": {
-            "heading": "&nbsp; Hand block-printed housecoats and one-of-a-kind vintage blankets &nbsp;",
-            "heading_size": "h0"
+            "text": "<h1>Hand block-printed housecoats and one-of-a-kind vintage blankets &nbsp;</h1>"
           }
         }
       },
       "block_order": [
-        "heading_7YX9jY"
+        "text_KT9Q3c"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
