@@ -101,9 +101,10 @@
 	text-align: center;
 }
 .collection-hero__title {
-	font-size:25px;
-  font-weight: 400;
-	letter-spacing: 0;  
+	font-size: 25px;
+	font-weight: 400;
+	letter-spacing: 0;
+	margin-top: 50px;
 }
 .collection-hero__title + .collection-hero__description {
 	font-size: 1.6rem;
