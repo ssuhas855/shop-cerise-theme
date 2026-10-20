@@ -85,10 +85,10 @@
     <a href="{{ linked }}" class="swatch-item {% if product.handle == linked %}active{%endif%}">
 
       {% if item.image != blank %}
-      <div class="swatch-imgbox"> 222
+      <div class="swatch-imgbox">
         <img 
           src="{{ item.image | image_url: width: 60 }}" 
-          alt="{{ item.title }}"
+          alt="{{ item.alt }}"
           class="swatch-img"
         >
       </div>
