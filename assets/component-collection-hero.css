@@ -100,3 +100,9 @@
 .collection-hero__text-wrapper {	
 	text-align: center;
 }
+.collection-hero__title {
+	font-size:25px;
+  font-weight: 400;
+	letter-spacing: 0;
+  color:#775B2A;
+}
