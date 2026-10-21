@@ -495,10 +495,10 @@
 
               
                 {% if product.tags contains "pre-order" %}
-                  {% if product.metafields.custom.preorder_text %}
-  <input type="hidden" name="properties[Preorder]" value="{{ product.metafields.custom.preorder_text  }}">
-  {% endif %}
-{% endif %}
+                {% if product.metafields.custom.preorder_text %}
+                <input type="hidden" name="properties[Preorder]" value="{{ product.metafields.custom.preorder_text  }}">
+                {% endif %}
+                {% endif %}
 
                 {%- render 'buy-buttons',
                   block: block,
