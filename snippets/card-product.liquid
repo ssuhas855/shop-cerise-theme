@@ -249,6 +249,11 @@
                 </span>
               </p>
             {%- endif -%}
+            {% for option in product.options_with_values %}
+            {% if option.name == 'Color' %}
+            <span class="pcolorname">{{ product.selected_or_first_available_variant.options[forloop.index0] }}</span>
+            {% endif %}
+            {% endfor %}
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
           </div>
         </div>
