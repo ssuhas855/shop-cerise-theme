@@ -109,13 +109,11 @@
                     </h2>
                   </a>
                   
-              {% if product.metafields.custom.product_color_name %}
-              <span class="pcolorname">{{ product.metafields.custom.product_color_name  }}</span>
-              {% endif %} 
+          
 
               {% for option in product.options_with_values %}
   {% if option.name == 'Color' %}
-    {{ product.selected_or_first_available_variant.options[forloop.index0] }}
+    <span class="pcolorname">{{ product.selected_or_first_available_variant.options[forloop.index0] }}</span>
   {% endif %}
 {% endfor %}
 
