@@ -97,6 +97,10 @@
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
+                 {% if product.vendor %}
+              <span class="pvendor">{{ product.vendor  }}</span>
+              {% endif %} 
+
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
                   <a href="{{ product.url }}" class="product__title">
