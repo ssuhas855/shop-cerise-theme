@@ -804,6 +804,9 @@ ul.list.list-social.list-unstyled {
 .card__heading.h3 .pcolorname {
 	font-size: 16px;
 }
+.card__heading.h3 .pcolorname {
+	font-size: 14px;
+}
 }
 /* END 989px */
 
