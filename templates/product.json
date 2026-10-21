@@ -48,6 +48,12 @@
             "show_gift_card_recipient": false
           }
         },
+        "custom_liquid_4jwNpA": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% assign pickup = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true %}\n{% for spot in pickup %}\n  {% if spot.available %}\n    <p style=\"margin-top:12px; font-size:0.85em; line-height:1.4; opacity:0.85;\">✓ Free pickup available in Richmond, VA at Barrel Thief, 5805 Patterson Ave. {{ spot.pick_up_time }}. Choose \"Pick up\" at checkout.</p>\n  {% endif %}\n{% endfor %}"
+          }
+        },
         "tab_pRBj7f": {
           "type": "tab",
           "settings": {}
@@ -68,6 +74,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "custom_liquid_4jwNpA",
         "tab_pRBj7f",
         "share"
       ],
