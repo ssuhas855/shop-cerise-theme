@@ -102,9 +102,11 @@
           </button>
 
           <div class="product-form__inventory">
+            {% comment %}
   {% if product.selected_or_first_available_variant.metafields.custom.pre_order_text %}
     {{ product.selected_or_first_available_variant.metafields.custom.pre_order_text }}
   {% endif %}
+   {% endcomment %}
 </div>
 
 
