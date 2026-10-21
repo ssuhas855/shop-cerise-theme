@@ -14,7 +14,6 @@
       "blocks": {
         "vendor": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "body"
@@ -23,6 +22,13 @@
         "title": {
           "type": "title",
           "settings": {}
+        },
+        "text_68AfAP": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_color_name.value }}",
+            "text_style": "subtitle"
+          }
         },
         "rating": {
           "type": "rating",
@@ -71,6 +77,7 @@
       "block_order": [
         "vendor",
         "title",
+        "text_68AfAP",
         "rating",
         "price",
         "description",
