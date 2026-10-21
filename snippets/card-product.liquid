@@ -220,11 +220,11 @@
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
-              {{ card_product.title | escape }} 222
+              {{ card_product.title | escape }}
             </a>
-            {% for option in product.options_with_values %}
+            {% for option in card_product.options_with_values %}
   {% if option.name == 'Color' %}
-    <span class="pcolorname">{{ product.selected_or_first_available_variant.options[forloop.index0] }}</span>
+    <span class="pcolorname">{{ card_product.selected_or_first_available_variant.options[forloop.index0] }}</span>
   {% endif %}
 {% endfor %}
           </h3>
