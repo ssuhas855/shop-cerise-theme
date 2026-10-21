@@ -1735,3 +1735,6 @@ input#preorder-flag,
 	width: 100%;
 	font-size: 26px;
 }
+.card__heading.h3 .pcolorname {
+	font-size: 20px;
+}
