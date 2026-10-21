@@ -113,6 +113,12 @@
               <span class="pcolorname">{{ product.metafields.custom.product_color_name  }}</span>
               {% endif %} 
 
+              {% for option in product.options_with_values %}
+  {% if option.name == 'Color' %}
+    {{ product.selected_or_first_available_variant.options[forloop.index0] }}
+  {% endif %}
+{% endfor %}
+
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
