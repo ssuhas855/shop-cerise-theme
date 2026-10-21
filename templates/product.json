@@ -16,13 +16,6 @@
           "type": "title",
           "settings": {}
         },
-        "text_68AfAP": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.product_color_name.value }}",
-            "text_style": "subtitle"
-          }
-        },
         "rating": {
           "type": "rating",
           "disabled": true,
@@ -69,7 +62,6 @@
       },
       "block_order": [
         "title",
-        "text_68AfAP",
         "rating",
         "price",
         "description",
