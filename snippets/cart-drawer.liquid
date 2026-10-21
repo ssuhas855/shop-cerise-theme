@@ -186,6 +186,14 @@
                             </div>
                           {%- endif -%}
 
+{%comment%}
+                          {% if item.product.metafields.custom.preorder_text %}
+                            <p class="preorder-text">
+                            <span>Preorder:</span> {{ item.product.metafields.custom.preorder_text | escape }}
+                            </p>
+                            {% endif %} {%endcomment%}
+
+
 
  {%- for property in item.properties -%}
                                 {%- assign property_first_char = property.first | slice: 0 -%}
