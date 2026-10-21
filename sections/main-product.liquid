@@ -103,7 +103,12 @@
                     <h2 class="h1">
                       {{ product.title | escape }}
                     </h2>
-                  </a>                  
+                  </a>
+                  
+              {% if product.metafields.custom.product_color_namet %}
+              <span class="pcolorname">{{ product.metafields.custom.product_color_name  }}</span>
+              {% endif %} 
+
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
