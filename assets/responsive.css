@@ -300,6 +300,9 @@ h3, .h3 {
 .variant_box {
 	gap: 15px;
 }
+.pcolorname {
+	font-size: 20px;
+}
 }
 /* END 1199px */
 
