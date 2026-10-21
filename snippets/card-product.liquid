@@ -222,6 +222,11 @@
             >
               {{ card_product.title | escape }}
             </a>
+            {% for option in product.options_with_values %}
+  {% if option.name == 'Color' %}
+    <span class="pcolorname">{{ product.selected_or_first_available_variant.options[forloop.index0] }}</span>
+  {% endif %}
+{% endfor %}
           </h3>
           <div class="card-information">
             {%- if show_vendor -%}
