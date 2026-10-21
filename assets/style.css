@@ -1710,3 +1710,13 @@ input#preorder-flag,
 }
 
 
+.pvendor {
+  letter-spacing: 1.7px;
+  font-family: var(--font-nav-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-nav-weight);
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0;
+  color: rgba(var(--color-foreground),1);
+}
