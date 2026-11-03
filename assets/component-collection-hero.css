@@ -114,3 +114,4 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+@media screen and (max-width: 749px) { .collection-hero__description { max-width: 100%; } }
