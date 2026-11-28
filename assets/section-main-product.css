@@ -1543,7 +1543,7 @@ a.product__text {
 }
 .product__info-container .price__regular .price-item--regular {
 	margin-right: 0;
-	font-size: 12px;
+	font-size: 14px;
   letter-spacing:1.7px;	
   font-family: var(--font-nav-family);
     font-style: var(--font-body-style);
