@@ -40,6 +40,25 @@
       -%}
 
       {%- for media in product.media -%}
+        {%- comment -%} Cerise: show only photos for the selected length. Photos whose alt text says "Petite length" or "Regular length" appear only for that length; other photos always show. {%- endcomment -%}
+        {%- liquid
+          assign length_alt = media.alt | downcase
+          assign length_variant = product.selected_or_first_available_variant.title | downcase
+          assign skip_length_media = false
+          unless media.id == product.selected_or_first_available_variant.featured_media.id
+            if length_alt contains 'petite length'
+              unless length_variant contains 'petite'
+                assign skip_length_media = true
+              endunless
+            endif
+            if length_alt contains 'regular length'
+              unless length_variant contains 'regular'
+                assign skip_length_media = true
+              endunless
+            endif
+          endunless
+        -%}
+        {%- if skip_length_media -%}{%- continue -%}{%- endif -%}
         {%- liquid
           if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
             assign variant_image = true
